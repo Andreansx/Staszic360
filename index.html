@@ -1,0 +1,798 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wirtualny spacer po I liceum w Chrzanowie</title>
+    <link rel="stylesheet" href="pannellum.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.4/build/pannellum.js"></script>
+
+    <style>
+        .body, html {
+            margin: 0;
+            padding: 0;
+             height: 100%;
+             overflow: hidden;
+        
+        }
+        #panorama {
+               width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin: 0;
+                padding: 0;
+        }
+        .search-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+        .search-container input[type="text"] {
+            padding: 5px;
+            font-size: 20px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .search-container button {
+            padding: 5px;
+            font-size: 16px;
+        }
+        .butn { 
+            background-color: #6b85eb;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-family: 'Ubuntu', sans-serif;
+
+        }
+    </style>
+</head>
+<body><div id="panorama">&nbsp;</div>
+
+<div class="search-container"><input id="searchInput" type="text" /><button class="butn" onclick="goToScene()">Przejdź</button></div>
+<script type="text/javascript">
+
+    const viewer = pannellum.viewer('panorama', {
+        "default": {
+            "firstScene": "portiernia",
+            "autoLoad": true,
+            "sceneFadeDuration": 100,
+
+
+        },
+        "scenes": {
+            "portiernia": {
+                "title": "Portiernia",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "zd/0portierniawejscie.jpg",
+                "autoLoad": true,
+                "hotSpots": [
+                    { 
+                        "pitch": 5, 
+                        "yaw": -10,
+                        "type": "info",
+                        "text": "Portiernia"
+                    },
+                    {
+                        "pitch": 5,
+                        "yaw": -35,
+                        "type": "scene",
+                        "text": "Przejdź do Korytarza Głównego",
+                        "sceneId": "part-srod"
+                    }
+                ]
+            },
+            "part-srod": {
+                "title": "Korytarz Główny",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 180,
+                "type": "equirectangular",
+                "panorama": "zd/parter-wejscie.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 180,
+                        "yaw": -170,
+                        "type": "scene",
+                        "text": "Przejdź z powrotem do portierni", 
+                        "sceneId": "portiernia"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": -150,
+                        "type": "scene",
+                        "text": "Biblioteka",
+                        "sceneId": "biblioteka"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": -268,
+                        "type": "scene",
+                        "text": "Nowe skrzydło",
+                        "sceneId": "korpuch"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 160,
+                        "type": "scene",
+                        "text": "Biblioteka",
+                        "sceneId": "biblioteka"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 180,
+                        "type": "scene",
+                        "text": "Na pierwsze piętro",
+                        "sceneId": "part-1-schody"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": -90,
+                        "type": "scene",
+                        "text": "Stare skrzydło",
+                        "sceneId": "parter-stareskrzydl1"
+                    }
+                ]
+            },
+            "korpuch": {
+                "title": "Przejście dla pieszych",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "zd/gab-pedag.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": 110,
+                        "type": "scene",
+                        "text": "Przejdź do Niebieskiego Dywanu",
+                        "sceneId": "niebieskiDywan"
+                    },
+                    {
+                        "pitch": 180,
+                        "yaw": 80,
+                        "type": "scene",
+                        "text": "Przejdź z powrotem do Korytarza Głównego", 
+                        "sceneId": "part-srod"
+                    },
+                    {
+                        "pitch": 15,
+                        "yaw": 170,
+                        "type": "scene",
+                        "text": "Do góry", 
+                        "sceneId": "part-noweskrzydl1"
+                    }
+                ]
+            },
+            "niebieskiDywan": {
+                "title": "Niebieski Dywan",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "zd/nieb-dyw.jpg",
+                "hotSpots": [
+                    { 
+                        "pitch": -5, 
+                        "yaw": 95,
+                        "type": "info",
+                        "text": "Sklepik Szkolny"
+                    },
+                    { 
+                        "pitch": -5, 
+                        "yaw": 298,
+                        "type": "info",
+                        "text": "Sekretariat"
+                    },
+                    {
+                        "pitch": 180,
+                        "yaw": 180,
+                        "type": "scene",
+                        "text": "Powrót do Korytarza",
+                        "sceneId": "korpuch"
+                    }
+                ]
+            },
+            "biblioteka": {
+                "title": "Biblioteka",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "zd/part-biblioteka.jpg",
+                "hotSpots": [
+                    { 
+                        "pitch": -5, 
+                        "yaw": 217,
+                        "type": "info",
+                        "text": "Biblioteka",
+                        "URL": "https://www.1lo.pl/biblioteka/"
+                    },
+                    {
+                        "pitch": 10,
+                        "yaw": 15,
+                        "type": "scene",
+                        "text": "Powrót do Korytarza Głównego",
+                        "sceneId": "part-srod"
+                    },
+                    {
+                        "pitch": 10,
+                        "yaw": 70,
+                        "type": "scene",
+                        "text": "Powrót do Korytarza Głównego",
+                        "sceneId": "part-srod"
+                    }
+                ]
+            },
+            "Korytarzstareskrzydlo1": {
+                "title": "Korytarz Stare Skrzydło 1",
+                "hfov": 330,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "images/image4.jpg",// też do zmiany
+                "hotSpots": [
+                    { 
+                        "pitch": 5, 
+                        "yaw": 130,
+                        "type": "scene",
+                        "text": "Przejdź do Korytarza Stare Skrzydło 2",
+                        "sceneId": "Korytarzstareskrzydlo2"
+                    },
+                    {
+                        "pitch": 10,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Powrót do Korytarza Głównego",
+                        "sceneId": "part-srod"
+                    }
+                ]
+            },
+            "Korytarzstareskrzydlo2": {
+                "title": "Korytarz Stare Skrzydło 2",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "images/image0.jpg", 
+                "hotSpots": [
+                    { 
+                        "pitch": 5, 
+                        "yaw": 130,
+                        "type": "scene",
+                        "text": "Powrót do Korytarza Stare Skrzydło 1",
+                        "sceneId": "Korytarzstareskrzydlo1"
+                    },
+                    {
+                        "pitch": 10,
+                        "yaw": 0,
+                        "type": "scene",
+                        "sceneId": "korytarzstareskrzydlo3" //zdjecie nie dokonczone pls wait
+                    }
+                ]
+            },
+            "part-noweskrzydl1": {
+                "title": "Nowe Skrzydło",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "zd/brakzdj.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -15,
+                        "yaw": 135,
+                        "type": "scene",
+                        "text": "Na dół",
+                        "sceneId": "korpuch"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Idź dalej",
+                        "sceneId": "part-noweskrzydl2"
+                    }
+                ]
+
+            },
+            "part-noweskrzydl2": {
+                "title": "Nowe Skrzydło",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "zd/part-noweskrzydl2.jpg",
+                "hotSpots": [
+                   {
+                        "pitch": 0,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Idź dalej",
+                        "sceneId": "part-noweskrzydl3"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Wróć",
+                        "sceneId": "part-noweskrzydl1"
+                    }
+                ]
+            },
+            "part-noweskrzydl3": {
+                "title": "Nowe Skrzydło",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "zd/part-noweskrzydl3.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Łącznik",
+                        "sceneId": "noweskrzydl-lacznik1"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Wróć",
+                        "sceneId": "part-noweskrzydl2"
+                    }
+                ]
+
+            },
+            "noweskrzydl-lacznik1": {
+                "title": "Łącznik",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "zd/noweskrzydl-lacznik1.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Idź dalej",
+                        "sceneId": "noweskrzydl-lacznik2"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Wróć",
+                        "sceneId": "part-noweskrzydl3"
+                    }
+                ]
+            },
+            "noweskrzydl-lacznik2": {
+                "title": "Łącznik",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "zd/noweskrzydl-lacznik2.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Idź dalej",
+                        "sceneId": "noweskrzydl-lacznik3"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Wróć",
+                        "sceneId": "noweskrzydl-lacznik1"
+                    }
+                ]
+            },
+            "noweskrzydl-lacznik3": {
+                "title": "Łącznik",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "zd/noweskrzydl-lacznik3.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Idź dalej",
+                        "sceneId": "noweskrzydl-lacznik4"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Wróć",
+                        "sceneId": "noweskrzydl-lacznik2"
+                    }
+                ]
+            },
+            "noweskrzydl-lacznik4": {
+                "title": "Łącznik",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "zd/noweskrzydl-lacznik4.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Idź dalej",
+                        "sceneId": "noweskrzydl-szatnie"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Wróć",
+                        "sceneId": "noweskrzydl-lacznik3"
+                    }
+                ]
+            },
+            "noweskrzydl-szatnie": {
+                "title": "Szatnie",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "zd/noweskrzydl-szatnie.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Wróć",
+                        "sceneId": "noweskrzydl-lacznik4"
+                    }
+                ]
+            },
+            "part-1-schody": {
+                "title": "Schody na I piętro",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 130,
+                "type": "equirectangular",
+                "panorama": "zd/part-1-schody.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 15,
+                        "yaw": 150,
+                        "type": "scene",
+                        "text": " Na I piętro",
+                        "sceneId": "1pietr-srod"
+                    },
+                    {
+                        "pitch": 15,
+                        "yaw": 110,
+                        "type": "scene",
+                        "text": " Na I piętro",
+                        "sceneId": "1pietr-srod"
+                    },
+                    {
+                        "pitch": -15,
+                        "yaw": 130,
+                        "type": "scene",
+                        "text": "Wróć",
+                        "sceneId": "part-srod"
+                    }
+                ]
+            },
+            "1pietr-srod": {
+                "title": "I piętro",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 25,
+                "type": "equirectangular",
+                "panorama": "zd/1pietr-srod.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Wróć na dół",
+                        "sceneId": "part-1-schody"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 60,
+                        "type": "scene",
+                        "text": "Wróć na dół",
+                        "sceneId": "part-1-schody"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 25,
+                        "type": "scene",
+                        "text": "Na II piętro",
+                        "sceneId": "1-2pietr-schody"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 120,
+                        "type": "scene",
+                        "text": "Stare skrzydło",
+                        "sceneId": "1pietr-stareskrzydl3" 
+                    }
+                ]
+            },
+            "1-2pietr-schody": {
+                "title": "Schody na II piętro",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 130,
+                "type": "equirectangular",
+                "panorama": "zd/1-2pietr-schody.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 15,
+                        "yaw": 150,
+                        "type": "scene",
+                        "text": " Na II piętro",
+                        "sceneId": "2pietr-srod"
+                    },
+                    {
+                        "pitch": 15,
+                        "yaw": 110,
+                        "type": "scene",
+                        "text": " Na II piętro",
+                        "sceneId": "2pietr-srod"
+                    },
+                    {
+                        "pitch": -15,
+                        "yaw": 130,
+                        "type": "scene",
+                        "text": "Wróć",
+                        "sceneId": "1pietr-srod"
+                    }
+                ]
+            },
+            "2pietr-srod": {
+                "title": "II piętro",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 55,
+                "type": "equirectangular",
+                "panorama": "zd/2pietr-srod.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": 10,
+                        "type": "scene",
+                        "text": "Wróć na dół",
+                        "sceneId": "1-2pietr-schody"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 10,
+                        "type": "scene",
+                        "text": "Wróć na dół",
+                        "sceneId": "1-2pietr-schody"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 25,
+                        "type": "scene",
+                        "text": "Na III piętro",
+                        "sceneId": "2-3pietr-schody"
+                    }
+                ]
+            },
+   
+  "parter-stareskrzydl1": {
+    "title": "Stare Skrzydło",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "zd/parter-stareskrzydl1.jpg",
+    "hotSpots": [
+      {
+        "pitch": 0,
+        "yaw": -30,
+        "type": "scene",
+        "text": "przejdź",
+        "sceneId": "parter-stareskrzydl2"
+      },
+      {
+        "pitch": -5,
+        "yaw": 150,
+        "type": "scene",
+        "text": "Wróć",
+        "sceneId": "part-srod"
+      }
+    ]
+  },
+  "parter-stareskrzydl2": {
+    "title": "Stare Skrzydło 2",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "zd/parter-stareskrzydl2.jpg",
+    "hotSpots": [
+      {
+        "pitch": 0,
+        "yaw": -35,
+        "type": "scene",
+        "text": "przejdź",
+        "sceneId": "parter-stareskrzydl3"
+      },
+      {
+        "pitch": 0,
+        "yaw": 145,
+        "type": "scene",
+        "text": "Wróć",
+        "sceneId": "parter-stareskrzydl1" //tutaj jestem
+      }
+    ]
+  },
+  "parter-stareskrzydl3": {
+    "title": "Stare Skrzydło 3",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "zd/parter-stareskrzydl3.jpg",
+    "hotSpots": [
+      {
+        "pitch": 0,
+        "yaw": -10,
+        "type": "scene",
+        "text": "przejdź",
+        "sceneId": "parter-stareskrzydl4"
+      },
+      {
+        "pitch": 0,
+        "yaw": 210,
+        "type": "scene",
+        "text": "Wróć",
+        "sceneId": "parter-stareskrzydl2"
+      }
+    ]
+  },
+  "parter-stareskrzydl4": { //tutaj jestem
+    "title": "Stare Skrzydło 4",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "zd/parter-stareskrzydl4.jpg",
+    "hotSpots": [
+      {
+        "pitch": 20,
+        "yaw": -40,
+        "type": "scene",
+        "text": "przejdź",
+        "sceneId": "1pietr-stareskrzydl1"
+      },
+      {
+        "pitch": 0,
+        "yaw": 50,
+        "type": "scene",
+        "text": "Wróć",
+        "sceneId": "parter-stareskrzydl3"
+      }
+    ]
+  },
+  "1pietr-stareskrzydl1": {
+    "title": "1 Piętro Stare Skrzydło 1",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "zd/1pietr-stareskrzydl1.jpg",
+    "hotSpots": [
+      {
+        "pitch": 0,
+        "yaw": -85,
+        "type": "scene",
+        "text": "przejdź",
+        "sceneId": "1pietr-stareskrzydl2"
+      },
+      {
+        "pitch": -25,
+        "yaw": 185,
+        "type": "scene",
+        "text": "Wróć",
+        "sceneId": "parter-stareskrzydl4"
+      }
+    ]
+  },
+  "1pietr-stareskrzydl2": {
+    "title": "1 Piętro Stare Skrzydło 2",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "zd/1pietr-stareskrzydl2.jpg",
+    "hotSpots": [
+      {
+        "pitch": 0,
+        "yaw": 130,
+        "type": "scene",
+        "text": "przejdź",
+        "sceneId": "1pietr-stareskrzydl3"
+      },
+      {
+        "pitch": 0,
+        "yaw": 225,
+        "type": "scene",
+        "text": "Wróć",
+        "sceneId": "1pietr-stareskrzydl1"
+      }
+    ]
+  },
+  "1pietr-stareskrzydl3": {
+    "title": "1 Piętro Stare Skrzydło 3",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "zd/1pietr-stareskrzydl3.jpg",
+    "hotSpots": [
+      {
+        "pitch": 0,
+        "yaw": -20,
+        "type": "scene",
+        "text": "Wróć",
+        "sceneId": "1pietr-stareskrzydl2"
+      },
+      {
+        "pitch": 0,
+        "yaw": 160,
+        "type": "scene",
+        "text": "Przejdź",
+        "sceneId": "1pietr-srod"
+      }
+    ]
+  }
+
+
+
+
+
+
+        } //wazne nawiasy nie usuwac
+    });
+
+
+    function goToScene() {
+        const searchInput = document.getElementById("searchInput").value.toLowerCase();
+        const sceneIds = Object.keys(viewer.getConfig().scenes);
+        const matchingScene = sceneIds.find(sceneId => sceneId.toLowerCase().includes(searchInput));
+        if (matchingScene) {
+            viewer.loadScene(matchingScene);
+        } else {
+            alert("Nie znaleziono sceny!"); //naprawie to jak będą sale ale teraz mi się nie chce 
+        }
+    }
+// ]]></script></body>
+</html>
+    
