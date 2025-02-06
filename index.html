@@ -648,7 +648,7 @@
         "yaw": 145,
         "type": "scene",
         "text": "Wróć",
-        "sceneId": "parter-stareskrzydl1" //tutaj jestem
+        "sceneId": "parter-stareskrzydl1" 
       }
     ]
   },
@@ -676,7 +676,7 @@
       }
     ]
   },
-  "parter-stareskrzydl4": { //tutaj jestem
+  "parter-stareskrzydl4": {
     "title": "Stare Skrzydło 4",
     "hfov": 180,
     "pitch": 0,
@@ -783,15 +783,31 @@
 
 
     function goToScene() {
-        const searchInput = document.getElementById("searchInput").value.toLowerCase();
-        const sceneIds = Object.keys(viewer.getConfig().scenes);
-        const matchingScene = sceneIds.find(sceneId => sceneId.toLowerCase().includes(searchInput));
-        if (matchingScene) {
-            viewer.loadScene(matchingScene);
-        } else {
-            alert("Nie znaleziono sceny!"); 
-        }
+    const searchInput = document.getElementById("searchInput").value.toLowerCase();
+    const sceneMapping = {
+        "sala 1": "1pietr-stareskrzydl3",
+        "sala 2": "room2", 
+        "sala 3": "room3",
+        "korytarz": "hallway",
+
+
+    };
+
+ 
+    if (sceneMapping[searchInput]) {
+        viewer.loadScene(sceneMapping[searchInput]);
+        return;
     }
+
+  
+    const sceneIds = Object.keys(viewer.getConfig().scenes);
+    const matchingScene = sceneIds.find(sceneId => sceneId.toLowerCase().includes(searchInput));
+    if (matchingScene) {
+        viewer.loadScene(matchingScene);
+    } else {
+        alert("Nie znaleziono sceny!"); 
+    }
+}
 // ]]></script></body>
 </html>
     
