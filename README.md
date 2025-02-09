@@ -1,10 +1,15 @@
 # Virtual Walk - I LO im. Stanisława Staszica w Chrzanowie
 
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/AndreansxTech/Staszic360?style=for-the-badge&logo=github)
+
+
 An interactive virtual tour of the No. 1 High School in Chrzanów named after Stanisław Staszic.
 
 ## 🌐 Live Demo
 
-Visit the virtual tour at: [https://staszic-virtual-walk.pages.dev](https://staszic-virtual-walk.pages.dev)
+Visit the virtual tour at the: [staszic-virtual-walk](https://staszic-virtual-walk.pages.dev) website !
 
 ## 📝 Description
 
