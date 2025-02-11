@@ -189,14 +189,9 @@
                     { 
                         "pitch": -5, 
                         "yaw": 95,
-                        "type": "info",
-                        "text": "Sklepik Szkolny"
-                    },
-                    { 
-                        "pitch": -5, 
-                        "yaw": 298,
-                        "type": "info",
-                        "text": "Sekretariat"
+                        "type": "scene",
+                        "text": "Sklepik Szkolny",
+                        "sceneId": "Sklepik"
                     },
                     {
                         "pitch": 180,
@@ -204,9 +199,83 @@
                         "type": "scene",
                         "text": "Powrót do Korytarza",
                         "sceneId": "korpuch"
+                    },
+                    { 
+                        "pitch": -5, 
+                        "yaw": 70,
+                        "type": "scene",
+                        "sceneId": "sekretariat",
+                        "text": "sekretariat"
+                    }
+
+                ]
+            },
+            "sekretariat": {
+                "title": "sekretariat",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "zd/sekretariat.jpg",
+                "hotSpots": [
+                    { 
+                        "pitch": -5, 
+                        "yaw": 160,
+                        "type": "scene",
+                        "text": "biuro dyrektora",
+                        "sceneId": "dyrektor"
+                    },
+                    { 
+                        "pitch": -5, 
+                        "yaw": 50,
+                        "type": "scene",
+                        "text": "powrót",
+                        "sceneId": "niebieskiDywan"
+                    }
+
+                ]
+            },
+             "dyrektor": {
+                "title": "Gabinet dyrektora",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": -70,
+                "type": "equirectangular",
+                "panorama": "zd/dyrektor.jpg",
+                "hotSpots": [
+                    { 
+                        "pitch": -5, 
+                        "yaw": 120,
+                        "type": "scene",
+                        "text": "sekretariat",
+                        "sceneId": "sekretariat"
                     }
                 ]
             },
+            "Sklepik": {
+                "title": "Sklepik szkolny",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": -70,
+                "type": "equirectangular",
+                "panorama": "zd/sklepik.jpg",
+                "hotSpots": [
+                    { 
+                        "pitch": -5, 
+                        "yaw": 160,
+                        "type": "scene",
+                        "text": "powrót",
+                        "sceneId": "niebieskiDywan"
+                    }
+                ]
+            },
+
+
+
+
+
+
+            
             "biblioteka": {
                 "title": "Biblioteka",
                 "hfov": 180,
@@ -238,53 +307,7 @@
                     }
                 ]
             },
-            "Korytarzstareskrzydlo1": {
-                "title": "Korytarz Stare Skrzydło 1",
-                "hfov": 330,
-                "pitch": 0,
-                "yaw": 100,
-                "type": "equirectangular",
-                "panorama": "images/image4.jpg",// też do zmiany
-                "hotSpots": [
-                    { 
-                        "pitch": 5, 
-                        "yaw": 130,
-                        "type": "scene",
-                        "text": "Przejdź do Korytarza Stare Skrzydło 2",
-                        "sceneId": "Korytarzstareskrzydlo2"
-                    },
-                    {
-                        "pitch": 10,
-                        "yaw": 0,
-                        "type": "scene",
-                        "text": "Powrót do Korytarza Głównego",
-                        "sceneId": "part-srod"
-                    }
-                ]
-            },
-            "Korytarzstareskrzydlo2": {
-                "title": "Korytarz Stare Skrzydło 2",
-                "hfov": 180,
-                "pitch": 0,
-                "yaw": 100,
-                "type": "equirectangular",
-                "panorama": "images/image0.jpg", 
-                "hotSpots": [
-                    { 
-                        "pitch": 5, 
-                        "yaw": 130,
-                        "type": "scene",
-                        "text": "Powrót do Korytarza Stare Skrzydło 1",
-                        "sceneId": "Korytarzstareskrzydlo1"
-                    },
-                    {
-                        "pitch": 10,
-                        "yaw": 0,
-                        "type": "scene",
-                        "sceneId": "korytarzstareskrzydlo3" //zdjecie nie dokonczone pls wait
-                    }
-                ]
-            },
+           
             "part-noweskrzydl1": {
                 "title": "Nowe Skrzydło",
                 "hfov": 180,
@@ -318,12 +341,6 @@
             },
             
       
-
-
-
-
-
-
             "part-noweskrzydl2": {
                 "title": "Nowe Skrzydło",
                 "hfov": 180,
@@ -594,16 +611,10 @@
                 "type": "equirectangular",
                 "panorama": "zd/2pietr-srod.jpg",
                 "hotSpots": [
+            
                     {
                         "pitch": 0,
-                        "yaw": 10,
-                        "type": "scene",
-                        "text": "Wróć na dół",
-                        "sceneId": "1-2pietr-schody"
-                    },
-                    {
-                        "pitch": 0,
-                        "yaw": 10,
+                        "yaw": 70,
                         "type": "scene",
                         "text": "Wróć na dół",
                         "sceneId": "1-2pietr-schody"
@@ -617,18 +628,26 @@
                     },
                     {
                         "pitch": 0,
-                        "yaw": 50,
+                        "yaw": 157,
                         "type": "scene",
                         "text": "sala konferencyjna",
                         "sceneId": "konf2pietro"
                     },
                     {
                         "pitch": 0,
-                        "yaw": 10,
+                        "yaw": -67,
                         "type": "scene",
                         "text": "sala konferencyjna",
                         "sceneId": "konf2pietro"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 135,
+                        "type": "scene",
+                        "text": "korytarz",
+                        "sceneId": "2petrostareskrzyd1" 
                     }
+
                 ]
             },
    
@@ -653,9 +672,34 @@
         "type": "scene",
         "text": "Wróć",
         "sceneId": "part-srod"
+      },
+      {
+        "pitch": 0,
+        "yaw": 60,
+        "type": "scene",
+        "text": "Sala numer 8",
+        "sceneId": "sala8"
       }
     ]
   },
+  "sala8": {
+    "title": "Sala 8",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "zd/sala8.jpg",
+    "hotSpots": [
+    {
+        "pitch": 0,
+        "yaw": -85,
+        "type": "scene",
+        "text": "Wyjdź na korytarz",
+        "sceneId": "parter-stareskrzydl1"
+      }
+    ]
+    },
+
   "parter-stareskrzydl2": {
     "title": "Stare Skrzydło 2",
     "hfov": 180,
@@ -810,21 +854,160 @@
     "hotSpots": [
       {
         "pitch": 0,
-        "yaw": -20,
+        "yaw": -15,
         "type": "scene",
         "text": "Wróć na korytarz",
         "sceneId": "2pietr-srod"
       },
       {
         "pitch": 0,
-        "yaw": 160,
+        "yaw": 85,
         "type": "scene",
         "text": "wróć na korytarz",
         "sceneId": "2pietr-srod"
       }
     ]
-  }
+  },
+  "2petrostareskrzyd1": {
+    "title": "korytarz",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "zd/2petrostareskrzyd1.jpg",
+    "hotSpots": [
+      {
+        "pitch": -1,
+        "yaw": -213,
+        "type": "scene",
+        "text": "Wróć na korytarz",
+        "sceneId": "2pietr-srod"
+      },
+      {
+        "pitch": 0,
+        "yaw": -30,
+        "type": "scene",
+        "text": "korytarz",
+        "sceneId": "2petrostareskrzyd2"
+      }
+    ]
+  },
+  "2petrostareskrzyd2": {
+    "title": "korytarz",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "zd/2petrostareskrzyd2.jpg",
+    "hotSpots": [
+      {
+        "pitch": -1,
+        "yaw": 225,
+        "type": "scene",
+        "text": "Wróć na korytarz",
+        "sceneId": "2petrostareskrzyd1"
+      },
+      {
+        "pitch": 0,
+        "yaw": 30,
+        "type": "scene",
+        "text": "wyjdź na olimp",
+        "sceneId": "Olimp 1"
+      },
+      {
+        "pitch": 0,
+        "yaw": 133,
+        "type": "scene",
+        "text": "sala 46",
+        "sceneId": "sala 46"
+      },
+      {
+        "pitch": 0,
+        "yaw": 50,
+        "type": "scene",
+        "text": "sala 47",
+        "sceneId": "sala 47"
+      }
+    ]
+  },
+  "sala 46": {
+    "title": "sala 46",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "zd/sala46.jpg",
+    "hotSpots": [
+      {
+        "pitch": -1,
+        "yaw": 65,
+        "type": "scene",
+        "text": "Wróć na korytarz",
+        "sceneId": "2petrostareskrzyd2"
+      }
+    ]
 
+    },
+    "sala 47": {
+    "title": "sala 47",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "zd/sala47.jpg",
+    "hotSpots": [
+      {
+        "pitch": -1,
+        "yaw": 20,
+        "type": "scene",
+        "text": "Wróć na korytarz",
+        "sceneId": "2petrostareskrzyd2"
+      }
+    ]
+
+    },
+    "Olimp 1": {
+    "title": "Olimp",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "zd/olimp1.jpg",
+    "hotSpots": [
+      {
+        "pitch": -20,
+        "yaw": 90,
+        "type": "scene",
+        "text": "Wróć na korytarz",
+        "sceneId": "2petrostareskrzyd2"
+      },
+      {
+        "pitch": 0,
+        "yaw": -10,
+        "type": "scene",
+        "text": "Wróć na korytarz",
+        "sceneId": "Olimp 2"
+      }
+    ]
+
+    }, 
+    "Olimp 2": {
+    "title": "Olimp",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "zd/olimp2.jpg",
+    "hotSpots": [
+        {
+        "pitch": 0,
+        "yaw": 40,
+        "type": "scene",
+        "text": "Wróć na korytarz",
+        "sceneId": "Olimp 1"
+        }
+    ]
+    }
 
 
 
@@ -840,8 +1023,8 @@
     function goToScene() {
     const searchInput = document.getElementById("searchInput").value.toLowerCase();
     const sceneMapping = {
-        "sala 1": "1pietr-stareskrzydl3",
-        "sala 2": "room2", 
+        "8": "sala8",
+        "46": "sala 46", 
         "sala 3": "room3",
         "korytarz": "hallway",
         "44": "konf2pietro",
