@@ -29,7 +29,7 @@
     <div id="welcomeScreen" class="fixed inset-0 bg-gray-200 bg-opacity-70 backdrop-blur-sm flex justify-center items-center z-50">
         <div class="p-6 bg-white rounded-xl shadow-inner flex flex-col items-center space-y-4">
             <h1 class="text-3xl font-semibold text-gray-800">Zapraszamy do Staszic360!</h1>
-            <h3 class="text-lg text-gray-600 text-center">Nawiguj po szkole klikając na strzałki aby przejść dalej<br>Jeśli coś się zawiesi albo wystąpi błąd, odśwież stronę.</h3>
+            <h3 class="text-lg text-gray-600 text-center">Nawiguj po szkole klikając na strzałki aby przejść dalej<br>Wyszukuj klasy wpisując nazwy w ten sposób: "16a" lub "sala 16a"</br>Jeśli coś się zawiesi albo wystąpi błąd, odśwież stronę.</h3>
             <button id="welcomeButton" class="px-4 py-2 bg-blue-500 text-white rounded-xl shadow-md hover:bg-blue-600 transition">Zobacz Wirtualny spacer po szkole</button>
         </div>
     </div>
@@ -1112,6 +1112,12 @@
     const searchInput = document.getElementById("searchInput").value.toLowerCase();
     const sceneMapping = {
         "8": "sala8",
+        "16": "sala16p",
+        "sale 16": "sala16p",
+        "16a": "sala16a",
+        "sala 16a": "sala16a",
+        "16b": "sala16b",
+        "sala 16b": "sala16b",
         "46": "sala 46", 
         "sala 3": "room3",
         "korytarz": "hallway",
