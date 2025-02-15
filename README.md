@@ -19,7 +19,7 @@ This project provides an immersive virtual walking experience through the halls 
 
 ## 🖼️ Preview
 
-![Virtual Walk Preview](./additional-media/screen1.png)
+![Virtual Walk Preview](./additional-media/preview-gif.gif)
 
 ## 🚀 Features
 
