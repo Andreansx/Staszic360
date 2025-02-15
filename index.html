@@ -8,58 +8,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.4/build/pannellum.js"></script>
     <style>
         .body, html {
             margin: 0;
             padding: 0;
-             height: 100%;
-             overflow: hidden;
-        
+            height: 100%;
+            overflow: hidden;
         }
         #panorama {
-               width: 100%;
-                height: 103%;
-                position: absolute;
-                top: -23px;
-                left: 0;
-                margin: 0;
-                padding: 0;
-        }
-        .search-container {
+            width: 100%;
+            height: 103%;
             position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 1000;
-        }
-        .search-container input[type="text"] {
-            padding: 5px;
-            font-size: 20px;
-            font-family: 'Ubuntu', sans-serif;
-        }
-        .search-container button {
-            padding: 5px;
-            font-size: 16px;
-        }
-        .butn { 
-            background-color: #6b85eb;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 20px;
-            margin: 4px 2px;
-            cursor: pointer;
-            font-family: 'Ubuntu', sans-serif;
-
+            top: -23px;
+            left: 0;
         }
     </style>
 </head>
-<body><div id="panorama">&nbsp;</div>
-
-<div class="search-container"><input id="searchInput" type="text" /><button class="butn" onclick="goToScene()">Przejdź</button></div>
+<body class="relative">
+    <div id="welcomeScreen" class="fixed inset-0 bg-gray-200 bg-opacity-70 backdrop-blur-sm flex justify-center items-center z-50">
+        <div class="p-6 bg-white rounded-xl shadow-inner flex flex-col items-center space-y-4">
+            <h1 class="text-3xl font-semibold text-gray-800">Zapraszamy do Staszic360!</h1>
+            <h3 class="text-lg text-gray-600 text-center">Nawiguj po szkole klikając na strzałki aby przejść dalej<br>Jeśli coś się zawiesi albo wystąpi błąd, odśwież stronę.</h3>
+            <button id="welcomeButton" class="px-4 py-2 bg-blue-500 text-white rounded-xl shadow-md hover:bg-blue-600 transition">Zobacz Wirtualny spacer po szkole</button>
+        </div>
+    </div>
+    <div id="panorama">&nbsp;</div>
+    <div class="absolute top-4 right-4 z-50 flex space-x-2">
+        <input id="searchInput" type="text" placeholder="Wyszukaj scenę..." class="px-4 py-2 border border-gray-300 rounded-lg shadow-inner focus:outline-none focus:ring focus:border-blue-300"/>
+        <button onclick="goToScene()" class="px-4 py-2 bg-blue-500 text-white rounded-xl shadow-md hover:bg-blue-600 transition">Przejdź</button>
+    </div>
 <script type="text/javascript">
 
     const viewer = pannellum.viewer('panorama', {
@@ -75,7 +54,7 @@
                 "title": "Portiernia",
                 "hfov": 180,
                 "pitch": 0,
-                "yaw": 100,
+                "yaw": -30,
                 "type": "equirectangular",
                 "panorama": "media/0portierniawejscie.jpg",
                 "autoLoad": true,
@@ -1052,6 +1031,10 @@
     });
 
 
+    document.getElementById("welcomeButton").addEventListener("click", function() {
+        document.getElementById("welcomeScreen").style.display = "none";
+    });
+    
     function goToScene() {
     const searchInput = document.getElementById("searchInput").value.toLowerCase();
     const sceneMapping = {
@@ -1081,4 +1064,3 @@
 }
 // ]]></script></body>
 </html>
-    
