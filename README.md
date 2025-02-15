@@ -7,7 +7,7 @@
 
 
 An interactive virtual tour of the No. 1 High School in Chrzanów named after Stanisław Staszic. </br>
-In a group of three people we spent a lot of time taking photos of the school corridors, classrooms etc. We were taking the photos using panoramic option in our phones cameras. After some time we figured out that those photos looked quite bad. So we bought a 360 degree Samsung Gear camera to capture the school in overall better quality. This whole project is made fully without any financial gain
+In a group of three people we spent a lot of time taking photos of the school corridors, classrooms etc. We were taking the photos using panoramic option in our phones cameras. After some time we figured out that those photos looked quite bad. So we bought a 360 degree Samsung Gear camera to capture the school in overall better quality. This whole project is made fully without any financial gain. All photos taken in the school are available in untouched quality in the <a href="./media/">media</a> folder.
 
 ## 🌐 Live Demo
 
