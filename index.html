@@ -34,7 +34,7 @@
         </div>
     </div>
     <div id="panorama">&nbsp;</div>
-    <div class="absolute top-4 right-4 z-50 flex space-x-2">
+    <div id="searchDiv" class="absolute top-4 right-4 z-50 flex space-x-2 hidden">
         <input id="searchInput" type="text" placeholder="Wyszukaj scenę..." class="px-4 py-2 border border-gray-300 rounded-lg shadow-inner focus:outline-none focus:ring focus:border-blue-300"/>
         <button onclick="goToScene()" class="px-4 py-2 bg-blue-500 text-white rounded-xl shadow-md hover:bg-blue-600 transition">Przejdź</button>
     </div>
@@ -1032,6 +1032,7 @@
 
     document.getElementById("welcomeButton").addEventListener("click", function() {
         document.getElementById("welcomeScreen").style.display = "none";
+        document.getElementById("searchDiv").classList.remove("hidden");
         viewer.resize();
     });
     
