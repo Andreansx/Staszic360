@@ -49,13 +49,13 @@
     <div id="welcomeScreen" class="fixed inset-0 bg-gray-200 bg-opacity-70 backdrop-blur-sm flex justify-center items-center z-50">
         <div class="p-6 bg-white rounded-xl shadow-inner flex flex-col items-center space-y-4">
             <h1 class="text-3xl font-semibold text-gray-800">Zapraszamy do Staszic360!</h1>
-            <h3 class="text-lg text-gray-600 text-center">Nawiguj po szkole klikając na strzałki aby przejść dalej<br>Wyszukuj klasy wpisując nazwy w ten sposób: "16a" lub "sala 16a"</br>Jeśli coś się zawiesi albo wystąpi błąd, odśwież stronę.</h3>
+            <h3 class="text-lg text-gray-600 text-center">Nawiguj po szkole klikając na strzałki aby przejść dalej<br>Wyszukuj klasy wpisując nazwy w ten sposób: "16a", "sala 16a" lub "sklepik"</br>Jeśli coś się zawiesi albo wystąpi błąd, odśwież stronę.</h3>
             <button id="welcomeButton" class="px-4 py-2 bg-blue-500 text-white rounded-xl shadow-md hover:bg-blue-600 transition">Zobacz Wirtualny spacer po szkole</button>
         </div>
     </div>
     <div id="panorama">&nbsp;</div>
     <div id="searchDiv" class="absolute top-4 right-4 z-50 flex space-x-2 hidden">
-        <input id="searchInput" type="text" placeholder="Wyszukaj scenę..." class="px-4 py-2 border border-gray-300 rounded-lg shadow-inner focus:outline-none focus:ring focus:border-blue-300 text-lg font-medium"/>
+        <input id="searchInput" type="text" placeholder="Wyszukaj salę... np. 16a" class="px-4 py-2 border border-gray-300 rounded-lg shadow-inner focus:outline-none focus:ring focus:border-blue-300 text-lg font-medium"/>
         <button onclick="goToScene()" class="px-4 py-2 bg-blue-500 text-white rounded-xl shadow-md hover:bg-blue-600 transition text-lg font-semibold">Przejdź</button>
     </div>
 <script type="text/javascript">
@@ -145,7 +145,7 @@
                 ]
             },
             "korpuch": {
-                "title": "Przejście dla pieszych",
+                "title": "Korytarz",
                 "hfov": 180,
                 "pitch": 0,
                 "yaw": 100,
@@ -219,7 +219,7 @@
                         "pitch": -5, 
                         "yaw": 160,
                         "type": "scene",
-                        "text": "biuro dyrektora",
+                        "text": "Biuro pani Dyrektor",
                         "sceneId": "dyrektor"
                     },
                     { 
@@ -233,7 +233,7 @@
                 ]
             },
              "dyrektor": {
-                "title": "Gabinet dyrektora",
+                "title": "Gabinet pani Dyrektor",
                 "hfov": 180,
                 "pitch": 0,
                 "yaw": -70,
@@ -253,7 +253,7 @@
                 "title": "Sklepik szkolny",
                 "hfov": 180,
                 "pitch": 0,
-                "yaw": -70,
+                "yaw": -30,
                 "type": "equirectangular",
                 "panorama": "media/sklepik.jpg",
                 "hotSpots": [
@@ -266,13 +266,6 @@
                     }
                 ]
             },
-
-
-
-
-
-
-            
             "biblioteka": {
                 "title": "Biblioteka",
                 "hfov": 180,
@@ -309,35 +302,52 @@
                 "title": "Nowe Skrzydło",
                 "hfov": 180,
                 "pitch": 0,
-                "yaw": 100,
+                "yaw": 0,
                 "type": "equirectangular",
                 "panorama": "media/part-noweskrzydl1.jpg",
                 "hotSpots": [
                     {
                         "pitch": -15,
-                        "yaw": 135,
+                        "yaw": -140,
                         "type": "scene",
                         "text": "Na dół",
                         "sceneId": "korpuch"
                     },
                     {
-                        "pitch": 0,
-                        "yaw": 0,
+                        "pitch": -3,
+                        "yaw": 10,
                         "type": "scene",
                         "text": "Idź dalej",
                         "sceneId": "part-noweskrzydl2"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": -20,
+                        "type": "scene",
+                        "text": "Sala 24",
+                        "sceneId": "sala24"
                     }
-               
-               
-               
-               
-               
                
                 ]
 
             },
-            
-      
+            "sala24":{
+                "title": "Sala 24",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 200,
+                "type": "equirectangular",
+                "panorama": "media/sala24.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -4,
+                        "yaw": -107,
+                        "type": "scene",
+                        "text": "Wróć na korytarz",
+                        "sceneId": "part-noweskrzydl1"
+                    }
+                ]
+            },
             "part-noweskrzydl2": {
                 "title": "Nowe Skrzydło",
                 "hfov": 180,
@@ -348,14 +358,14 @@
                 "hotSpots": [
                    {
                         "pitch": 0,
-                        "yaw": 0,
+                        "yaw": 52,
                         "type": "scene",
                         "text": "Idź dalej",
                         "sceneId": "part-noweskrzydl3"
                     },
                     {
-                        "pitch": 0,
-                        "yaw": 0,
+                        "pitch": -5,
+                        "yaw": -130,
                         "type": "scene",
                         "text": "Wróć",
                         "sceneId": "part-noweskrzydl1"
@@ -372,20 +382,44 @@
                 "hotSpots": [
                     {
                         "pitch": 0,
-                        "yaw": 0,
+                        "yaw": 58,
                         "type": "scene",
                         "text": "Łącznik",
                         "sceneId": "noweskrzydl-lacznik1"
                     },
                     {
                         "pitch": 0,
-                        "yaw": 0,
+                        "yaw": -120,
                         "type": "scene",
                         "text": "Wróć",
                         "sceneId": "part-noweskrzydl2"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": -22,
+                        "type": "scene",
+                        "text": "Sala 26",
+                        "sceneId": "sala26"
                     }
                 ]
 
+            },
+            "sala26":{
+                "title": "Sala 26",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 0,
+                "type": "equirectangular",
+                "panorama": "media/sala26.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -4,
+                        "yaw": -75,
+                        "type": "scene",
+                        "text": "Wróć na korytarz",
+                        "sceneId": "part-noweskrzydl3"
+                    }
+                ]
             },
             "noweskrzydl-lacznik1": {
                 "title": "Łącznik",
@@ -610,8 +644,8 @@
             "2pietr-srod": {
                 "title": "II piętro",
                 "hfov": 180,
-                "pitch": 0,
-                "yaw": 55,
+                "pitch": 10,
+                "yaw":43,
                 "type": "equirectangular",
                 "panorama": "media/2pietr-srod.jpg",
                 "hotSpots": [
@@ -666,15 +700,22 @@
                 "title": "Nowe skrzydło przejście",
                 "hfov": 180,
                 "pitch": 0,
-                "yaw": 0,
+                "yaw": 145,
                 "type": "equirectangular",
                 "panorama": "media/2pietr-noweskrzydl-schod.jpg",
                 "hotSpots": [
                     {
-                        "pitch": -10,
+                        "pitch": -5,
                         "yaw": -130,
                         "type": "scene",
                         "text": "Wróć",
+                        "sceneId": "2pietr-srod"
+                    },
+                    {
+                        "pitch": 10,
+                        "yaw": 143,
+                        "type": "scene",
+                        "text": "Na górę",
                         "sceneId": "2pietr-srod"
                     }
                 ]
@@ -684,7 +725,7 @@
     "title": "Stare Skrzydło",
     "hfov": 180,
     "pitch": 0,
-    "yaw": 0,
+    "yaw": -27,
     "type": "equirectangular",
     "panorama": "media/parter-stareskrzydl1.jpg",
     "hotSpots": [
@@ -715,7 +756,7 @@
     "title": "Sala 8",
     "hfov": 180,
     "pitch": 0,
-    "yaw": 0,
+    "yaw": -100,
     "type": "equirectangular",
     "panorama": "media/sala8.jpg",
     "hotSpots": [
@@ -946,10 +987,10 @@
     ]
   },
   "konf2pietro": {
-    "title": "sala konferencyjna",
+    "title": "Sala konferencyjna",
     "hfov": 180,
     "pitch": 0,
-    "yaw": 0,
+    "yaw": 130,
     "type": "equirectangular",
     "panorama": "media/konf2pietro.jpg",
     "hotSpots": [
@@ -1110,13 +1151,6 @@
     ]
     }
 
-
-
-
-
-
-
-
         } //wazne nawiasy nie usuwac
     });
 
@@ -1125,6 +1159,7 @@
         document.getElementById("welcomeScreen").style.display = "none";
         document.getElementById("searchDiv").classList.remove("hidden");
         viewer.resize();
+        preloadImages();
     });
     
     function showErrorModal() {
@@ -1138,7 +1173,13 @@
     function goToScene() {
         const searchInput = document.getElementById("searchInput").value.toLowerCase();
         const sceneMapping = {
+            "Sklepik": "Sklepik",
+            "Stołówka": "Sklepik",
+            "stolowka": "Sklepik",
+            "sekretariat": "sekretariat",
             "8": "sala8",
+            "sala 8": "sala8",
+            "sala8": "sala8",
             "16": "sala16p",
             "sale 16": "sala16p",
             "16a": "sala16a",
@@ -1149,10 +1190,14 @@
             "16 b": "sala16b",
             "sala 16b": "sala16b",
             "sala 16 b": "sala16b",
+            "24": "sala24",
+            "sala 24": "sala24",
+            "26": "sala26",
+            "sala 26": "sala26",
             "46": "sala 46", 
-            "sala 3": "room3",
             "korytarz": "hallway",
             "44": "konf2pietro",
+            "sala 44": "konf2pietro",
         };
 
         if (sceneMapping[searchInput]) {
@@ -1168,5 +1213,34 @@
             showErrorModal();
         }
     }
-</script></body>
+
+    function preloadImages() {
+        const scenes = viewer.getConfig().scenes;
+        let loadedImages = 0;
+        const totalImages = Object.keys(scenes).length;
+        
+        const updateProgress = () => {
+            loadedImages++;
+            const progress = (loadedImages / totalImages) * 100;
+            const loadingMsg = document.querySelector('.pnlm-lmsg');
+            if (loadingMsg) {
+                loadingMsg.innerHTML = `Ładowanie zdjęć: ${Math.round(progress)}%`;
+            }
+            const lbarFill = document.querySelector('.pnlm-lbar-fill');
+            if (lbarFill) {
+                lbarFill.style.width = `${progress}%`;
+            }
+        };
+
+        Object.values(scenes).forEach(scene => {
+            if (scene.panorama) {
+                const img = new Image();
+                img.onload = updateProgress;
+                img.onerror = updateProgress;
+                img.src = scene.panorama;
+            }
+        });
+    }
+</script>
+</body>
 </html>
