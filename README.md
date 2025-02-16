@@ -1,4 +1,6 @@
-# Virtual Walk - I LO im. Stanisława Staszica w Chrzanowie
+    Read the README.md in English <a href="./additional-media/README-en.md">here</a>
+
+# Wirtualny Spacer - I LO im. Stanisława Staszica w Chrzanowie
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -6,39 +8,38 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/AndreansxTech/Staszic360?style=for-the-badge&logo=github)
 
 
-An interactive virtual tour of the No. 1 High School in Chrzanów named after Stanisław Staszic. </br>
-In a group of three people we spent a lot of time taking photos of the school corridors, classrooms etc. We were taking the photos using panoramic option in our phones cameras. After some time we figured out that those photos looked quite bad. So we bought a 360 degree Samsung Gear camera to capture the school in overall better quality. This whole project is made fully without any financial gain. All photos taken in the school are available in untouched quality in the <a href="./media/">media</a> folder.
+Interaktywny wirtualny spacer po I Liceum Ogólnokształcącym im. Stanisława Staszica w Chrzanowie. </br>
+W grupie trzech osób spędziliśmy dużo czasu robiąc zdjęcia korytarzy szkolnych, sal lekcyjnych itp. Robiliśmy zdjęcia za pomocą opcji panoramicznej w aparatach naszych telefonów. Po pewnym czasie zorientowaliśmy się, że te zdjęcia wyglądają właściwie dosyć źle. Więc kupiliśmy kamerę Samsung Gear 360, aby uchwycić szkołę w ogólnie lepszej jakości. Cały ten projekt jest realizowany w pełni bez żadnych korzyści finansowych. Wszystkie zdjęcia wykonane w szkole są dostępne w nieruszonej jakości w folderze <a href="./media/">media</a>.
 
-## 🌐 Live Demo
+## 🌐 Demo na żywo
 
-Visit the virtual tour at the: [Staszic360](https://staszic-virtual-walk.pages.dev) website !
+Odwiedź wirtualny spacer na stronie: [Staszic360](https://staszic-virtual-walk.pages.dev) !
 
-## 📝 Description
+## 📝 Opis
 
-This project provides an immersive virtual walking experience through the halls and facilities of I LO im. Stanisława Staszica in Chrzanów, Poland. Users can navigate through different parts of the school building, exploring classrooms, corridors, and other facilities. The website is fully adapted to accessibility standards
+Ten projekt zapewnia immersyjne doświadczenie wirtualnego spaceru po korytarzach i obiektach I LO im. Stanisława Staszica w Chrzanowie, Polska. Użytkownicy mogą nawigować po różnych częściach budynku szkoły, eksplorując sale lekcyjne, korytarze i inne obiekty. Strona internetowa jest w pełni dostosowana do standardów dostępności.
 
-## 🖼️ Preview
+## 🖼️ Podgląd
 
-![Virtual Walk Preview](./additional-media/preview-gif2.gif)
+![Podgląd Wirtualnego Spaceru](./additional-media/preview-gif2.gif)
 
-## 🚀 Features
+## 🚀 Funkcje
 
-- Interactive 360-degree views
-- Smooth navigation between different locations
-- High-quality panoramic images
-- Classroom search funcionality
-- Complete accessibility support
+- Interaktywny widok w 360 stopniach
+- Płynna nawigacja między różnymi lokalizacjami
+- Wysokiej jakości zdjęcia panoramiczne
+- Funkcjonalność wyszukiwania sal lekcyjnych
+- Pełna dostępność zgodnie z W3C
 
-## 🤝 Accessibility
+## 🤝 Dostępność
 
-This website features accessibility tools such as:
-- High contrast toggle
-- Animations turn off option
-- Text size changing
+Nasza strona wirtualnego spaceru zawiera wbudowane opcje dostępności, aby poprawić doświadczenie każdego użytkownika:
 
-It is fully accessible for every person visiting it.
+- **Tryb wysokiego kontrastu:** Przełącz na wysoki kontrast dla lepszej widoczności.
+- **Zmiana rozmiaru tekstu:** Zwiększ lub zmniejsz rozmiar tekstu dla lepszej czytelności.
+- **Przełącznik animacji:** Włącz lub wyłącz animacje, aby dostosować stronę do osobistych preferencji.
 
-## 🛠️ Technologies Used
+## 🛠️ Użyte technologie
 
 - HTML5
 - CSS3
@@ -46,6 +47,7 @@ It is fully accessible for every person visiting it.
 - Panellum.js 
 
 
-### Made with ❤️ by Michał Bańkowski, Mateusz Długaj and Gabriel Świątek 2024-2025
+### Stworzone z ❤️ przez Michała Bańkowskiego, Mateusza Długaja i Gabriela Świątka 2024-2025
 
-## This project is licensed under **MIT License** ( check <a href="./LICENSE">LICENSE</a>)
+## Ten projekt jest licencjonowany na podstawie **Licencji MIT** (sprawdź <a href="./LICENSE">LICENSE</a>)
+</div>
