@@ -46,5 +46,6 @@ It is fully accessible for every person visiting it.
 - Panellum.js 
 
 
-
 ### Made with ❤️ by Michał Bańkowski, Mateusz Długaj and Gabriel Świątek 2024-2025
+
+## This project is licensed under **MIT License** ( check <a href="./LICENSE">LICENSE</a>)
