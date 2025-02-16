@@ -221,18 +221,6 @@ div.pnlm-tooltip span,
     transition: font-size 0.2s ease;
 }
 
-body[data-text-scale="90"] .pnlm-tooltip span,
-body[data-text-scale="90"] .pnlm-title-box,
-body[data-text-scale="90"] .pnlm-author-box,
-body[data-text-scale="90"] .pnlm-load-box,
-body[data-text-scale="90"] .pnlm-panorama-info { font-size: 90%; }
-
-body[data-text-scale="150"] .pnlm-tooltip span,
-body[data-text-scale="150"] .pnlm-title-box,
-body[data-text-scale="150"] .pnlm-author-box,
-body[data-text-scale="150"] .pnlm-load-box,
-body[data-text-scale="150"] .pnlm-panorama-info { font-size: 150%; }
-
 body[data-text-scale="90"] .text-scalable,
 body[data-text-scale="90"] input.text-scalable,
 body[data-text-scale="90"] button.text-scalable,
