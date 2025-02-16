@@ -50,4 +50,3 @@ Nasza strona wirtualnego spaceru zawiera wbudowane opcje dostępności, aby popr
 ### Stworzone z ❤️ przez Michała Bańkowskiego, Mateusza Długaja i Gabriela Świątka 2024-2025
 
 ## Ten projekt jest licencjonowany na podstawie **Licencji MIT** (sprawdź <a href="./LICENSE">LICENSE</a>)
-</div>
