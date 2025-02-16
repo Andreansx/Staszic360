@@ -322,20 +322,34 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
     position: absolute;
     top: 4px;
     left: 40px;
-    background-color: #fff;
-    border: 1px solid #999;
-    border-color: rgba(0,0,0,0.4);
-    border-radius: 3px;
-    padding: 4px 8px;
+    background-color: #3B82F6;
+    border: none;
+    border-radius: 0.75rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
     z-index: 2;
-    font-size: 14px;
-    font-family: inherit;
+    font-size: 1.125rem;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
+    color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .pnlm-map-button:hover {
-    background-color: #f8f8f8;
+    background-color: #2563EB;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+.high-contrast .pnlm-map-button {
+    background-color: #000000 !important;
+    border: 3px solid #0066FF !important;
+    color: #FFFF00 !important;
+    font-weight: bold !important;
+}
+
+.high-contrast .pnlm-map-button:hover {
+    background-color: #333333 !important;
 }
 
 .pnlm-map-overlay {
