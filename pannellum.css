@@ -365,12 +365,21 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
     justify-content: center;
     align-items: center;
     padding: 20px;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .pnlm-map-container {
     position: relative;
     max-width: 90%;
     max-height: 90%;
+    border: 4px solid #3B82F6;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.high-contrast .pnlm-map-container {
+    border-color: #0066FF !important;
 }
 
 .pnlm-map-container img {
@@ -380,19 +389,24 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
 }
 
 .pnlm-map-close {
-    position: absolute;
-    top: -40px;
-    right: 0;
-    background: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
+    display: none;
 }
 
 .high-contrast .pnlm-map-button,
 .high-contrast .pnlm-map-close {
     background-color: #000000 !important;
     border: 3px solid #0066FF !important;
+    color: #FFFF00 !important;
+}
+
+.pnlm-map-hint {
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.high-contrast .pnlm-map-hint {
     color: #FFFF00 !important;
 }

@@ -55,8 +55,8 @@
         </div>
     </div>
     <div id="mapOverlay" class="pnlm-map-overlay">
+        <div class="pnlm-map-hint text-scalable">Kliknij dookoła aby zamknąć mapę</div>
         <div class="pnlm-map-container">
-            <button id="closeMap" class="pnlm-map-close text-scalable">Zamknij</button>
             <img src="./additional-media/mapa-szkoly-2020.jpg" alt="Mapa szkoły" />
         </div>
     </div>
@@ -1884,13 +1884,14 @@
         document.getElementById('mapOverlay').style.display = 'flex';
     });
 
-    document.getElementById('closeMap').addEventListener('click', function() {
-        document.getElementById('mapOverlay').style.display = 'none';
-    });
     document.getElementById('mapOverlay').addEventListener('click', function(e) {
-        if (e.target === this) {
+        if (e.target === this || e.target.classList.contains('pnlm-map-hint')) {
             this.style.display = 'none';
         }
+    });
+
+    document.querySelector('.pnlm-map-container').addEventListener('click', function(e) {
+        e.stopPropagation();
     });
 </script>
 </body>
