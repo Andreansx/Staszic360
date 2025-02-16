@@ -839,7 +839,7 @@
     "title": "Stare Skrzydło 2",
     "hfov": 180,
     "pitch": 0,
-    "yaw": 0,
+    "yaw": 10,
     "type": "equirectangular",
     "panorama": "media/parter-stareskrzydl2.jpg",
     "hotSpots": [
@@ -856,20 +856,44 @@
         "type": "scene",
         "text": "Wróć",
         "sceneId": "parter-stareskrzydl1" 
-      }
+      },
+        {
+            "pitch": 0,
+            "yaw": 66.5,
+            "type": "scene",
+            "text": "Sala numer 7",
+            "sceneId": "sala7"
+        }
     ]
   },
+    "sala7": {
+        "title": "Sala 7",
+        "hfov": 180,
+        "pitch": 0,
+        "yaw": -120,
+        "type": "equirectangular",
+        "panorama": "media/sala7.jpg",
+        "hotSpots": [
+        {
+            "pitch": 0,
+            "yaw": -148,
+            "type": "scene",
+            "text": "Wyjdź na korytarz",
+            "sceneId": "parter-stareskrzydl2"
+        }
+        ]
+        },
   "parter-stareskrzydl3": {
     "title": "Stare Skrzydło 3",
     "hfov": 180,
     "pitch": 0,
-    "yaw": 0,
+    "yaw": 100,
     "type": "equirectangular",
     "panorama": "media/parter-stareskrzydl3.jpg",
     "hotSpots": [
       {
         "pitch": 0,
-        "yaw": -10,
+        "yaw": -7,
         "type": "scene",
         "text": "Przejdź",
         "sceneId": "parter-stareskrzydl4"
@@ -880,9 +904,33 @@
         "type": "scene",
         "text": "Wróć",
         "sceneId": "parter-stareskrzydl2"
-      }
+      },
+        {
+            "pitch": 0,
+            "yaw": 102,
+            "type": "scene",
+            "text": "Sala numer 6",
+            "sceneId": "sala6"
+        }
     ]
   },
+    "sala6": {
+        "title": "Sala 6",
+        "hfov": 180,
+        "pitch": 0,
+        "yaw": -120,
+        "type": "equirectangular",
+        "panorama": "media/sala6.jpg",
+        "hotSpots": [
+        {
+            "pitch": -3,
+            "yaw": -145,
+            "type": "scene",
+            "text": "Wyjdź na korytarz",
+            "sceneId": "parter-stareskrzydl3"
+        }
+        ]
+        },
   "parter-stareskrzydl4": { //coś tu nie działa
     "title": "Stare Skrzydło 4",
     "hfov": 180,
@@ -1007,7 +1055,7 @@
     "title": "1 Piętro Stare Skrzydło 2",
     "hfov": 180,
     "pitch": 0,
-    "yaw": 0,
+    "yaw": 170,
     "type": "equirectangular",
     "panorama": "media/1pietr-stareskrzydl2.jpg",
     "hotSpots": [
@@ -1038,8 +1086,8 @@
   "sala18":{
     "title": "Sala 18",
     "hfov": 180,
-    "pitch": 0,
-    "yaw": 0,
+    "pitch": -5,
+    "yaw": -20,
     "type": "equirectangular",
     "panorama": "media/sala18.jpg",
     "hotSpots": [
@@ -1314,6 +1362,12 @@
             "Stołówka": "Sklepik",
             "stolowka": "Sklepik",
             "sekretariat": "sekretariat",
+            "6": "sala6",
+            "sala 6": "sala6",
+            "sala6": "sala6",
+            "7": "sala7",
+            "sala 7": "sala7",
+            "sala7": "sala7",
             "8": "sala8",
             "sala 8": "sala8",
             "sala8": "sala8",
@@ -1322,10 +1376,12 @@
             "16a": "sala16a",
             "16 a": "sala16a",
             "sala 16a": "sala16a",
+            "sala16a": "sala16a",
             "sala 16 a": "sala16a",
             "16b": "sala16b",
             "16 b": "sala16b",
             "sala 16b": "sala16b",
+            "sala16b": "sala16b",
             "sala 16 b": "sala16b",
             "24": "sala24",
             "sala 24": "sala24",
