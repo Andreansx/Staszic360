@@ -1774,32 +1774,21 @@
             showErrorModal();
         }
     }
-
     function preloadImages() {
         const scenes = viewer.getConfig().scenes;
+        const sceneValues = Object.values(scenes);
         let loadedImages = 0;
-        const totalImages = Object.keys(scenes).length;
+        const totalImages = sceneValues.length;
         
-        const updateProgress = () => {
-            loadedImages++;
-            const progress = (loadedImages / totalImages) * 100;
-            const loadingMsg = document.querySelector('.pnlm-lmsg');
-            if (loadingMsg) {
-                loadingMsg.innerHTML = `Ładowanie zdjęć: ${Math.round(progress)}%`;
-            }
-            const lbarFill = document.querySelector('.pnlm-lbar-fill');
-            if (lbarFill) {
-                lbarFill.style.width = `${progress}%`;
-            }
-        };
-
-        Object.values(scenes).forEach(scene => {
-            if (scene.panorama) {
-                const img = new Image();
-                img.onload = updateProgress;
-                img.onerror = updateProgress;
-                img.src = scene.panorama;
-            }
+        sceneValues.forEach(scene => {
+            const img = new Image();
+            img.src = scene.panorama;
+            img.onload = img.onerror = () => {
+                loadedImages++;
+                if (loadedImages === totalImages) {
+                    console.log("All images preloaded");
+                }
+            };
         });
     }
 
