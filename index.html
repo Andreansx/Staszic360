@@ -49,7 +49,7 @@
     <div id="welcomeScreen" class="fixed inset-0 bg-gray-200 bg-opacity-70 backdrop-blur-sm flex justify-center items-center z-50">
         <div class="p-6 bg-white rounded-xl shadow-inner flex flex-col items-center space-y-4">
             <h1 class="text-3xl font-semibold text-gray-800">Zapraszamy do Staszic360!</h1>
-            <h3 class="text-lg text-gray-600 text-center">Nawiguj po szkole klikając na strzałki aby przejść dalej<br>Wyszukuj klasy wpisując nazwy w ten sposób: "16a", "sala 16a" lub "sklepik"</br>Jeśli coś się zawiesi albo wystąpi błąd, odśwież stronę.</h3>
+            <h3 class="text-lg text-gray-600 text-center">Nawiguj po szkole klikając na strzałki aby przejść dalej<br>Wyszukuj klasy wpisując nazwy w ten sposób: "16a", "sala 16a" lub "sklepik"</br>Jeśli coś się zawiesi albo wystąpi błąd, odśwież stronę.</br>Kod źródłowy projektu dostępny <a href="https://github.com/Andreansxtech/Staszic360" target="_blank">tutaj</a></h3> 
             <button id="welcomeButton" class="px-4 py-2 bg-blue-500 text-white rounded-xl shadow-md hover:bg-blue-600 transition">Zobacz Wirtualny spacer po szkole</button>
         </div>
     </div>
@@ -58,6 +58,35 @@
         <input id="searchInput" type="text" placeholder="Wyszukaj salę... np. 16a" class="px-4 py-2 border border-gray-300 rounded-lg shadow-inner focus:outline-none focus:ring focus:border-blue-300 text-lg font-medium"/>
         <button onclick="goToScene()" class="px-4 py-2 bg-blue-500 text-white rounded-xl shadow-md hover:bg-blue-600 transition text-lg font-semibold">Przejdź</button>
     </div>
+    <div id="accessibilityMenu" class="hidden fixed bottom-20 right-4 bg-white rounded-xl shadow-lg p-4 z-50 w-64">
+        <h3 class="text-lg font-semibold mb-3 text-gray-800">Opcje dostępności</h3>
+        <div class="space-y-3">
+            <div class="flex items-center justify-between">
+                <label class="text-sm text-gray-700">Wysoki kontrast</label>
+                <button id="highContrastBtn" class="px-3 py-1 bg-blue-500 text-white rounded-lg text-sm hover:bg-blue-600 transition">
+                    Włącz
+                </button>
+            </div>
+            <div class="flex items-center justify-between">
+                <label class="text-sm text-gray-700">Rozmiar tekstu</label>
+                <div class="flex space-x-2">
+                    <button id="decreaseText" class="px-2 py-1 bg-gray-200 text-gray-700 rounded-lg text-sm hover:bg-gray-300 transition">A-</button>
+                    <button id="increaseText" class="px-2 py-1 bg-gray-200 text-gray-700 rounded-lg text-sm hover:bg-gray-300 transition">A+</button>
+                </div>
+            </div>
+            <div class="flex items-center justify-between">
+                <label class="text-sm text-gray-700">Animacje</label>
+                <button id="toggleAnimations" class="px-3 py-1 bg-blue-500 text-white rounded-lg text-sm hover:bg-blue-600 transition">
+                    Wyłącz
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <button id="accessibilityBtn" class="fixed bottom-4 right-4 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition z-50" aria-label="Opcje dostępności">
+        <!--- Icon by Smashicons  -->
+        <img src="./additional-media/accessibility_1512642.png" alt="Ikona dostępności" class="w-8 h-8 filter invert" />
+    </button>
 <script type="text/javascript">
 
     const viewer = pannellum.viewer('panorama', {
@@ -400,7 +429,7 @@
                 "title": "Nowe Skrzydło",
                 "hfov": 180,
                 "pitch": 0,
-                "yaw": 100,
+                "yaw": 60,
                 "type": "equirectangular",
                 "panorama": "media/part-noweskrzydl3.jpg",
                 "hotSpots": [
@@ -449,20 +478,20 @@
                 "title": "Łącznik",
                 "hfov": 180,
                 "pitch": 0,
-                "yaw": 100,
+                "yaw": 40,
                 "type": "equirectangular",
                 "panorama": "media/noweskrzydl-lacznik1.jpg",
                 "hotSpots": [
                     {
-                        "pitch": 0,
-                        "yaw": 0,
+                        "pitch": -6,
+                        "yaw": -30,
                         "type": "scene",
                         "text": "Idź dalej",
                         "sceneId": "noweskrzydl-lacznik2"
                     },
                     {
                         "pitch": 0,
-                        "yaw": 0,
+                        "yaw": 60,
                         "type": "scene",
                         "text": "Wróć",
                         "sceneId": "part-noweskrzydl3"
@@ -1747,6 +1776,54 @@
             }
         });
     }
+
+    document.getElementById('accessibilityBtn').addEventListener('click', function() {
+        const menu = document.getElementById('accessibilityMenu');
+        menu.classList.toggle('hidden');
+    });
+    let highContrastEnabled = false;
+    document.getElementById('highContrastBtn').addEventListener('click', function() {
+        highContrastEnabled = !highContrastEnabled;
+        if (highContrastEnabled) {
+            document.body.classList.add('high-contrast');
+            this.textContent = 'Wyłącz';
+            this.classList.add('bg-gray-700');
+            this.classList.remove('bg-blue-500');
+        } else {
+            document.body.classList.remove('high-contrast');
+            this.textContent = 'Włącz';
+            this.classList.remove('bg-gray-700');
+            this.classList.add('bg-blue-500');
+        }
+    });
+    let currentTextSize = 100;
+    document.getElementById('increaseText').addEventListener('click', function() {
+        if (currentTextSize < 150) {
+            currentTextSize += 10;
+            document.body.style.fontSize = `${currentTextSize}%`;
+        }
+    });
+    document.getElementById('decreaseText').addEventListener('click', function() {
+        if (currentTextSize > 80) {
+            currentTextSize -= 10;
+            document.body.style.fontSize = `${currentTextSize}%`;
+        }
+    });
+    let animationsEnabled = true;
+    document.getElementById('toggleAnimations').addEventListener('click', function() {
+        animationsEnabled = !animationsEnabled;
+        if (animationsEnabled) {
+            document.body.classList.remove('reduce-motion');
+            this.textContent = 'Wyłącz';
+            this.classList.add('bg-blue-500');
+            this.classList.remove('bg-gray-700');
+        } else {
+            document.body.classList.add('reduce-motion');
+            this.textContent = 'Włącz';
+            this.classList.remove('bg-blue-500');
+            this.classList.add('bg-gray-700');
+        }
+    });
 </script>
 </body>
 </html>

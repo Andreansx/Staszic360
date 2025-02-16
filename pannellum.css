@@ -78,3 +78,81 @@ div.pnlm-tooltip span{visibility:hidden;position:absolute;border-radius:3px;back
 .pnlm-lmsg{font-size:12px}
 .pnlm-fade-img{position:absolute;top:0;left:0}
 .pnlm-pointer{cursor:pointer}
+.high-contrast .pnlm-controls,
+.high-contrast #searchDiv button,
+.high-contrast #accessibilityMenu button,
+.high-contrast #closeErrorModal,
+.high-contrast #welcomeButton,
+.high-contrast #accessibilityBtn {
+    border: 3px solid #0066FF !important;
+    color: #FFFF00 !important;
+    background-color: #000000 !important;
+}
+.high-contrast .pnlm-title-box {
+    border: 3px solid #0066FF !important;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    color: #FFFF00 !important;
+}
+.high-contrast #searchInput {
+    border: 3px solid #0066FF !important;
+    background-color: #000000 !important;
+    color: #FFFF00 !important;
+}
+.high-contrast #accessibilityMenu {
+    background-color: #000000 !important;
+    border: 3px solid #0066FF !important;
+}
+.high-contrast label,
+.high-contrast #accessibilityMenu h3,
+.high-contrast .pnlm-load-box,
+.high-contrast div.pnlm-tooltip span {
+    color: #FFFF00 !important;
+}
+.high-contrast #accessibilityBtn img {
+    filter: brightness(0) saturate(100%) invert(82%) sepia(71%) saturate(639%) hue-rotate(359deg) brightness(105%) contrast(103%);
+}
+.high-contrast div.pnlm-tooltip span {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    border: 2px solid #0066FF !important;
+}
+.high-contrast .pnlm-hotspot {
+    border: 3px solid #0066FF !important;
+    background-color: #000000 !important;
+}
+.high-contrast {
+    filter: none;
+}
+.high-contrast .pnlm-container {
+    background: #000000;
+}
+.high-contrast .pnlm-zoom-in,
+.high-contrast .pnlm-zoom-out {
+    background-color: #000000 !important;
+    border: 2px solid #0066FF !important;
+}
+
+.high-contrast .pnlm-zoom-in:before,
+.high-contrast .pnlm-zoom-out:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 2px;
+    background-color: #FFFF00;
+}
+
+.high-contrast .pnlm-zoom-in:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 12px;
+    background-color: #FFFF00;
+}
+.pnlm-compass {
+    display: none !important;
+}
