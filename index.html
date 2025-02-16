@@ -62,7 +62,7 @@
 
     const viewer = pannellum.viewer('panorama', {
         "default": {
-            "firstScene": "portiernia",
+            "firstScene": "2pietrostareskrzyd1",
             "autoLoad": true,
             "sceneFadeDuration": 100,
             "showFullscreenCtrl": false,
@@ -747,10 +747,206 @@
                         "yaw": 120,
                         "type": "scene",
                         "text": "Na dół",
-                        "sceneId": "2pietr-srod"
+                        "sceneId": "1pietr-noweskrzydl1" //błąd
                     }
                 ]
             },
+            "1pietr-noweskrzydl1": {
+                "title": "korytarz",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 180,
+                "type": "equirectangular",
+                "panorama": "media/1pietr-noweskrzydl1.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 15,
+                        "yaw": 152,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "2pietr-noweskrzydl-schod"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 200,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "1pietr-noweskrzydl2"
+                    }
+                ]
+            },
+            "1pietr-noweskrzydl2":{
+                "title": "korytarz",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 180,
+                "type": "equirectangular",
+                "panorama": "media/1pietr-noweskrzydl2.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": -30,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "1pietr-noweskrzydl1"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 140,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "1pietr-noweskrzydl3"
+                    }
+                ]
+
+
+            },
+            "1pietr-noweskrzydl2,2":{
+                "title": "korytarz",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 0,
+                "type": "equirectangular",
+                "panorama": "media/1pietr-noweskrzydl2.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": -30,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "1pietr-noweskrzydl1"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 140,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "1pietr-noweskrzydl3"
+                    }
+                ]
+
+
+
+
+            },
+            "1pietr-noweskrzydl3": {
+                "title": "Stare Skrzydło",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 0,
+                "type": "equirectangular",
+                "panorama": "media/1pietr-noweskrzydl3.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": -160,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "1pietr-noweskrzydl2,2"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 20,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "1pietr-noweskrzydl4"
+                    },
+                    {
+                        "pitch": 5,
+                        "yaw": -6,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "sala40"
+                    }
+                ]
+            },
+            "1pietr-noweskrzydl3,3": {
+                "title": "Stare Skrzydło",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 190,
+                "type": "equirectangular",
+                "panorama": "media/1pietr-noweskrzydl3.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": -160,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "1pietr-noweskrzydl2,2"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 20,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "1pietr-noweskrzydl4"
+                    },
+                    {
+                        "pitch": 5,
+                        "yaw": -6,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "sala40"
+                    }
+                ]
+            },
+            "1pietr-noweskrzydl4": {
+                "title": "Stare Skrzydło",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 90,
+                "type": "equirectangular",
+                "panorama": "media/1pietr-noweskrzydl4.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": -84,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "1pietr-noweskrzydl3,3"
+                    }
+                    
+            
+                ]
+            },
+            "1pietr-noweskrzydl4,4": {
+                "title": "Stare Skrzydło",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 90,
+                "type": "equirectangular",
+                "panorama": "media/1pietr-noweskrzydl4.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": -84,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "1pietr-noweskrzydl3"
+                    }
+                    
+            
+                ]
+            },
+            "sala40": {
+                "title": "Sala 40",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 0,
+                "type": "equirectangular",
+                "panorama": "media/sala40.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": -30,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "1pietr-noweskrzydl3"
+                    }
+                ]
+            },
+
             "2pietr-noweskrzydl1":{
                 "title": "II piętro Nowe Skrzydło",
                 "hfov": 180,
@@ -764,7 +960,14 @@
                         "yaw": 175,
                         "type": "scene",
                         "text": "Na dół",
-                        "sceneId": "2pietr-noweskrzydl1"
+                        "sceneId": "2pietr-noweskrzydl-schod"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": -65,
+                        "type": "scene",
+                        "text": "sala 57",
+                        "sceneId": "sala57"
                     }
                 ]
             },
@@ -772,7 +975,7 @@
                 "title": "Sala 57",
                 "hfov": 180,
                 "pitch": 0,
-                "yaw": 0,
+                "yaw": 180,
                 "type": "equirectangular",
                 "panorama": "media/sala57.jpg",
                 "hotSpots": [
@@ -854,7 +1057,7 @@
         "pitch": 0,
         "yaw": 145,
         "type": "scene",
-        "text": "Wróć",
+        "text": "przejdź",
         "sceneId": "parter-stareskrzydl1" 
       },
         {
@@ -876,7 +1079,7 @@
         "hotSpots": [
         {
             "pitch": 0,
-            "yaw": -148,
+            "yaw": 232,
             "type": "scene",
             "text": "Wyjdź na korytarz",
             "sceneId": "parter-stareskrzydl2"
@@ -900,9 +1103,9 @@
       },
       {
         "pitch": 0,
-        "yaw": 210,
+        "yaw": 260,
         "type": "scene",
-        "text": "Wróć",
+        "text": "przejdź",
         "sceneId": "parter-stareskrzydl2"
       },
         {
@@ -1169,6 +1372,61 @@
         "type": "scene",
         "text": "korytarz",
         "sceneId": "2pietrostareskrzyd2"
+      },
+      {
+        "pitch": 0,
+        "yaw": 70,
+        "type": "scene",
+        "text": "Sala 45",
+        "sceneId": "sala45"
+      }
+    ]
+  },
+  "2pietrostareskrzyd1,2": {
+    "title": "korytarz",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 160,
+    "type": "equirectangular",
+    "panorama": "media/2pietrostareskrzyd1.jpg",
+    "hotSpots": [
+      {
+        "pitch": -1,
+        "yaw": -213,
+        "type": "scene",
+        "text": "Wróć na korytarz",
+        "sceneId": "2pietr-srod"
+      },
+      {
+        "pitch": 0,
+        "yaw": -30,
+        "type": "scene",
+        "text": "korytarz",
+        "sceneId": "2pietrostareskrzyd2"
+      },
+      {
+        "pitch": 0,
+        "yaw": 70,
+        "type": "scene",
+        "text": "Sala 45",
+        "sceneId": "sala45"
+      }
+    ]
+  },
+  "sala45":{
+    "title": "Sala 45",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "media/sala45.jpg",
+    "hotSpots": [
+      {
+        "pitch": -1,
+        "yaw": 45,
+        "type": "scene",
+        "text": "Wróć na korytarz",
+        "sceneId": "2pietrostareskrzyd1"
       }
     ]
   },
@@ -1185,7 +1443,45 @@
         "yaw": 225,
         "type": "scene",
         "text": "Wróć na korytarz",
-        "sceneId": "2pietrostareskrzyd1"
+        "sceneId": "2pietrostareskrzyd1,2"
+      },
+      {
+        "pitch": 0,
+        "yaw": 30,
+        "type": "scene",
+        "text": "wyjdź na olimp",
+        "sceneId": "Olimp 1"
+      },
+      {
+        "pitch": 0,
+        "yaw": 133,
+        "type": "scene",
+        "text": "sala 46",
+        "sceneId": "sala 46"
+      },
+      {
+        "pitch": 0,
+        "yaw": 50,
+        "type": "scene",
+        "text": "sala 47",
+        "sceneId": "sala 47"
+      }
+    ]
+  },
+  "2pietrostareskrzyd2,2": {
+    "title": "korytarz",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": -130,
+    "type": "equirectangular",
+    "panorama": "media/2pietrostareskrzyd2.jpg",
+    "hotSpots": [
+      {
+        "pitch": -1,
+        "yaw": 225,
+        "type": "scene",
+        "text": "Wróć na korytarz",
+        "sceneId": "2pietrostareskrzyd1,2"
       },
       {
         "pitch": 0,
@@ -1259,7 +1555,7 @@
         "yaw": 90,
         "type": "scene",
         "text": "Na dół",
-        "sceneId": "2pietrostareskrzyd2"
+        "sceneId": "2pietrostareskrzyd2,2"
       },
       {
         "pitch": 0,
@@ -1336,6 +1632,7 @@
     ]
     }
 
+
         } //wazne nawiasy nie usuwac
     });
 
@@ -1392,7 +1689,8 @@
             "44": "konf2pietro",
             "sala 44": "konf2pietro",
             "sala konferencyjna": "konf2pietro",
-            "46": "sala 46", 
+            "46": "sala 46",
+            "45": "sala45", 
             "sala 46": "sala 46",
             "47": "sala 47",
             "sala 47": "sala 47",
