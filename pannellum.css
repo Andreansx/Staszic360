@@ -54,7 +54,7 @@
 .pnlm-load-box{position:absolute;top:50%;left:50%;width:200px;height:150px;margin:-75px 0 0 -100px;background-color:rgba(22, 123, 255,0.7);border-radius:12px;text-align:center;font-size:25px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;display:none;color:#dfdfdf}
 .pnlm-load-box p{margin:20px 0}
 .pnlm-lbox{position:absolute;top:50%;left:50%;width:20px;height:20px;margin:-10px 0 0 -10px;display:none}
-.pnlm-loading{animation-duration:1.5s;-webkit-animation-duration:1.5s;animation-name:pnlm-mv;-webkit-animation-name:pnlm-mv;animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;animation-timing-function:linear;-webkit-animation-timing-function:linear;height:10px;width:10px;background-color:#fff;position:relative}
+.pnlm-loading{animation-duration:0.5s;-webkit-animation-duration:0.5s;animation-name:pnlm-mv;-webkit-animation-name:pnlm-mv;animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;animation-timing-function:linear;-webkit-animation-timing-function:linear;height:10px;width:10px;background-color:#fff;position:relative}
 @keyframes pnlm-mv{from{left:0;top:0}25%{left:10px;top:0}50%{left:10px;top:10px}75%{left:0;top:10px}to{left:0;top:0}}
 @-webkit-keyframes pnlm-mv{from{left:0;top:0}25%{left:10px;top:0}50%{left:10px;top:10px}75%{left:0;top:10px}to{left:0;top:0}}
 .pnlm-load-button{position:absolute;top:50%;left:50%;width:200px;height:100px;margin:-50px 0 0 -100px;background-color:rgba(0,0,0,.7);border-radius:3px;text-align:center;font-size:20px;display:table;color:#fff;cursor:pointer}
@@ -72,6 +72,17 @@
 .pnlm-hotspot:hover{background-color:rgba(255,255,255,0.2)}
 .pnlm-hotspot.pnlm-info{background-position:0 -104px}
 .pnlm-hotspot.pnlm-scene{background-position:0 -130px}
+.pnlm-hotspot-base.pnlm-scene {
+    background: none;
+    border: 3px solid #1D4ED8;
+    border-radius: 9999px;
+    padding: 0.5rem;
+    transition: transform 0.1s ease-out, background-color 0.5s ease;
+}
+.pnlm-hotspot-base.pnlm-scene:hover {
+    transform: scale(1.1);
+    background-color: #3B82F6;
+}
 div.pnlm-tooltip span{visibility:hidden;position:absolute;border-radius:3px;background-color:rgba(0,0,0,0.7);color:#fff;text-align:center;max-width:200px;padding:5px 10px;margin-left:-220px;cursor:default;font-family:'Ubuntu',sans-serif;font-size:1.125rem;font-weight:500}div.pnlm-tooltip:hover span{visibility:visible}div.pnlm-tooltip:hover span:after{content:'';position:absolute;width:0;height:0;border-width:10px;border-style:solid;border-color:rgba(0,0,0,0.7) transparent transparent transparent;bottom:-20px;left:-10px;margin:0 50%}.pnlm-compass{position:absolute;width:50px;height:50px;right:4px;bottom:40px;border-radius:25px;background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2250%22%20width%3D%2250%22%3E%0A%3Cpath%20d%3D%22m24.5078%206-3.2578%2018h7.5l-3.25781-18h-0.984376zm-3.2578%2020%203.2578%2018h0.9844l3.2578-18h-7.5zm1.19531%200.9941h5.10938l-2.5547%2014.1075-2.5547-14.1075z%22%2F%3E%0A%3C%2Fsvg%3E%0A');cursor:default;display:none}.pnlm-world{position:absolute;left:50%;top:50%}.pnlm-face{position:absolute;-webkit-transform-origin:0 0;transform-origin:0 0}.pnlm-dragfix,.pnlm-preview-img{position:absolute;height:100%;width:100%}.pnlm-preview-img{background-size:cover;background-position:center}
 .pnlm-lbar{width:150px;margin:0 auto;border:#fff 1px solid;height:6px}
 .pnlm-lbar-fill{background:#fff;height:100%;width:0}
