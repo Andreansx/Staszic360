@@ -1,4 +1,4 @@
-    Read the README.md in English <a href="./additional-media/README-en.md">here</a>
+Read the README.md in English <a href="./additional-media/README-en.md">here</a>
 
 # Wirtualny Spacer - I LO im. Stanisława Staszica w Chrzanowie
 
