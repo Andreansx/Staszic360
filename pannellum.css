@@ -74,7 +74,7 @@
 .pnlm-hotspot.pnlm-scene{background-position:0 -130px}
 .pnlm-hotspot-base.pnlm-scene {
     background: none;
-    border: 3px solid #1D4ED8;
+    border: 5px solid #0138d1;
     border-radius: 9999px;
     padding: 0.5rem;
     transition: transform 0.1s ease-out, background-color 0.5s ease;
@@ -124,10 +124,10 @@ div.pnlm-tooltip span{visibility:hidden;position:absolute;border-radius:3px;back
 }
 .high-contrast div.pnlm-tooltip span {
     background-color: rgba(0, 0, 0, 0.9) !important;
-    border: 2px solid #0066FF !important;
+    border: 3px solid #0066FF !important;
 }
 .high-contrast .pnlm-hotspot {
-    border: 3px solid #0066FF !important;
+    border: 2px solid #0066FF !important;
     background-color: #000000 !important;
 }
 .high-contrast {
@@ -139,7 +139,7 @@ div.pnlm-tooltip span{visibility:hidden;position:absolute;border-radius:3px;back
 .high-contrast .pnlm-zoom-in,
 .high-contrast .pnlm-zoom-out {
     background-color: #000000 !important;
-    border: 2px solid #0066FF !important;
+    border: 3px solid #0066FF !important;
 }
 
 .high-contrast .pnlm-zoom-in:before,
@@ -316,4 +316,69 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
 
 .high-contrast .pnlm-loading {
     background-color: #FFFF00 !important;
+}
+
+.pnlm-map-button {
+    position: absolute;
+    top: 4px;
+    left: 40px;
+    background-color: #fff;
+    border: 1px solid #999;
+    border-color: rgba(0,0,0,0.4);
+    border-radius: 3px;
+    padding: 4px 8px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.pnlm-map-button:hover {
+    background-color: #f8f8f8;
+}
+
+.pnlm-map-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.pnlm-map-container {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.pnlm-map-container img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.pnlm-map-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.high-contrast .pnlm-map-button,
+.high-contrast .pnlm-map-close {
+    background-color: #000000 !important;
+    border: 3px solid #0066FF !important;
+    color: #FFFF00 !important;
 }

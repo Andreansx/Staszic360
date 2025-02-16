@@ -54,6 +54,12 @@
             <button id="welcomeButton" class="px-4 py-2 bg-blue-500 text-white rounded-xl shadow-md hover:bg-blue-600 transition text-scalable">Zobacz Wirtualny spacer po szkole</button>
         </div>
     </div>
+    <div id="mapOverlay" class="pnlm-map-overlay">
+        <div class="pnlm-map-container">
+            <button id="closeMap" class="pnlm-map-close text-scalable">Zamknij</button>
+            <img src="./additional-media/mapa-szkoly-2020.jpg" alt="Mapa szkoły" />
+        </div>
+    </div>
     <div id="panorama">&nbsp;</div>
     <div id="searchDiv" class="absolute top-4 right-4 z-50 flex space-x-2 hidden">
         <input id="searchInput" type="text" placeholder="Wyszukaj salę... np. 16a" class="px-4 py-2 border border-gray-300 rounded-lg shadow-inner focus:outline-none focus:ring focus:border-blue-300 text-lg font-medium text-scalable"/>
@@ -88,6 +94,7 @@
         <!--- Icon by Smashicons  -->
         <img src="./additional-media/accessibility_1512642.png" alt="Ikona dostępności" class="w-8 h-8 filter invert" />
     </button>
+    <button id="showMap" class="pnlm-map-button text-scalable">Pokaż mapę</button>
 <script type="text/javascript">
 
     const viewer = pannellum.viewer('panorama', {
@@ -1870,6 +1877,19 @@
             this.textContent = 'Włącz';
             this.classList.remove('bg-blue-500');
             this.classList.add('bg-gray-700');
+        }
+    });
+
+    document.getElementById('showMap').addEventListener('click', function() {
+        document.getElementById('mapOverlay').style.display = 'flex';
+    });
+
+    document.getElementById('closeMap').addEventListener('click', function() {
+        document.getElementById('mapOverlay').style.display = 'none';
+    });
+    document.getElementById('mapOverlay').addEventListener('click', function(e) {
+        if (e.target === this) {
+            this.style.display = 'none';
         }
     });
 </script>
