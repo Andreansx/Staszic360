@@ -315,7 +315,7 @@
                         "pitch": -5, 
                         "yaw": 160,
                         "type": "scene",
-                        "text": "powrót",
+                        "text": "Powrót",
                         "sceneId": "niebieskiDywan"
                     }
                 ]
@@ -1784,6 +1784,7 @@
             const img = new Image();
             img.src = scene.panorama;
             img.onload = img.onerror = () => {
+                console.log("Image preloaded");
                 loadedImages++;
                 if (loadedImages === totalImages) {
                     console.log("All images preloaded");
@@ -1812,17 +1813,24 @@
         }
     });
     let currentTextSize = 100;
+    const MIN_TEXT_SIZE = 80;
+    const MAX_TEXT_SIZE = 150;
+    
     document.body.setAttribute('data-text-scale', currentTextSize);
+    
     document.getElementById('increaseText').addEventListener('click', function() {
-        if (currentTextSize < 150) {
+        if (currentTextSize + 10 <= MAX_TEXT_SIZE) {
             currentTextSize += 10;
             document.body.setAttribute('data-text-scale', currentTextSize);
+            console.log('Zwiększono rozmiar tekstu do:', currentTextSize);
         }
     });
+    
     document.getElementById('decreaseText').addEventListener('click', function() {
-        if (currentTextSize > 80) {
+        if (currentTextSize - 10 >= MIN_TEXT_SIZE) {
             currentTextSize -= 10;
             document.body.setAttribute('data-text-scale', currentTextSize);
+            console.log('Zmniejszono rozmiar tekstu do:', currentTextSize);
         }
     });
     let animationsEnabled = true;

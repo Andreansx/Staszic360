@@ -159,6 +159,7 @@ div.pnlm-tooltip span{visibility:hidden;position:absolute;border-radius:3px;back
 .text-scalable {
     transition: font-size 0.2s ease;
 }
+body[data-text-scale="80"] .text-scalable { font-size: 80%; }
 body[data-text-scale="90"] .text-scalable { font-size: 90%; }
 body[data-text-scale="100"] .text-scalable { font-size: 100%; }
 body[data-text-scale="110"] .text-scalable { font-size: 110%; }
@@ -179,6 +180,7 @@ body[data-text-scale="150"] .text-scalable { font-size: 150%; }
 .pnlm-load-box {
     transition: font-size 0.2s ease;
 }
+body[data-text-scale="80"] .pnlm-tooltip span { font-size: 80%; }
 body[data-text-scale="90"] .pnlm-tooltip span { font-size: 90%; }
 body[data-text-scale="100"] .pnlm-tooltip span { font-size: 100%; }
 body[data-text-scale="110"] .pnlm-tooltip span { font-size: 110%; }
@@ -187,6 +189,7 @@ body[data-text-scale="130"] .pnlm-tooltip span { font-size: 130%; }
 body[data-text-scale="140"] .pnlm-tooltip span { font-size: 140%; }
 body[data-text-scale="150"] .pnlm-tooltip span { font-size: 150%; }
 
+body[data-text-scale="80"] .pnlm-title-box { font-size: 80%; }
 body[data-text-scale="90"] .pnlm-title-box { font-size: 90%; }
 body[data-text-scale="100"] .pnlm-title-box { font-size: 100%; }
 body[data-text-scale="110"] .pnlm-title-box { font-size: 110%; }
@@ -220,6 +223,12 @@ div.pnlm-tooltip span,
 .pnlm-info-box {
     transition: font-size 0.2s ease;
 }
+body[data-text-scale="80"] .text-scalable,
+body[data-text-scale="80"] input.text-scalable,
+body[data-text-scale="80"] button.text-scalable,
+body[data-text-scale="80"] #searchInput,
+body[data-text-scale="80"] #searchDiv button { font-size: 80%; }
+
 
 body[data-text-scale="90"] .text-scalable,
 body[data-text-scale="90"] input.text-scalable,
@@ -265,7 +274,7 @@ body[data-text-scale="150"] #searchDiv button { font-size: 150%; }
 input::placeholder {
     transition: all 0.2s ease;
 }
-
+body[data-text-scale="80"] input::placeholder { font-size: 80%; }
 body[data-text-scale="90"] input::placeholder { font-size: 90%; }
 body[data-text-scale="100"] input::placeholder { font-size: 100%; }
 body[data-text-scale="110"] input::placeholder { font-size: 110%; }
@@ -273,3 +282,27 @@ body[data-text-scale="120"] input::placeholder { font-size: 120%; }
 body[data-text-scale="130"] input::placeholder { font-size: 130%; }
 body[data-text-scale="140"] input::placeholder { font-size: 140%; }
 body[data-text-scale="150"] input::placeholder { font-size: 150%; }
+
+.high-contrast .pnlm-load-box {
+    background-color: #000000 !important;
+    border: 3px solid #0066FF !important;
+    color: #FFFF00 !important;
+}
+
+.high-contrast .pnlm-lbar {
+    border-color: #0066FF !important;
+    background-color: #000000 !important;
+}
+
+.high-contrast .pnlm-lbar-fill {
+    background-color: #FFFF00 !important;
+}
+
+.high-contrast .pnlm-lmsg {
+    color: #FFFF00 !important;
+    font-weight: bold;
+}
+
+.high-contrast .pnlm-loading {
+    background-color: #FFFF00 !important;
+}
