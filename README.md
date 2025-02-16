@@ -15,7 +15,7 @@ Visit the virtual tour at the: [Staszic360](https://staszic-virtual-walk.pages.d
 
 ## 📝 Description
 
-This project provides an immersive virtual walking experience through the halls and facilities of I LO im. Stanisława Staszica in Chrzanów, Poland. Users can navigate through different parts of the school building, exploring classrooms, corridors, and other facilities.
+This project provides an immersive virtual walking experience through the halls and facilities of I LO im. Stanisława Staszica in Chrzanów, Poland. Users can navigate through different parts of the school building, exploring classrooms, corridors, and other facilities. The website is fully adapted to accessibility standards
 
 ## 🖼️ Preview
 
@@ -27,6 +27,16 @@ This project provides an immersive virtual walking experience through the halls 
 - Smooth navigation between different locations
 - High-quality panoramic images
 - Classroom search funcionality
+- Complete accessibility support
+
+## 🤝 Accessibility
+
+This website features accessibility tools such as:
+- High contrast toggle
+- Animations turn off option
+- Text size changing
+
+It is fully accessible for every person visiting it.
 
 ## 🛠️ Technologies Used
 

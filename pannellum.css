@@ -156,3 +156,132 @@ div.pnlm-tooltip span{visibility:hidden;position:absolute;border-radius:3px;back
 .pnlm-compass {
     display: none !important;
 }
+.text-scalable {
+    transition: font-size 0.2s ease;
+}
+body[data-text-scale="90"] .text-scalable { font-size: 90%; }
+body[data-text-scale="100"] .text-scalable { font-size: 100%; }
+body[data-text-scale="110"] .text-scalable { font-size: 110%; }
+body[data-text-scale="120"] .text-scalable { font-size: 120%; }
+body[data-text-scale="130"] .text-scalable { font-size: 130%; }
+body[data-text-scale="140"] .text-scalable { font-size: 140%; }
+body[data-text-scale="150"] .text-scalable { font-size: 150%; }
+.pnlm-title-box,
+.pnlm-tooltip span,
+#accessibilityMenu label,
+#accessibilityMenu h3,
+#searchInput,
+#searchDiv button,
+#welcomeScreen h1,
+#welcomeScreen h3,
+#errorModal h3,
+#errorModal p,
+.pnlm-load-box {
+    transition: font-size 0.2s ease;
+}
+body[data-text-scale="90"] .pnlm-tooltip span { font-size: 90%; }
+body[data-text-scale="100"] .pnlm-tooltip span { font-size: 100%; }
+body[data-text-scale="110"] .pnlm-tooltip span { font-size: 110%; }
+body[data-text-scale="120"] .pnlm-tooltip span { font-size: 120%; }
+body[data-text-scale="130"] .pnlm-tooltip span { font-size: 130%; }
+body[data-text-scale="140"] .pnlm-tooltip span { font-size: 140%; }
+body[data-text-scale="150"] .pnlm-tooltip span { font-size: 150%; }
+
+body[data-text-scale="90"] .pnlm-title-box { font-size: 90%; }
+body[data-text-scale="100"] .pnlm-title-box { font-size: 100%; }
+body[data-text-scale="110"] .pnlm-title-box { font-size: 110%; }
+body[data-text-scale="120"] .pnlm-title-box { font-size: 120%; }
+body[data-text-scale="130"] .pnlm-title-box { font-size: 130%; }
+body[data-text-scale="140"] .pnlm-title-box { font-size: 140%; }
+body[data-text-scale="150"] .pnlm-title-box { font-size: 150%; }
+
+.text-scalable,
+input.text-scalable,
+button.text-scalable,
+.pnlm-title-box,
+.pnlm-tooltip span,
+#accessibilityMenu label,
+#accessibilityMenu h3,
+#searchInput,
+#searchDiv button,
+#welcomeScreen h1,
+#welcomeScreen h3,
+#errorModal h3,
+#errorModal p,
+.pnlm-load-box,
+.pnlm-load-button,
+.pnlm-lmsg,
+div.pnlm-tooltip span,
+.pnlm-tooltip,
+.pnlm-panorama-info,
+.pnlm-title-box,
+.pnlm-author-box,
+.pnlm-load-box p,
+.pnlm-info-box {
+    transition: font-size 0.2s ease;
+}
+
+body[data-text-scale="90"] .pnlm-tooltip span,
+body[data-text-scale="90"] .pnlm-title-box,
+body[data-text-scale="90"] .pnlm-author-box,
+body[data-text-scale="90"] .pnlm-load-box,
+body[data-text-scale="90"] .pnlm-panorama-info { font-size: 90%; }
+
+body[data-text-scale="150"] .pnlm-tooltip span,
+body[data-text-scale="150"] .pnlm-title-box,
+body[data-text-scale="150"] .pnlm-author-box,
+body[data-text-scale="150"] .pnlm-load-box,
+body[data-text-scale="150"] .pnlm-panorama-info { font-size: 150%; }
+
+body[data-text-scale="90"] .text-scalable,
+body[data-text-scale="90"] input.text-scalable,
+body[data-text-scale="90"] button.text-scalable,
+body[data-text-scale="90"] #searchInput,
+body[data-text-scale="90"] #searchDiv button { font-size: 90%; }
+
+body[data-text-scale="100"] .text-scalable,
+body[data-text-scale="100"] input.text-scalable,
+body[data-text-scale="100"] button.text-scalable,
+body[data-text-scale="100"] #searchInput,
+body[data-text-scale="100"] #searchDiv button { font-size: 100%; }
+
+body[data-text-scale="110"] .text-scalable,
+body[data-text-scale="110"] input.text-scalable,
+body[data-text-scale="110"] button.text-scalable,
+body[data-text-scale="110"] #searchInput,
+body[data-text-scale="110"] #searchDiv button { font-size: 110%; }
+
+body[data-text-scale="120"] .text-scalable,
+body[data-text-scale="120"] input.text-scalable,
+body[data-text-scale="120"] button.text-scalable,
+body[data-text-scale="120"] #searchInput,
+body[data-text-scale="120"] #searchDiv button { font-size: 120%; }
+
+body[data-text-scale="130"] .text-scalable,
+body[data-text-scale="130"] input.text-scalable,
+body[data-text-scale="130"] button.text-scalable,
+body[data-text-scale="130"] #searchInput,
+body[data-text-scale="130"] #searchDiv button { font-size: 130%; }
+
+body[data-text-scale="140"] .text-scalable,
+body[data-text-scale="140"] input.text-scalable,
+body[data-text-scale="140"] button.text-scalable,
+body[data-text-scale="140"] #searchInput,
+body[data-text-scale="140"] #searchDiv button { font-size: 140%; }
+
+body[data-text-scale="150"] .text-scalable,
+body[data-text-scale="150"] input.text-scalable,
+body[data-text-scale="150"] button.text-scalable,
+body[data-text-scale="150"] #searchInput,
+body[data-text-scale="150"] #searchDiv button { font-size: 150%; }
+input::placeholder {
+    transition: all 0.2s ease;
+}
+
+body[data-text-scale="90"] input::placeholder { font-size: 90%; }
+body[data-text-scale="100"] input::placeholder { font-size: 100%; }
+body[data-text-scale="110"] input::placeholder { font-size: 110%; }
+body[data-text-scale="120"] input::placeholder { font-size: 120%; }
+body[data-text-scale="130"] input::placeholder { font-size: 130%; }
+body[data-text-scale="140"] input::placeholder { font-size: 140%; }
+body[data-text-scale="150"] input::placeholder { font-size: 150%; }
