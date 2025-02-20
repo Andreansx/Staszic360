@@ -211,11 +211,11 @@
                         "sceneId": "part-noweskrzydl1"
                     },
                     {
-                        "pitch": -6,
+                        "pitch": -2,
                         "yaw": 150,
                         "type": "scene",
-                        "text": "Sala gimnastyczna",
-                        "sceneId": "sala-gim"
+                        "text": "przejście",
+                        "sceneId": "part-sala-gim-wejscie"
                     }
                 ]
             },
@@ -232,8 +232,89 @@
                         "yaw": 170,
                         "type": "scene",
                         "text": "Wróć na korytarz",
-                        "sceneId": "korpuch"
+                        "sceneId": "part-sala-gim-wejscie"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": -70,
+                        "type": "scene",
+                        "text": "Wróć na korytarz",
+                        "sceneId": "salagimn1"
                     }
+                ]
+            },
+            "part-sala-gim-wejscie": {
+                "title": "Korytarz",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": -100,
+                "type": "equirectangular",
+                "panorama": "media/part-sala-gim-wejscie.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": -87,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "sala-gim"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 110,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "korpuch"
+                    },
+                   
+                ]
+            },
+            "salagimn1": {
+    "title": "Sala gimnastyczna",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "media/salagimn1.jpg",
+    "hotSpots": [
+        {
+        "pitch": 0,
+        "yaw": 52,
+        "type": "scene",
+        "text": "Wróć na korytarz",
+        "sceneId": "sala-gim"
+        },
+        {
+        "pitch": 0,
+        "yaw": 139,
+        "type": "scene",
+        "text": "Wróć na korytarz",
+        "sceneId": "noweskrzydl-lacznik4"
+        },
+        {
+        "pitch": 0,
+        "yaw": -30,
+        "type": "scene",
+        "text": "Wróć na korytarz",
+        "sceneId": "salagimn"
+        }
+    ]
+    },
+            "salagimn": {
+                "title": "sala gimnasyczna",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 0,
+                "type": "equirectangular",
+                "panorama": "media/salagimn.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": 148,
+                        "type": "scene",
+                        "text": "Wróć na korytarz",
+                        "sceneId": "salagimn1"
+                    }
+                  
                 ]
             },
             "niebieskiDywan": {
@@ -338,9 +419,9 @@
                     { 
                         "pitch": -5, 
                         "yaw": 217,
-                        "type": "info",
+                        "type": "scene",
                         "text": "Biblioteka",
-                        "URL": "https://www.1lo.pl/biblioteka/"
+                        "sceneId": "biblioteka1"
                     },
                     {
                         "pitch": 10,
@@ -357,6 +438,49 @@
                         "sceneId": "part-srod"
                     }
                 ]
+            },
+            "biblioteka1": {
+                "title": "Biblioteka",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "media/Biblioteka1.jpg",
+                "hotSpots": [
+                    { 
+                        "pitch": 0, 
+                        "yaw": 77,
+                        "type": "scene",
+                        "text": "Powrót",
+                        "sceneId": "biblioteka"
+                    },
+                    { 
+                        "pitch": -5, 
+                        "yaw": 255,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "biblioteka2"
+                    }
+                ]
+             
+            },
+            "biblioteka2": {
+                "title": "Biblioteka",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "media/Biblioteka2.jpg",
+                "hotSpots": [
+                    { 
+                        "pitch": -5, 
+                        "yaw": 160,
+                        "type": "scene",
+                        "text": "Powrót",
+                        "sceneId": "biblioteka"
+                    }
+                ]
+             
             },
            
             "part-noweskrzydl1": {
@@ -581,7 +705,7 @@
                     }
                 ]
             },
-            "noweskrzydl-lacznik4": {
+            "noweskrzydl-lacznik4": { 
                 "title": "Łącznik",
                 "hfov": 180,
                 "pitch": 0,
@@ -590,18 +714,25 @@
                 "panorama": "media/noweskrzydl-lacznik4.jpg",
                 "hotSpots": [
                     {
-                        "pitch": 0,
-                        "yaw": 0,
+                        "pitch": -10,
+                        "yaw": 110,
                         "type": "scene",
                         "text": "Idź dalej",
                         "sceneId": "noweskrzydl-szatnie"
                     },
                     {
-                        "pitch": 0,
-                        "yaw": 0,
+                        "pitch": 10,
+                        "yaw": 80,
                         "type": "scene",
                         "text": "Wróć",
                         "sceneId": "noweskrzydl-lacznik3"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": -110,
+                        "type": "scene",
+                        "text": "Wróć",
+                        "sceneId": "salagimn1"
                     }
                 ]
             },
@@ -1052,7 +1183,7 @@
                     }
                 ]
             },
-   
+   //sss początekk kskdksk ds
   "parter-stareskrzydl1": {
     "title": "Stare Skrzydło",
     "hfov": 180,
@@ -1106,7 +1237,7 @@
     "title": "Stare Skrzydło 2",
     "hfov": 180,
     "pitch": 0,
-    "yaw": 10,
+    "yaw": -30,
     "type": "equirectangular",
     "panorama": "media/parter-stareskrzydl2.jpg",
     "hotSpots": [
@@ -1122,7 +1253,7 @@
         "yaw": 145,
         "type": "scene",
         "text": "Przejdź",
-        "sceneId": "parter-stareskrzydl1" 
+        "sceneId": "parter-stareskrzydl1.1" 
       },
         {
             "pitch": 0,
@@ -1154,7 +1285,7 @@
     "title": "Stare Skrzydło 3",
     "hfov": 180,
     "pitch": 0,
-    "yaw": 100,
+    "yaw": 70,
     "type": "equirectangular",
     "panorama": "media/parter-stareskrzydl3.jpg",
     "hotSpots": [
@@ -1170,7 +1301,7 @@
         "yaw": 260,
         "type": "scene",
         "text": "Przejdź",
-        "sceneId": "parter-stareskrzydl2"
+        "sceneId": "parter-stareskrzydl2.2"
       },
         {
             "pitch": 0,
@@ -1206,6 +1337,196 @@
         ]
         },
   "parter-stareskrzydl4": {
+    "title": "Stare Skrzydło 4",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "media/parter-stareskrzydl4.jpg",
+    "hotSpots": [
+      {
+        "pitch": 20,
+        "yaw": -40,
+        "type": "scene",
+        "text": "Na górę",
+        "sceneId": "1pietr-stareskrzydl1"
+      },
+      {
+        "pitch": 0,
+        "yaw": 50,
+        "type": "scene",
+        "text": "Idź dalej",
+        "sceneId": "parter-stareskrzydl3.3"
+      },
+      {
+        "pitch": 0,
+        "yaw": 25,
+        "type": "scene",
+        "text": "Sala numer 4",
+        "sceneId": "sala4"
+      },
+        {
+            "pitch": 0,
+            "yaw": -115,
+            "type": "scene",
+            "text": "Sala numer 3",
+            "sceneId": "sala3"
+        }
+    ]
+  }, //środek 
+  "parter-stareskrzydl1.1": {
+    "title": "Stare Skrzydło",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 150,
+    "type": "equirectangular",
+    "panorama": "media/parter-stareskrzydl1.jpg",
+    "hotSpots": [
+      {
+        "pitch": 0,
+        "yaw": -30,
+        "type": "scene",
+        "text": "Przejdź",
+        "sceneId": "parter-stareskrzydl2"
+      },
+      {
+        "pitch": -5,
+        "yaw": 150,
+        "type": "scene",
+        "text": "Przejdź",
+        "sceneId": "part-srod"
+      },
+      {
+        "pitch": 0,
+        "yaw": 60,
+        "type": "scene",
+        "text": "Sala numer 8",
+        "sceneId": "sala8"
+      }
+    ]
+  },
+  "sala8": {
+    "title": "Sala 8",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": -100,
+    "type": "equirectangular",
+    "panorama": "media/sala8.jpg",
+    "hotSpots": [
+    {
+        "pitch": 0,
+        "yaw": -85,
+        "type": "scene",
+        "text": "Wyjdź na korytarz",
+        "sceneId": "parter-stareskrzydl1"
+      }
+    ]
+    },
+
+  "parter-stareskrzydl2.2": {
+    "title": "Stare Skrzydło 2",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 145,
+    "type": "equirectangular",
+    "panorama": "media/parter-stareskrzydl2.jpg",
+    "hotSpots": [
+      {
+        "pitch": 0,
+        "yaw": -35,
+        "type": "scene",
+        "text": "Przejdź",
+        "sceneId": "parter-stareskrzydl3"
+      },
+      {
+        "pitch": 0,
+        "yaw": 145,
+        "type": "scene",
+        "text": "Przejdź",
+        "sceneId": "parter-stareskrzydl1.1" 
+      },
+        {
+            "pitch": 0,
+            "yaw": 66.5,
+            "type": "scene",
+            "text": "Sala numer 7",
+            "sceneId": "sala7"
+        }
+    ]
+  },
+    "sala7": {
+        "title": "Sala 7",
+        "hfov": 180,
+        "pitch": 0,
+        "yaw": -120,
+        "type": "equirectangular",
+        "panorama": "media/sala7.jpg",
+        "hotSpots": [
+        {
+            "pitch": 0,
+            "yaw": 232,
+            "type": "scene",
+            "text": "Wyjdź na korytarz",
+            "sceneId": "parter-stareskrzydl2"
+        }
+        ]
+        },
+  "parter-stareskrzydl3.3": {
+    "title": "Stare Skrzydło 3",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 260,
+    "type": "equirectangular",
+    "panorama": "media/parter-stareskrzydl3.jpg",
+    "hotSpots": [
+      {
+        "pitch": 0,
+        "yaw": -7,
+        "type": "scene",
+        "text": "Przejdź",
+        "sceneId": "parter-stareskrzydl4"
+      },
+      {
+        "pitch": 0,
+        "yaw": 260,
+        "type": "scene",
+        "text": "Przejdź",
+        "sceneId": "parter-stareskrzydl2.2"
+      },
+        {
+            "pitch": 0,
+            "yaw": 102,
+            "type": "scene",
+            "text": "Sala numer 6",
+            "sceneId": "sala6"
+        },
+        {
+            "pitch": 0,
+            "yaw": 25,
+            "type": "scene",
+            "text": "Sala numer 5",
+            "sceneId": "sala5",
+        }
+    ]
+  },
+    "sala6": {
+        "title": "Sala 6",
+        "hfov": 180,
+        "pitch": 0,
+        "yaw": -120,
+        "type": "equirectangular",
+        "panorama": "media/sala6.jpg",
+        "hotSpots": [
+        {
+            "pitch": -3,
+            "yaw": -145,
+            "type": "scene",
+            "text": "Wyjdź na korytarz",
+            "sceneId": "parter-stareskrzydl3"
+        }
+        ]
+        },
+  "parter-stareskrzydl4.4": {
     "title": "Stare Skrzydło 4",
     "hfov": 180,
     "pitch": 0,
@@ -1411,7 +1732,7 @@
         "sceneId": "1pietr-srod"
       }
     ]
-  },
+  }, //koniec 
   "konf2pietro": {
     "title": "Sala konferencyjna",
     "hfov": 180,
@@ -1715,7 +2036,9 @@
         "sceneId": "Olimp 1"
         }
     ]
-    }
+    },
+    
+
 
 
         } //wazne nawiasy nie usuwac
