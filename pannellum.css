@@ -167,7 +167,7 @@ div.pnlm-tooltip span {
     position: absolute;
     border-radius: 16px;
     background: rgba(80, 144, 248, 0.55);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 0px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     color: white;
@@ -576,7 +576,7 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
     padding: 14px 20px;
     background: rgba(59, 130, 246, 0.15);
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 0px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
@@ -628,7 +628,7 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
     overflow-y: auto;
     margin-top: 12px;
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 0px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
