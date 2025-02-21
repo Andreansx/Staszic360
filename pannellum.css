@@ -472,7 +472,46 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    overflow-y: auto;
+    max-height: 60vh;
+    scrollbar-width: thin;
+    scrollbar-color: #3B82F6 #F3F4F6;
+}
+
+.quick-access-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.quick-access-content::-webkit-scrollbar-track {
+    background: #F3F4F6;
+    border-radius: 8px;
+}
+
+.quick-access-content::-webkit-scrollbar-thumb {
+    background-color: #3B82F6;
+    border-radius: 8px;
+    border: 2px solid #F3F4F6;
+}
+
+.quick-access-content::-webkit-scrollbar-thumb:hover {
+    background-color: #2563EB;
+}
+.high-contrast .quick-access-content {
+    scrollbar-color: #FFFF00 #000000;
+}
+
+.high-contrast .quick-access-content::-webkit-scrollbar-track {
+    background: #000000;
+    border: 1px solid #0066FF;
+}
+
+.high-contrast .quick-access-content::-webkit-scrollbar-thumb {
+    background-color: #FFFF00;
+    border: 2px solid #000000;
+}
+
+.high-contrast .quick-access-content::-webkit-scrollbar-thumb:hover {
+    background-color: #FFFF00;
 }
 
 .quick-access-content.show {
