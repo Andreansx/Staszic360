@@ -343,8 +343,8 @@
                         "pitch": -5, 
                         "yaw": 70,
                         "type": "scene",
-                        "sceneId": "sekretariat",
-                        "text": "Do sekretariatu"
+                        "sceneId": "sekretariat1",
+                        "text": "przejdź"
                     }
 
                 ]
@@ -391,6 +391,132 @@
                     }
                 ]
             },
+            "sekretariat1": {
+    "title": "Sekretariat",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "media/sekretariat1.jpg",
+    "hotSpots": [
+        {
+        "pitch": 0,
+        "yaw": 180,
+        "type": "scene",
+        "text": "Wróć na korytarz",
+        "sceneId": "niebieskiDywan"
+        },
+        {
+        "pitch": 0,
+        "yaw": -20,
+        "type": "scene",
+        "text": "Sekretariat",
+        "sceneId": "sekretariat"
+        },
+        {
+        "pitch": 0,
+        "yaw": 74,
+        "type": "scene",
+        "text": "przejdź",
+        "sceneId": "sekretariat3"
+        }
+        
+    
+    ]
+    },
+            "sekretariat3": {
+                "title": "sekretariat",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "media/sekretariat3.jpg",
+                "hotSpots": [
+                    { 
+                        "pitch": 0, 
+                        "yaw": -72,
+                        "type": "scene",
+                        "text": "przejdź",
+                        "sceneId": "sekretariat1"
+                    },
+                    { 
+                        "pitch": -5, 
+                        "yaw": 90,
+                        "type": "scene",
+                        "text": "powrót",
+                        "sceneId": "wicedyr"
+                    },
+                    { 
+                        "pitch": -5, 
+                        "yaw": -45,
+                        "type": "scene",
+                        "text": "powrót",
+                        "sceneId": "skarbnik"
+                    },
+                    { 
+                        "pitch": -5, 
+                        "yaw": 113,
+                        "type": "scene",
+                        "text": "powrót",
+                        "sceneId": "sala1"
+                    }
+                  
+
+                ]
+            },
+            "sala1":
+            {
+                "title": "Sala 1",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "media/sala1.jpg",
+                "hotSpots": [
+                    { 
+                        "pitch": -5, 
+                        "yaw": 160,
+                        "type": "scene",
+                        "text": "powrót",
+                        "sceneId": "sekretariat3"
+                    }
+                ]
+            },
+            "wicedyr": {
+                "title": "Wicedyrektor",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "media/wicedyr.jpg",
+                "hotSpots": [
+                    { 
+                        "pitch": -5, 
+                        "yaw": 160,
+                        "type": "scene",
+                        "text": "sekretariat",
+                        "sceneId": "sekretariat3"
+                    }
+                ]
+            },
+            "skarbnik": {
+                "title": "nie wiem",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "media/skarbnik.jpg",
+                "hotSpots": [
+                    { 
+                        "pitch": -5, 
+                        "yaw": 160,
+                        "type": "scene",
+                        "text": "sekretariat",
+                        "sceneId": "sekretariat3"
+                    }
+                ]
+            },
+
             "Sklepik": {
                 "title": "Sklepik szkolny",
                 "hfov": 180,
@@ -513,6 +639,11 @@
                         "sceneId": "sala24"
                     },
                     {
+                        "pitch": 4,
+                        "yaw": 250,
+                        "type": "scene",
+                        "text": "Wróć",
+                        "sceneId": "przejscie-noweskrzydl"
                         
                     }
                
@@ -784,7 +915,7 @@
                     }
                 ]
             },
-            "1pietr-srod": {
+            "1pietr-srod": { //Working here (long ass code)
                 "title": "I piętro",
                 "hfov": 180,
                 "pitch": 0,
@@ -825,10 +956,42 @@
                         "yaw": -60,
                         "type": "scene",
                         "text": "Do nowego skrzydła ( image/fix awaiting)",
-                        "sceneId": "1pietr-stareskrzydl3" 
+                        "sceneId": "przejscie-noweskrzydl" 
                     }
                 ]
             },
+            "przejscie-noweskrzydl": {
+                "title": "Przejście do nowego skrzydła",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 100,
+                "type": "equirectangular",
+                "panorama": "media/przejscie-noweskrzydl.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": -55,
+                        "type": "scene",
+                        "text": "Wróć",
+                        "sceneId": "1pietr-srod"
+                    },
+                    {
+                        "pitch": -15,
+                        "yaw": 200,
+                        "type": "scene",
+                        "text": "Wróć",
+                        "sceneId": "part-noweskrzydl1"
+                    },
+                    {
+                        "pitch": 20,
+                        "yaw": 225,
+                        "type": "scene",
+                        "text": "Wróć",
+                        "sceneId": "1pietr-noweskrzydl1"
+                    }
+                ]
+            },
+
             "1-2pietr-schody": {
                 "title": "Schody na II piętro",
                 "hfov": 180,
@@ -942,11 +1105,11 @@
                         "yaw": 120,
                         "type": "scene",
                         "text": "Na dół",
-                        "sceneId": "1pietr-noweskrzydl1" //błąd
+                        "sceneId": "1pietr-noweskrzydl1" 
                     }
                 ]
             },
-            "1pietr-noweskrzydl1": {
+            "1pietr-noweskrzydl1": { //ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
                 "title": "I pietro Nowe Skrzydło",
                 "hfov": 180,
                 "pitch": 0,
@@ -967,7 +1130,15 @@
                         "type": "scene",
                         "text": "Przejdź",
                         "sceneId": "1pietr-noweskrzydl2"
+                    },
+                    {
+                        "pitch": -20,
+                        "yaw": 130,
+                        "type": "scene",
+                        "text": "Wróć",
+                        "sceneId": "przejscie-noweskrzydl"
                     }
+                  
                 ]
             },
             "1pietr-noweskrzydl2":{
@@ -1366,14 +1537,87 @@
         "sceneId": "sala4"
       },
         {
-            "pitch": 0,
+            "pitch": 0,// wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
             "yaw": -115,
             "type": "scene",
             "text": "Sala numer 3",
             "sceneId": "sala3"
+        },
+        {
+            "pitch": 0,
+            "yaw": -130,
+            "type": "scene",
+            "text": "Sala numer 2",
+            "sceneId": "sala2"
         }
     ]
-  }, //środek 
+  }, 
+  "sala2":{
+    "title": "Sala 2",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "media/sala2.jpg",
+    "hotSpots": [
+        {
+            "pitch": 0,
+            "yaw": 60,
+            "type": "scene",
+            "text": "Wróć na korytarz",
+            "sceneId": "parter-stareskrzydl4"
+        },
+        {
+            "pitch": 0,
+            "yaw": -50,
+            "type": "scene",
+            "text": "Sala 2a",
+            "sceneId": "sala2a"
+        },
+        {
+            "pitch": 0,
+            "yaw": -75,
+            "type": "scene",
+            "text": "Sala 2b",
+            "sceneId": "sala2b"
+        }
+
+    ]
+  },
+    "sala2a":{
+        "title": "Sala 2a",
+        "hfov": 180,
+        "pitch": 0,
+        "yaw": 180,
+        "type": "equirectangular",
+        "panorama": "media/sala2a.jpg",
+        "hotSpots": [
+            {
+                "pitch": 0,
+                "yaw": -60,
+                "type": "scene",
+                "text": "Wróć na korytarz",
+                "sceneId": "sala2"
+            }
+        ]
+    },
+    "sala2b":{
+        "title": "Sala 2b",
+        "hfov": 180,
+        "pitch": 0,
+        "yaw": 0,
+        "type": "equirectangular",
+        "panorama": "media/sala2b.jpg",
+        "hotSpots": [
+            {
+                "pitch": 0,
+                "yaw": 25,
+                "type": "scene",
+                "text": "Wróć na korytarz",
+                "sceneId": "sala2"
+            }
+        ]
+    },
   "parter-stareskrzydl1.1": {
     "title": "Stare Skrzydło",
     "hfov": 180,
@@ -1577,7 +1821,7 @@
         "yaw": -85,
         "type": "scene",
         "text": "Przejdź",
-        "sceneId": "1pietr-stareskrzydl2"
+        "sceneId": "1pietr-stareskrzydl1.5" // Changed connection
       },
       {
         "pitch": -25,
@@ -1595,6 +1839,90 @@
         }
     ]
   },
+
+"1pietr-stareskrzydl1.5": { // New scene //fdfddfsgdfsgdfsgdfsgdfsgdfsgdfsgdfsgdfsgdfsgdfsgdfsgdfsgdfsgdfsgdfsgdfsgdfsgdfsgdfsgdfsgdfsgdfsgdfsghu
+    "title": "1 Piętro Stare Skrzydło 1.5",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 170,
+    "type": "equirectangular",
+    "panorama": "media/1pietr-stareskrzydl1.5.jpg",
+    "hotSpots": [
+      {
+        "pitch": 0,
+        "yaw": 187,
+        "type": "scene",
+        "text": "Przejdź",
+        "sceneId": "1pietr-stareskrzydl2"
+      },
+      {
+        "pitch": 0,
+        "yaw": 20,
+        "type": "scene",
+        "text": "Przejdź",
+        "sceneId": "1pietr-stareskrzydl1"
+      },
+        {
+            "pitch": 0,
+            "yaw": 90,
+            "type": "scene",
+            "text": "Sala 17",
+            "sceneId": "sala17"
+        }
+    ]
+},
+"sala17":{
+    "title": "Sala 17",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "media/sala17.jpg",
+    "hotSpots": [
+        {
+            "pitch": 0,
+            "yaw": 124,
+            "type": "scene",
+            "text": "Wróć na korytarz",
+            "sceneId": "1pietr-stareskrzydl1.5"
+        }
+    ]
+},
+  "sala3": {
+    "title": "Sala 3",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "media/sala3.jpg",
+    "hotSpots": [
+      {
+        "pitch": 0,
+        "yaw": 20,
+        "type": "scene",
+        "text": "Wróć na korytarz",
+        "sceneId": "parter-stareskrzydl4.4"
+      }
+    ]
+  },
+  "sala5": {
+    "title": "Sala 5",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "media/sala5.jpg",
+    "hotSpots": [
+      {
+        "pitch": 0,
+        "yaw": 20,
+        "type": "scene",
+        "text": "Wróć na korytarz",
+        "sceneId": "parter-stareskrzydl3.3"
+      }
+    ]
+    },
+
   "sala16p": {
     "title": "Sale 16A i 16B",
     "hfov": 180,
@@ -1680,7 +2008,7 @@
         "yaw": 225,
         "type": "scene",
         "text": "Przejdź",
-        "sceneId": "1pietr-stareskrzydl1"
+        "sceneId": "1pietr-stareskrzydl1.5" // Changed connection
       },
       {
         "pitch": -5,
@@ -2037,9 +2365,7 @@
         }
     ]
     },
-    
-
-
+   
 
         } //wazne nawiasy nie usuwac
     });
