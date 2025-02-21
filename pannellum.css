@@ -59,7 +59,7 @@
     height: 150px;
     margin: -75px 0 0 -140px;
     background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 0px solid rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
