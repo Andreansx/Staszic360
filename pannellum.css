@@ -130,46 +130,50 @@
 .pnlm-hotspot.pnlm-scene{background-position:0 -130px}
 .pnlm-hotspot-base.pnlm-scene,
 .pnlm-hotspot-base.pnlm-info {
-    background: none;
-    border: 5px solid #0138d1;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 9999px;
-    padding: 0.5rem;
-    transition: transform 0.1s ease-out, background-color 0.5s ease;
-}
-.reduce-motion .pnlm-hotspot-base.pnlm-scene,
-.reduce-motion .pnlm-hotspot-base.pnlm-info {
-    transition: none;
-}
-.pnlm-hotspot-base.pnlm-scene:hover {
-    transform: scale(1.1);
-    background-color: #3B82F6;
-}
-.pnlm-hotspot-base.pnlm-info:hover {
-    transform: scale(1.1);
-    background-color: #00245f;
+    padding: 0.75rem;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
 }
 
-.reduce-motion .pnlm-hotspot-base.pnlm-scene:hover{
-    transform: none;
-    background-color: #3B82F6;
+.pnlm-hotspot-base.pnlm-scene:hover,
+.pnlm-hotspot-base.pnlm-info:hover {
+    transform: scale(1.1);
+    background: rgba(59, 130, 246, 0.25);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);
 }
-.reduce-motion .pnlm-hotspot-base.pnlm-info:hover {
-    transform: none;
-    background-color: #00245f;
+
+.high-contrast .pnlm-hotspot-base.pnlm-scene,
+.high-contrast .pnlm-hotspot-base.pnlm-info {
+    background: #000000;
+    border: 3px solid #0066FF;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+}
+
+.high-contrast .pnlm-hotspot-base.pnlm-scene:hover,
+.high-contrast .pnlm-hotspot-base.pnlm-info:hover {
+    background: #333333;
 }
 
 div.pnlm-tooltip span {
     visibility: hidden;
     position: absolute;
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(59, 130, 246, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     color: white;
     text-align: center;
     max-width: 200px;
-    left: -4px;
+    left: 0px;
     bottom: 55px;
     padding: 12px 20px;
     margin-left: -220px;
@@ -179,7 +183,7 @@ div.pnlm-tooltip span {
     font-weight: 500;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.1s ease;
     opacity: 0;
     transform: translateY(10px);
 }
@@ -197,7 +201,7 @@ div.pnlm-tooltip:hover span:after {
     height: 0;
     border-width: 10px;
     border-style: solid;
-    border-color: rgba(255, 255, 255, 0.15) transparent transparent transparent;
+    border-color: rgba(59, 130, 246, 0.25) transparent transparent transparent;
     bottom: -20px;
     left: -11px;
     margin: 0 50%;
