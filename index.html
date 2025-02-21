@@ -65,6 +65,20 @@
         <input id="searchInput" type="text" placeholder="Wyszukaj salę... np. 16a" class="px-4 py-2 border border-gray-300 rounded-lg shadow-inner focus:outline-none focus:ring focus:border-blue-300 text-lg font-medium text-scalable"/>
         <button onclick="goToScene()" class="px-4 py-2 bg-blue-500 text-white rounded-xl shadow-md hover:bg-blue-600 transition text-lg font-semibold text-scalable">Przejdź</button>
     </div>
+
+    <div class="quick-access-menu text-scalable blurred">
+        <button id="quickAccessBtn" class="quick-access-button text-scalable">
+            Szybki dostęp ▼
+        </button>
+        <div id="quickAccessContent" class="quick-access-content">
+            <div class="quick-access-item" onclick="viewer.loadScene('sala1')">Sala 1</div>
+            <div class="quick-access-item" onclick="viewer.loadScene('sala2a')">Sala 2a</div>
+            <div class="quick-access-item" onclick="viewer.loadScene('sala2b')">Sala 2b</div>
+            <div class="quick-access-item" onclick="viewer.loadScene('sala3')">Sala 3</div>
+            <div class="quick-access-item" onclick="viewer.loadScene('sala4')">Sala 4</div>
+        </div>
+    </div>
+
     <div id="accessibilityMenu" class="hidden fixed bottom-20 right-4 bg-white rounded-xl shadow-lg p-4 z-50 w-64">
         <h3 class="text-lg font-semibold mb-3 text-gray-800 text-scalable">Opcje dostępności</h3>
         <div class="space-y-3">
@@ -368,7 +382,7 @@
                         "pitch": -5, 
                         "yaw": 50,
                         "type": "scene",
-                        "text": "powrót",
+                        "text": "Powrót",
                         "sceneId": "niebieskiDywan"
                     }
 
@@ -443,21 +457,21 @@
                         "pitch": -5, 
                         "yaw": 90,
                         "type": "scene",
-                        "text": "powrót",
+                        "text": "Powrót",
                         "sceneId": "wicedyr"
                     },
                     { 
                         "pitch": -5, 
                         "yaw": -45,
                         "type": "scene",
-                        "text": "powrót",
+                        "text": "Powrót",
                         "sceneId": "skarbnik"
                     },
                     { 
                         "pitch": -5, 
                         "yaw": 113,
                         "type": "scene",
-                        "text": "powrót",
+                        "text": "Powrót",
                         "sceneId": "sala1"
                     }
                   
@@ -477,7 +491,7 @@
                         "pitch": -5, 
                         "yaw": 160,
                         "type": "scene",
-                        "text": "powrót",
+                        "text": "Powrót",
                         "sceneId": "sekretariat3"
                     }
                 ]
@@ -2391,6 +2405,7 @@
     document.getElementById("welcomeButton").addEventListener("click", function() {
         document.getElementById("welcomeScreen").style.display = "none";
         document.getElementById("searchDiv").classList.remove("hidden");
+        document.querySelector(".quick-access-menu").classList.remove("blurred");
         viewer.resize();
         preloadImages();
     });
@@ -2574,6 +2589,19 @@
     document.querySelector('.pnlm-map-container').addEventListener('click', function(e) {
         e.stopPropagation();
     });
+
+    document.getElementById('quickAccessBtn').addEventListener('click', function() {
+        document.getElementById('quickAccessContent').classList.toggle('show');
+    });
+
+    document.addEventListener('click', function(e) {
+        const menu = document.getElementById('quickAccessContent');
+        const btn = document.getElementById('quickAccessBtn');
+        if (!btn.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.remove('show');
+        }
+    });
+
 </script>
 </body>
 </html>

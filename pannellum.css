@@ -432,3 +432,81 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
 .high-contrast .pnlm-map-hint {
     color: #FFFF00 !important;
 }
+
+.quick-access-menu {
+    position: absolute;
+    top: 70px;
+    right: 16px;
+    z-index: 50;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+.quick-access-menu.blurred {
+    filter: blur(5px);
+    pointer-events: none;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.quick-access-button {
+    width: 100%;
+    padding: 8px 12px;
+    background-color: #3B82F6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quick-access-button:hover {
+    background-color: #2563EB;
+}
+
+.quick-access-content {
+    display: none;
+    margin-top: 8px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.quick-access-content.show {
+    display: block;
+}
+
+.quick-access-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #374151;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.quick-access-item:hover {
+    background-color: #F3F4F6;
+    color: #2563EB;
+}
+
+.high-contrast .quick-access-button {
+    background-color: #000000 !important;
+    border: 3px solid #0066FF !important;
+    color: #FFFF00 !important;
+}
+
+.high-contrast .quick-access-content {
+    background-color: #000000 !important;
+    border: 3px solid #0066FF !important;
+}
+
+.high-contrast .quick-access-item {
+    color: #FFFF00 !important;
+}
+
+.high-contrast .quick-access-item:hover {
+    background-color: #333333 !important;
+}
