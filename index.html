@@ -71,6 +71,7 @@
             Szybki dostęp ▼
         </button>
         <div id="quickAccessContent" class="quick-access-content">
+            <div class="quick-access-section-title">Sale lekcyjne</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala1')">Sala 1</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala2a')">Sala 2A</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala2b')">Sala 2B</div>
@@ -80,12 +81,10 @@
             <div class="quick-access-item" onclick="viewer.loadScene('sala6')">Sala 6</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala7')">Sala 7</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala8')">Sala 8</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala9')">Sala 9</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala16a')">Sala 16A</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala16b')">Sala 16B</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala17')">Sala 17</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala18')">Sala 18</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala21')">Sala 21</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala24')">Sala 24</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala25')">Sala 25</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala26')">Sala 26</div>
@@ -96,7 +95,16 @@
             <div class="quick-access-item" onclick="viewer.loadScene('sala57')">Sala 57</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala59')">Sala 59</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala60')">Sala 60</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala61')">Sala 61</div>
+            
+            <div class="quick-access-section-title">Administracja</div>
+            <div class="quick-access-item" onclick="viewer.loadScene('sekretariat')">Sekretariat</div>
+            <div class="quick-access-item" onclick="viewer.loadScene('dyrektor')">Gabinet dyrektora</div>
+            <div class="quick-access-item" onclick="viewer.loadScene('wicedyr')">Gabinet wicedyrektora</div>
+            <div class="quick-access-item" onclick="viewer.loadScene('skarbnik')">Księgowość</div>
+            
+            <div class="quick-access-section-title">Inne pomieszczenia</div>
+            <div class="quick-access-item" onclick="viewer.loadScene('biblioteka1')">Biblioteka</div>
+            <div class="quick-access-item" onclick="viewer.loadScene('Sklepik')">Sklepik szkolny</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala-gim')">Sala gimnastyczna mała</div>
             <div class="quick-access-item" onclick="viewer.loadScene('salagimn')">Sala gimnastyczna duża</div>
         </div>
@@ -1080,7 +1088,7 @@
                         "pitch": 0,
                         "yaw": 25,
                         "type": "scene",
-                        "text": "wróć na dół",
+                        "text": "Wróć na dół",
                         "sceneId": "1-2pietr-schody"
                     },
                     {
@@ -2134,7 +2142,7 @@
         "pitch": 0,
         "yaw": 85,
         "type": "scene",
-        "text": "wróć na korytarz",
+        "text": "Wróć na korytarz",
         "sceneId": "2pietr-srod"
       }
     ]
@@ -2389,13 +2397,13 @@
     "title": "Sala 60",
     "hfov": 180,
     "pitch": 0,
-    "yaw": 0,
+    "yaw": -100,
     "type": "equirectangular",
     "panorama": "media/sala60.jpg",
     "hotSpots": [
       {
         "pitch": -7,
-        "yaw": 107,
+        "yaw": -150,
         "type": "scene",
         "text": "Wróć na korytarz",
         "sceneId": "Olimp 1"

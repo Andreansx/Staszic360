@@ -549,3 +549,21 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
 .high-contrast .quick-access-item:hover {
     background-color: #333333 !important;
 }
+
+.quick-access-section-title {
+    padding: 12px;
+    font-weight: 600;
+    color: #1E40AF;
+    background-color: #EFF6FF;
+    border-bottom: 1px solid #DBEAFE;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.025em;
+}
+
+.high-contrast .quick-access-section-title {
+    background-color: #000000 !important;
+    color: #FFFF00 !important;
+    border-bottom: 1px solid #0066FF !important;
+    font-weight: bold;
+}
