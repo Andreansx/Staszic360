@@ -342,7 +342,7 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
 
 .pnlm-map-button {
     position: absolute;
-    top: 4px;
+    top: 17px;
     left: 40px;
     background-color: #3B82F6;
     border: none;
