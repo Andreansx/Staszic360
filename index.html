@@ -140,6 +140,9 @@
         <img src="./additional-media/accessibility_1512642.png" alt="Ikona dostępności" class="w-8 h-8 filter invert" />
     </button>
     <button id="showMap" class="pnlm-map-button text-scalable">Pokaż mapę</button>
+    <button id="brightnessToggle" class="pnlm-brightness-button text-scalable">
+        Przyciemnij widok
+    </button>
 <script type="text/javascript">
 
     const viewer = pannellum.viewer('panorama', {
@@ -2631,6 +2634,17 @@
         if (!btn.contains(e.target) && !menu.contains(e.target)) {
             menu.classList.remove('show');
         }
+    });
+
+    const brightnessToggle = document.getElementById('brightnessToggle');
+    const container = document.querySelector('.pnlm-container');
+    let isDimmed = false;
+
+    brightnessToggle.addEventListener('click', function() {
+        isDimmed = !isDimmed;
+        container.classList.toggle('dimmed');
+        brightnessToggle.classList.toggle('active');
+        brightnessToggle.textContent = isDimmed ? 'Przywróć jasność' : 'Przyciemnij widok';
     });
 
 </script>
