@@ -6,6 +6,7 @@ Read the README.md in English <a href="./additional-media/README-en.md">here</a>
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Static Badge](https://img.shields.io/badge/Panellum.js-%23ffa321?style=for-the-badge)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/AndreansxTech/Staszic360?style=for-the-badge&logo=github)
+![GitHub License](https://img.shields.io/github/license/AndreansxTech/Staszic360?style=for-the-badge)
 
 
 Interaktywny wirtualny spacer po I Liceum Ogólnokształcącym im. Stanisława Staszica w Chrzanowie. </br>
