@@ -51,6 +51,14 @@ Nasza strona wirtualnego spaceru zawiera wbudowane opcje dostępności, aby popr
 - Czasami przy użyciu menu szybkiego dostępu, możemy zobaczyć komunikat " (ścieżka zdjęcia sali) could not be accessed." W takim przypadku należy poprostu kliknąć na salę w menu szybkieg dostępu jeszcze raz. Ten bład pojawia się dosyć rzadko, a jego powodem jest trudność z załadowaniem zdjęcia przez Cloudflare w odpowiednim czasie. Zdjęcia są dosyć duże a plan, dzięki któremu ta strona jest hostowana, jest darmowy więc czas jaki CPU w hostingu może przeznaczyć na zapytanie od clienta jest ograniczony
 - Jeśli jakieś błedy wystąpią w wersji production, zostaną dodane tutaj. Jeśli zauważyłeś/aś jakiś błąd, możesz napisać do jednego z nas najlepiej z zrzutem ekranu albo poprostu opisem błędu.  
 
+## Dla deweloperów
+
+- Poniżej znajduje się diagram blokowy odnośnie działania strony
+
+![Block diagram](./additional-media/block-diagram.drawio.png)
+
+- Tutaj umieścimy jakieś devnotes jeśli jakieś się pojawią
+
 ### Stworzone z ❤️ przez Michała Bańkowskiego, Mateusza Długaja i Gabriela Świątka 2024-2025
 
 ## Ten projekt jest licencjonowany na podstawie **Licencji MIT** (sprawdź <a href="./LICENSE">LICENSE</a>)
