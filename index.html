@@ -85,10 +85,12 @@
             <div class="quick-access-item" onclick="viewer.loadScene('sala16b')">Sala 16B</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala17')">Sala 17</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala18')">Sala 18</div>
+            <div class="quick-access-item" onclick="viewer.loadScene('sala20')">Sala 20</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala21')">Sala 21</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala24')">Sala 24</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala25')">Sala 25</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala26')">Sala 26</div>
+            <div class="quick-access-item" onclick="viewer.loadScene('sala33')">Sala 33</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala40')">Sala 40</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala45')">Sala 45</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala46')">Sala 46</div>
@@ -1300,8 +1302,15 @@
                         "pitch": 5,
                         "yaw": -6,
                         "type": "scene",
-                        "text": "Przejdź",
+                        "text": "Sala numer 40",  
                         "sceneId": "sala40"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Sala numer 33",
+                        "sceneId": "sala33"
                     }
                 ]
             },
@@ -1331,8 +1340,32 @@
                         "pitch": 5,
                         "yaw": -6,
                         "type": "scene",
-                        "text": "Przejdź",
+                        "text": "Sala numer 40",
                         "sceneId": "sala40"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Sala numer 33",
+                        "sceneId": "sala33"
+                    }
+                ]
+            },
+            "sala33":{
+                "title": "Sala 33",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 0,
+                "type": "equirectangular",
+                "panorama": "media/sala33.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -5,
+                        "yaw": 80,
+                        "type": "scene",
+                        "text": "Wróć na korytarz",
+                        "sceneId": "1pietr-noweskrzydl3,3"
                     }
                 ]
             },
@@ -2154,9 +2187,33 @@
         "type": "scene",
         "text": "Przejdź",
         "sceneId": "1pietr-srod"
-      }
+      },
+        {
+            "pitch": 0,
+            "yaw": 72,
+            "type": "scene",
+            "text": "Sala numer 20",
+            "sceneId": "sala20"
+        }
     ]
   }, //koniec 
+  "sala20":{
+    "title": "Sala 20",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "media/sala20.jpg",
+    "hotSpots": [
+      {
+        "pitch": 0,
+        "yaw": -29,
+        "type": "scene",
+        "text": "Wróć na korytarz",
+        "sceneId": "1pietr-stareskrzydl3"
+      }
+    ]
+  },
   "konf2pietro": {
     "title": "Sala konferencyjna",
     "hfov": 180,
