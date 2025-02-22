@@ -91,6 +91,7 @@
             <div class="quick-access-item" onclick="viewer.loadScene('sala25')">Sala 25</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala26')">Sala 26</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala33')">Sala 33</div>
+            <div class="quick-access-item" onclick="viewer.loadScene('sala39')">Sala 39</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala40')">Sala 40</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala45')">Sala 45</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala46')">Sala 46</div>
@@ -1307,7 +1308,7 @@
                     },
                     {
                         "pitch": 0,
-                        "yaw": 0,
+                        "yaw": 180,
                         "type": "scene",
                         "text": "Sala numer 33",
                         "sceneId": "sala33"
@@ -1345,7 +1346,7 @@
                     },
                     {
                         "pitch": 0,
-                        "yaw": 0,
+                        "yaw": 180,
                         "type": "scene",
                         "text": "Sala numer 33",
                         "sceneId": "sala33"
@@ -1355,8 +1356,8 @@
             "sala33":{
                 "title": "Sala 33",
                 "hfov": 180,
-                "pitch": 0,
-                "yaw": 0,
+                "pitch": 4,
+                "yaw": 40,
                 "type": "equirectangular",
                 "panorama": "media/sala33.jpg",
                 "hotSpots": [
@@ -1383,16 +1384,40 @@
                         "type": "scene",
                         "text": "Przejdź",
                         "sceneId": "1pietr-noweskrzydl3,3"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 70,
+                        "type": "scene",
+                        "text": "Sala numer 39",
+                        "sceneId": "sala39"
                     }
                     
             
+                ]
+            },
+            "sala39": {
+                "title": "Sala 39",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 60,
+                "type": "equirectangular",
+                "panorama": "media/sala39.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -5,
+                        "yaw": 125,
+                        "type": "scene",
+                        "text": "Wróć na korytarz",
+                        "sceneId": "1pietr-noweskrzydl4,4"
+                    }
                 ]
             },
             "1pietr-noweskrzydl4,4": {
                 "title": "I piętro Nowe Skrzydło",
                 "hfov": 180,
                 "pitch": 0,
-                "yaw": 90,
+                "yaw": -90,
                 "type": "equirectangular",
                 "panorama": "media/1pietr-noweskrzydl4.jpg",
                 "hotSpots": [
@@ -1402,6 +1427,13 @@
                         "type": "scene",
                         "text": "Przejdź",
                         "sceneId": "1pietr-noweskrzydl3"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 70,
+                        "type": "scene",
+                        "text": "Sala numer 39",
+                        "sceneId": "sala39"
                     }
                     
             
