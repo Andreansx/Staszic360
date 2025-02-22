@@ -41,7 +41,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="OeqEpGcmac5ejH6DKW5M-10" value="Domyślnie zorientowane w stronę cz.3" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Tahoma;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="OeqEpGcmac5ejH6DKW5M-10" value="Domyślnie zorientowane w stronę po kolei: 2,3,4" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Tahoma;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="240" y="50" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="OeqEpGcmac5ejH6DKW5M-11" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontFamily=Tahoma;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OeqEpGcmac5ejH6DKW5M-10">
@@ -64,7 +64,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="OeqEpGcmac5ejH6DKW5M-13" value="Domyślnie zorientowane w stronę cz.1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Tahoma;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="OeqEpGcmac5ejH6DKW5M-13" value="Domyślnie zorientowane w stronę po kolei: 3,2,1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Tahoma;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="240" y="360" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="OeqEpGcmac5ejH6DKW5M-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fontFamily=Tahoma;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OeqEpGcmac5ejH6DKW5M-13">
