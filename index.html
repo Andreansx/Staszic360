@@ -85,6 +85,7 @@
             <div class="quick-access-item" onclick="viewer.loadScene('sala16b')">Sala 16B</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala17')">Sala 17</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala18')">Sala 18</div>
+            <div class="quick-access-item" onclick="viewer.loadScene('sala21')">Sala 21</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala24')">Sala 24</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala25')">Sala 25</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala26')">Sala 26</div>
@@ -102,6 +103,9 @@
             <div class="quick-access-item" onclick="viewer.loadScene('wicedyr')">Gabinet wicedyrektora</div>
             <div class="quick-access-item" onclick="viewer.loadScene('skarbnik')">Księgowość</div>
             
+            <div class="quick-access-section-title">Piętra</div>
+            <div class="quick-access-item" onclick="viewer.loadScene('1pietr-srod')">I piętro</div>
+            <div class="quick-access-item" onclick="viewer.loadScene('2pietr-srod')">II piętro</div>
             <div class="quick-access-section-title">Inne miejsca</div>
             <div class="quick-access-item" onclick="viewer.loadScene('biblioteka1')">Biblioteka</div>
             <div class="quick-access-item" onclick="viewer.loadScene('Sklepik')">Sklepik szkolny</div>
@@ -1008,6 +1012,30 @@
                         "type": "scene",
                         "text": "Do nowego skrzydła",
                         "sceneId": "przejscie-noweskrzydl" 
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 145,
+                        "type": "scene",
+                        "text": "Sala numer 21",
+                        "sceneId": "sala21"
+                    }
+                ]
+            },
+            "sala21":{
+                "title": "Sala 21",
+                "hfov": 180,
+                "pitch": 0,
+                "yaw": 0,
+                "type": "equirectangular",
+                "panorama": "media/sala21.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -4,
+                        "yaw": 15,
+                        "type": "scene",
+                        "text": "Wróć na korytarz",
+                        "sceneId": "1pietr-srod"
                     }
                 ]
             },
