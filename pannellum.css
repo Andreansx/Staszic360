@@ -862,8 +862,8 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
 .pnlm-brightness-button {
     position: absolute;
     padding: 12px 20px;
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(16, 60, 255, 0.15);
+    border: 1px solid rgba(16, 60, 255, 0.3);
     border-radius: 16px;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -874,7 +874,7 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
     cursor: pointer;
     z-index: 2;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(16, 60, 255, 0.2);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -890,15 +890,16 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
 
 .pnlm-map-button:hover,
 .pnlm-brightness-button:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(16, 60, 255, 0.25);
     transform: translateY(-2px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 .pnlm-brightness-button.active {
-    background: rgba(16, 60, 255, 0.25);
-    border-color: rgba(16, 60, 255, 0.3);
-    box-shadow: 0 8px 32px rgba(16, 60, 255, 0.2);
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(170, 185, 255, 0.2);
+    
 }
 
 .high-contrast .pnlm-map-button,
