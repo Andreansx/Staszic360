@@ -10,7 +10,7 @@ sig1 - index.html</br>
 sig2 - panellum.css</br>
 sig3 - panellum.js
 
-Wiadomo że to ta strona to nie coś co możemy skompilować i mieć wątpliwości co do bezpieczeństwa i autentyczności tego pliku. Jednakże ten projekt jest częścią naszego ogólnie poznawania tego wszystkiego. Dlatego nie zaszkodzi na nim odrazu po próbować podpisów cyfrowych itp. Nikomu to nie przeszkodzi w użytkowaniu a nam pozwala na poznanie czegoś nowego.
+Wiadomo że to ta strona to nie coś co możemy skompilować i mieć wątpliwości co do bezpieczeństwa i autentyczności tego pliku. Jednakże ten projekt jest częścią naszego ogólnie coraz szerszego poznawania tego wszystkiego. Dlatego nie zaszkodzi na nim odrazu po próbować na przykład właśnie podpisów cyfrowych. Nikomu to nie przeszkodzi w użytkowaniu a nam pozwala na poznanie czegoś nowego.
 ## Diagramy blokowe
 ![Block diagram](../additional-media/block-diagram.drawio.png)
 ![Block diagram](../additional-media/project.drawio)
