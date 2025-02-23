@@ -586,7 +586,7 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
 }
 
 .quick-access-button:hover {
-    background: rgba(16, 60, 255, 0.25);
+    background: rgba(16, 60, 255, 0.356);
     transform: translateY(-2px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
@@ -595,7 +595,7 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
     position: relative;
     display: none; 
     margin-top: 12px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(145, 145, 145, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     backdrop-filter: blur(16px);
@@ -624,12 +624,12 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
     max-height: 70vh;
     overflow-y: auto;
     margin-top: 12px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(161, 161, 161, 0.233);
     border: 0px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.329);
     transition: all 0.3s ease;
 }
 
