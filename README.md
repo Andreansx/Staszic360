@@ -49,16 +49,36 @@ Nasza strona wirtualnego spaceru zawiera wbudowane opcje dostępności, aby popr
 - JavaScript
 - Panellum.js 
 
-## Znane błędy
+## Znane błędy / problemy
 
 - Czasami przy użyciu menu szybkiego dostępu, możemy zobaczyć komunikat " (ścieżka zdjęcia sali) could not be accessed." W takim przypadku należy poprostu kliknąć na salę w menu szybkieg dostępu jeszcze raz. Ten błąd pojawia się dosyć rzadko, a jego powodem jest trudność z załadowaniem zdjęcia przez Cloudflare w odpowiednim czasie. Zdjęcia są dosyć duże a plan, dzięki któremu ta strona jest hostowana, jest darmowy więc czas jaki CPU w hostingu może przeznaczyć na zapytanie od clienta jest ograniczony
 - Jeśli jakieś błedy wystąpią w wersji production, zostaną dodane tutaj. Jeśli zauważyłeś/aś jakiś błąd, możesz napisać do jednego z nas najlepiej z zrzutem ekranu albo poprostu opisem błędu.  
 
-## Dla deweloperów
-
+## Dla dociekliwych
+- Pliki są podpisane cyfrowo aby można było zapewnić ich integralność i autentyczność. ( Czytaj niżej )
 - Jeśli jesteś zainteresowanym rozwinięciem tego projektu albo jesteś poprostu ciekaw jak to dokładniej działa i jak postępował rozwój, sprawdź koniecznie pliki <a href="./LICENSE">LICENSE</a> oraz <a href="./additional-media/devnotes.md">devnotes</a>
 - Jeśli chcesz zaproponować coś albo cokolwiek, możesz napisać na <a href="https://t.me/Andrtexh" target="_blank">Telegramie</a>.
 
-### Stworzone z ❤️ przez Michała Bańkowskiego, Mateusza Długaja i Gabriela Świątka 2024-2025
+## Weryfikacja podpisów
+
+Pliki `index.html`, `panellum.js` i `panellum.css` są podpisane cyfrowo za pomocą GPG, aby zapewnić ich integralność i autentyczność. Oznacza to, że możesz mieć pewność, iż pliki te nie zostały zmodyfikowane przez osoby trzecie od momentu ich podpisania przez nas.</br>
+
+**Klucz publiczny**: [AndreansxTech_0x1A5C5CDB_public.asc](./AndreansxTech_0x1A5C5CDB_public.asc)
+
+**Odcisk cyfrowy klucza**: 9282 DF55 1096 3273 6618  5B2E 4C80 939B 1A5C 5CDB
+
+**Importowanie klucza (wiersz poleceń):**
+
+```bash
+gpg --import AndreansxTech_0x1A5C5CDB_public.asc
+```
+**Weryfikacja podpisów**
+```bash
+gpg --verify index.html.sig index.html
+gpg --verify pannellum.css.sig pannellum.css
+gpg --verify pannellum.js.sig pannellum.js
+```
+### Stworzone z ❤️ przez Michała Bańkowskiego ( AndreansxTech ), Mateusza Długaja ( Matkard1 ) i Gabriela Świątka ( Simonaven265 ) 2025
+
 
 ## Ten projekt jest licencjonowany na podstawie **Licencji MIT** (sprawdź <a href="./LICENSE">LICENSE</a>)

@@ -1,14 +1,16 @@
 ## Ten plik zawiera notatki dla deweloperów
 
-W sprawie czegokolwiek pisz do mnie ( <a href="https://t.me/Andrtexh">AndreansxTech</a> ) na Telegramie
+W sprawie czegokolwiek pisz do mnie ( <a href="https://t.me/Andrtexh">AndreansxTech</a> ) na Telegramie. </br>
 Ogólnie fajnie że nie ma tu nawet żadnego backendu. Właściwie to statyczna strona
 ## Ukryte funkcje
 - "index" w polu wyszukiwania sal - pomagało przy sprawdzaniu w wersji production
 - "sig" - podpis cyfrowy - użyj np. Kleopatry aby sprawdzić czy ktoś ruszał pliki od czasu podpisania go przez nas, autorów.</br>
-Po wpisaniu pobierze się plik z podpisem odpowiednio:
+Po wpisaniu pobierze się plik z podpisem odpowiednio:</br>
 sig1 - index.html</br>
 sig2 - panellum.css</br>
 sig3 - panellum.js
+
+Wiadomo że to ta strona to nie coś co możemy skompilować i mieć wątpliwości co do bezpieczeństwa i autentyczności tego pliku. Jednakże ten projekt jest częścią naszego ogólnie poznawania tego wszystkiego. Dlatego nie zaszkodzi na nim odrazu po próbować podpisów cyfrowych itp. Nikomu to nie przeszkodzi w użytkowaniu a nam pozwala na poznanie czegoś nowego.
 ## Diagramy blokowe
 ![Block diagram](../additional-media/block-diagram.drawio.png)
 ![Block diagram](../additional-media/project.drawio)
