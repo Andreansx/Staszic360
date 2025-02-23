@@ -78,6 +78,23 @@ gpg --verify index.html.sig index.html
 gpg --verify pannellum.css.sig pannellum.css
 gpg --verify pannellum.js.sig pannellum.js
 ```
+### Struktura projektu
+```
+Staszic360/
+├── additional-media/
+│   └── ...                               ( dodatkowe devnotes, ikonki, diagramy )
+├── media/
+│   └── ...                               ( folder z panoramami )
+├── AndreansxTech_0x1A5C5CDB_public.asc - Klucz publiczny do weryfikacji podpisów
+├── index.html                          - Główny plik HTML
+├── index.html.sig                      - Podpis cyfrowy index.html
+├── LICENSE                             - Plik licencji
+├── pannellum.css                       - Arkusz stylów Pannellum.
+├── pannellum.css.sig                   - Podpis cyfrowy pannellum.css
+├── pannellum.js                        - Biblioteka Pannellum
+├── pannellum.js.sig                    - Podpis cyfrowy panellum.js
+└── README.md
+```
 ### Stworzone z ❤️ przez Michała Bańkowskiego ( AndreansxTech ), Mateusza Długaja ( Matkard1 ) i Gabriela Świątka ( Simonaven265 ) 2025
 
 
