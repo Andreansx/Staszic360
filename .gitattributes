@@ -1,1 +1,2 @@
-pannellum.js -linguist-vendored
+pannellum.js -linguist-vendored=false
+*.js linguist-detectable=true
