@@ -7,7 +7,7 @@ Read the README.md in English <a href="./additional-media/README-en.md">here</a>
 ![Static Badge](https://img.shields.io/badge/Panellum.js-%23ffa321?style=for-the-badge)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/AndreansxTech/Staszic360?style=for-the-badge&logo=github)
 ![GitHub License](https://img.shields.io/github/license/AndreansxTech/Staszic360?style=for-the-badge)
-[![Kontakt](https://img.shields.io/badge/Kontakt-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/Andretexh)
+[![Kontakt](https://img.shields.io/badge/Kontakt-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/Andrtexh)
 
 
 Interaktywny wirtualny spacer po I Liceum Ogólnokształcącym im. Stanisława Staszica w Chrzanowie. </br>
@@ -57,7 +57,7 @@ Nasza strona wirtualnego spaceru zawiera wbudowane opcje dostępności, aby popr
 ## Dla deweloperów
 
 - Jeśli jesteś zainteresowanym rozwinięciem tego projektu albo jesteś poprostu ciekaw jak to dokładniej działa i jak postępował rozwój, sprawdź koniecznie pliki <a href="./LICENSE">LICENSE</a> oraz <a href="./additional-media/devnotes.md">devnotes</a>
-- Jeśli chcesz zaproponować coś albo cokolwiek, możesz napisać na <a href="https://t.me/Andretexh" target="_blank">Telegramie</a>.
+- Jeśli chcesz zaproponować coś albo cokolwiek, możesz napisać na <a href="https://t.me/Andrtexh" target="_blank">Telegramie</a>.
 
 ### Stworzone z ❤️ przez Michała Bańkowskiego, Mateusza Długaja i Gabriela Świątka 2024-2025
 
