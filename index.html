@@ -2244,7 +2244,7 @@
     "title": "Sala 19",
     "hfov": 180,
     "pitch": 0,
-    "yaw": 0,
+    "yaw": -40,
     "type": "equirectangular",
     "panorama": "media/sala19.jpg",
     "hotSpots": [
@@ -2606,8 +2606,16 @@
             window.location.href = window.location.href.replace(/\/[^\/]*$/, '/media/');
             return;
                 }
-            if (searchInput === "sig") {
+            if (searchInput === "sig1") {
             window.location.href = window.location.href.replace(/\/[^\/]*$/, '/index.html.sig');
+            return;
+            }
+            if (searchInput === "sig2") {
+            window.location.href = window.location.href.replace(/\/[^\/]*$/, '/pannellum.css.sig');
+            return;
+            }
+            if (searchInput === "sig3") {
+            window.location.href = window.location.href.replace(/\/[^\/]*$/, '/pannellum.js.sig');
             return;
         }
         const sceneMapping = {
@@ -2777,7 +2785,6 @@
             this.textContent = 'Wyłącz';
             this.classList.add('bg-blue-500');
             this.classList.remove('bg-gray-700');
-            // Przywróć wszystkie efekty hover
             document.querySelectorAll('.pnlm-hotspot-base').forEach(hotspot => {
                 hotspot.style.transition = '';
                 hotspot.style.transform = '';

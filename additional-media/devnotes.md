@@ -4,7 +4,11 @@ W sprawie czegokolwiek pisz do mnie ( <a href="https://t.me/Andrtexh">AndreansxT
 Ogólnie fajnie że nie ma tu nawet żadnego backendu. Właściwie to statyczna strona
 ## Ukryte funkcje
 - "index" w polu wyszukiwania sal - pomagało przy sprawdzaniu w wersji production
-- "sig" - suma kontrolna pliku - użyj np. Cleopatry aby sprawdzić czy ktoś ruszał plik index.html od czasu podpisania go przez nas, autorów.
+- "sig" - podpis cyfrowy - użyj np. Kleopatry aby sprawdzić czy ktoś ruszał pliki od czasu podpisania go przez nas, autorów.</br>
+Po wpisaniu pobierze się plik z podpisem odpowiednio:
+sig1 - index.html</br>
+sig2 - panellum.css</br>
+sig3 - panellum.js
 ## Diagramy blokowe
 ![Block diagram](../additional-media/block-diagram.drawio.png)
 ![Block diagram](../additional-media/project.drawio)
