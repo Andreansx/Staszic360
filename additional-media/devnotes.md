@@ -1,10 +1,13 @@
 ## Ten plik zawiera notatki dla deweloperów
 
+W sprawie czegokolwiek pisz do mnie ( <a href="https://t.me/Andrtexh">AndreansxTech</a> ) na Telegramie
+Ogólnie fajnie że nie ma tu nawet żadnego backendu. Właściwie to statyczna strona
 ## Ukryte funkcje
 - "index" w polu wyszukiwania sal - pomagało przy sprawdzaniu w wersji production
-- "sig" - suma kontrolna pliku - użyj np. Cleopatry aby sprawdzić czy ktoś ruszał plik index.html od czasu podpisania przez nas, autorów.
+- "sig" - suma kontrolna pliku - użyj np. Cleopatry aby sprawdzić czy ktoś ruszał plik index.html od czasu podpisania go przez nas, autorów.
 ## Diagramy blokowe
 ![Block diagram](../additional-media/block-diagram.drawio.png)
+![Block diagram](../additional-media/project.drawio)
 
 ### Zdjęcia i ich obróbka
 Specyfikacja sprzętu:
@@ -20,3 +23,6 @@ Kamera: Samsung Gear360 ( nie ta wersja z 2017 roku ) model CM-200
 - Przeróżne światło, ciężko było zaplanować robienie zdjęć tak aby były idealne warunki za każdym razem</br>
 
 Zdjęcia na karcie SDXC w kamerze są w 100% surowe, nie podlegały żadnej obróbce. Po pobraniu zdjęcia na telefon ( Samsung Galaxy S8 ) zdjęcia ulegają, bezstratnemu pod względem jakości, połączeniu dwóch zdjęć ( Double fish eye ) aby przejść do equiractangular po to żeby Panellum.js mogło je w ten sposób przerobić w zdjęcie sferyczne. Można również te zdjęcia brać bezpośrednio z karty SDXC i zamienić je ( być może jeszcze bardziej bezstratnie ) do odpowiedniego zdjęcia panoramicznego. Tak więc zdjęcia w folderze <a href="../media/">media</a> podległy jedynie najbardziej jak to możliwe połączeniu dwóch obrazów typu *fish-eye* do *panoramic* 
+
+## Panoramy
+Zdjęcia mogą wydawać się dość mylnie nazwane, bo tak jest, ale jednak jest pewien schemat. Sal chyba nie trzeba tłumaczyć. Zazwyczaj jest: "xpiętro=" potem albo "stareskrzydl" albo "noweskrzydl" i potem jakaś cyfra czyli któreś ze zdjęć zrobionych w tej części szkoły. Wszystkie zdjęcia powinny być najlepiej nazwane z małej litery. Dlatego że Cloudflare build environment działa na Linuxie który jest case sensitive. Często był taki dziwny błąd że dodaję jakieś nowe zdjęcie i widzę na Live serverze że strona działa więc pushuje na Githuba. Potem patrzę na stronę i nagle ta sala którą dodałem nie działa. 

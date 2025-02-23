@@ -995,3 +995,39 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
 .high-contrast #errorModal svg {
     color: #FFFF00 !important;
 }
+
+.reduce-motion .pnlm-hotspot-base.pnlm-scene:hover,
+.reduce-motion .pnlm-hotspot-base.pnlm-info:hover {
+    transform: none;
+    transition: none;
+}
+
+.reduce-motion .pnlm-hotspot-base.pnlm-scene,
+.reduce-motion .pnlm-hotspot-base.pnlm-info {
+    transition: none;
+}
+
+.reduce-motion div.pnlm-tooltip span {
+    transition: none;
+}
+
+.reduce-motion div.pnlm-tooltip:hover span {
+    transform: none;
+}
+
+.reduce-motion .quick-access-item,
+.reduce-motion .quick-access-button,
+.reduce-motion .pnlm-map-button,
+.reduce-motion .pnlm-brightness-button,
+.reduce-motion button {
+    transition: none !important;
+    transform: none !important;
+}
+
+.reduce-motion .quick-access-item:hover,
+.reduce-motion .quick-access-button:hover,
+.reduce-motion .pnlm-map-button:hover,
+.reduce-motion .pnlm-brightness-button:hover,
+.reduce-motion button:hover {
+    transform: none !important;
+}

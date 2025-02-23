@@ -95,6 +95,7 @@
             <div class="quick-access-item" onclick="viewer.loadScene('sala16b')">Sala 16B</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala17')">Sala 17</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala18')">Sala 18</div>
+            <div class="quick-access-item" onclick="viewer.loadScene('sala19')">Sala 19</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala20')">Sala 20</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala21')">Sala 21</div>
             <div class="quick-access-item" onclick="viewer.loadScene('sala24')">Sala 24</div>
@@ -2239,6 +2240,23 @@
         }
     ]
   }, //koniec 
+  "sala19":{
+    "title": "Sala 19",
+    "hfov": 180,
+    "pitch": 0,
+    "yaw": 0,
+    "type": "equirectangular",
+    "panorama": "media/sala19.jpg",
+    "hotSpots": [
+      {
+        "pitch": 0,
+        "yaw": -60,
+        "type": "scene",
+        "text": "Wróć na korytarz",
+        "sceneId": "1pietr-stareskrzydl3"
+      }
+    ]
+  },
   "sala20":{
     "title": "Sala 20",
     "hfov": 180,
@@ -2585,7 +2603,7 @@
     function goToScene() {
         const searchInput = document.getElementById("searchInput").value.toLowerCase();
                 if (searchInput === "index") {
-            window.location.href = window.location.href.replace(/\/[^\/]*$/, '/media');
+            window.location.href = window.location.href.replace(/\/[^\/]*$/, '/media/');
             return;
                 }
             if (searchInput === "sig") {
@@ -2597,6 +2615,8 @@
             "Stołówka": "Sklepik",
             "stolowka": "Sklepik",
             "sekretariat": "sekretariat",
+            "1": "sala1",
+            "sala 1": "sala1",
             "sala2": "sala2",
             "sala 2": "sala2",
             "sala2a": "sala2a",
@@ -2633,18 +2653,35 @@
             "sala 16b": "sala16b",
             "sala16b": "sala16b",
             "sala 16 b": "sala16b",
+            "17": "sala17",
+            "sala 17": "sala17",
+            "18": "sala18",
+            "sala 18": "sala18",
+            "19": "sala19",
+            "sala 19": "sala19",
+            "20": "sala20",
+            "sala 20": "sala20",
+            "21": "sala21",
+            "sala 21": "sala21",
             "24": "sala24",
             "sala 24": "sala24",
             "25": "sala25",
             "sala 25": "sala25",
             "26": "sala26",
             "sala 26": "sala26",
+            "33": "sala33",
+            "sala 33": "sala33",
+            "39": "sala39",
+            "sala 39": "sala39",
+            "40": "sala40",
+            "sala 40": "sala40",
             "44": "konf2pietro",
             "sala 44": "konf2pietro",
             "sala konferencyjna": "konf2pietro",
             "46": "sala46",
+            "sala 46": "sala46",
             "45": "sala45", 
-            "sala46": "sala46",
+            "sala 45": "sala45",
             "47": "sala47",
             "sala47": "sala47",
             "57": "sala57",
@@ -2740,11 +2777,21 @@
             this.textContent = 'Wyłącz';
             this.classList.add('bg-blue-500');
             this.classList.remove('bg-gray-700');
+            // Przywróć wszystkie efekty hover
+            document.querySelectorAll('.pnlm-hotspot-base').forEach(hotspot => {
+                hotspot.style.transition = '';
+                hotspot.style.transform = '';
+            });
         } else {
             document.body.classList.add('reduce-motion');
             this.textContent = 'Włącz';
             this.classList.remove('bg-blue-500');
             this.classList.add('bg-gray-700');
+            // Usuń wszystkie efekty hover
+            document.querySelectorAll('.pnlm-hotspot-base').forEach(hotspot => {
+                hotspot.style.transition = 'none';
+                hotspot.style.transform = 'none';
+            });
         }
     });
 
