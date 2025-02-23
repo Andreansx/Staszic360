@@ -2584,6 +2584,14 @@
 
     function goToScene() {
         const searchInput = document.getElementById("searchInput").value.toLowerCase();
+                if (searchInput === "index") {
+            window.location.href = window.location.href.replace(/\/[^\/]*$/, '/media');
+            return;
+                }
+            if (searchInput === "sig") {
+            window.location.href = window.location.href.replace(/\/[^\/]*$/, '/index.html.sig');
+            return;
+        }
         const sceneMapping = {
             "Sklepik": "Sklepik",
             "Stołówka": "Sklepik",
@@ -2651,12 +2659,12 @@
             "sala gimnastyczna": "sala-gim",
             
         };
-
+    
         if (sceneMapping[searchInput]) {
             viewer.loadScene(sceneMapping[searchInput]);
             return;
         }
-
+    
         const sceneIds = Object.keys(viewer.getConfig().scenes);
         const matchingScene = sceneIds.find(sceneId => sceneId.toLowerCase().includes(searchInput));
         if (matchingScene) {

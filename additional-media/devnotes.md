@@ -1,5 +1,8 @@
 ## Ten plik zawiera notatki dla deweloperów
 
+## Ukryte funkcje
+- "index" w polu wyszukiwania sal - pomagało przy sprawdzaniu w wersji production
+- "sig" - suma kontrolna pliku - użyj np. Cleopatry aby sprawdzić czy ktoś ruszał plik index.html od czasu podpisania przez nas, autorów.
 ## Diagramy blokowe
 ![Block diagram](../additional-media/block-diagram.drawio.png)
 
