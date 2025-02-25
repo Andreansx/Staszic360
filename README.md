@@ -52,6 +52,7 @@ Nasza strona wirtualnego spaceru zawiera wbudowane opcje dostępności, aby popr
 ## Znane błędy / problemy
 
 - Czasami przy użyciu menu szybkiego dostępu, możemy zobaczyć komunikat ```"The file %s could not be accessed."``` W takim przypadku należy poprostu kliknąć na salę w menu szybkieg dostępu jeszcze raz. Ten błąd pojawia się dosyć rzadko, a jego powodem jest trudność z załadowaniem zdjęcia przez Cloudflare w odpowiednim czasie. Zdjęcia są dosyć duże a plan, dzięki któremu ta strona jest hostowana, jest darmowy więc czas jaki CPU w hostingu może przeznaczyć na zapytanie od clienta jest ograniczony
+- Przy przełączaniu funkcji dostępności "Włącz / Wyłącz animacje", hotspoty mogą przesunąć się do lewego górnego rogu zamiast być tam gdzie powinny. Ten błąd nie wpływa na funkcjonalność strony. Hotspoty odrazu wracają na swoje miejsce kiedy tylko poruszymy panoramą.
 - Jeśli jakieś błedy wystąpią w wersji production, zostaną dodane tutaj. Jeśli zauważyłeś/aś jakiś błąd, możesz napisać do jednego z nas najlepiej z zrzutem ekranu albo poprostu opisem błędu.  
 
 ## Dla dociekliwych
