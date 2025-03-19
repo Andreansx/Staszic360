@@ -89,6 +89,8 @@ Staszic360/
 ├── additional-media/
 │   └── ...                               ( dodatkowe devnotes, ikonki, diagramy )
 ├── media/
+│   ├──lowscaled_images/
+│   │   └── ...                           ( Zdjęcia w mniejszej rozdzielczości )
 │   └── ...                               ( folder z panoramami )
 ├── AndreansxTech_0x1A5C5CDB_public.asc - Klucz publiczny do weryfikacji podpisów
 ├── index.html                          - Główny plik HTML
@@ -98,6 +100,7 @@ Staszic360/
 ├── pannellum.css.sig                   - Podpis cyfrowy pannellum.css
 ├── pannellum.js                        - Biblioteka Pannellum
 ├── pannellum.js.sig                    - Podpis cyfrowy panellum.js
+├── resize_images.py                    - Skrypt Pythona użyty do zmniejszenia rozdzielczości zdjęć
 └── README.md
 ```
 ### Stworzone z ❤️ przez Michała Bańkowskiego ( AndreansxTech ), Mateusza Długaja ( Matkard1 ) i Gabriela Świątka ( Simonaven265 ) 2025
