@@ -1,0 +1,205 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+% Define colors
+\definecolor{staszicblue}{RGB}{44, 165, 224}
+\definecolor{staszicgold}{RGB}{255, 163, 33}
+\definecolor{codegray}{RGB}{50, 51, 48}
+\definecolor{codegreen}{RGB}{107, 139, 88}
+
+% Configure page geometry
+\geometry{margin=2.5cm}
+
+% Configure section titles
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{staszicblue}}
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{staszicgold}}
+  {\thesubsection}{1em}{}
+
+% Configure code listings
+\lstset{
+  backgroundcolor=\color{codegray!10},
+  basicstyle=\footnotesize\ttfamily\color{black},
+  breaklines=true,
+  captionpos=b,
+  commentstyle=\color{codegreen},
+  frame=single,
+  numbers=left,
+  numbersep=5pt,
+  numberstyle=\tiny\color{codegray},
+  keywordstyle=\color{blue},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2
+}
+
+% Configure hyperlinks
+\hypersetup{
+  colorlinks=true,
+  linkcolor=staszicblue,
+  filecolor=staszicgold,
+  urlcolor=staszicblue,
+  citecolor=staszicblue
+}
+
+% Configure headers and footers
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Virtual Tour - I LO Stanisław Staszic}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{Created with \textcolor{staszicblue}{$\heartsuit$} by AndreansxTech, Matkard1, and Simonaven265}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\title{\textbf{\Huge{\textcolor{staszicblue}{Virtual Tour}}}\\\Large{I LO Stanisław Staszic in Chrzanów}}
+\author{\textbf{Project Documentation}}
+\date{\today}
+
+\begin{document}
+
+\begin{titlepage}
+\maketitle
+\begin{center}
+\includegraphics[width=0.7\textwidth]{./additional-media/preview-gif2.gif}
+
+\vspace{1cm}
+\begin{tcolorbox}[colback=staszicblue!5,colframe=staszicblue,title=Project Status]
+\begin{center}
+\textbf{License:} MIT \hspace{1cm} \textbf{Last Update:} \today
+\end{center}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+\begin{tcolorbox}[colback=staszicgold!5,colframe=staszicgold,title=Live Demo]
+Visit the virtual tour at: \href{https://staszic-virtual-walk.pages.dev}{Staszic360}
+\end{tcolorbox}
+\end{center}
+\end{titlepage}
+
+\section{Project Overview}
+This project implements an interactive virtual tour of I LO Stanisław Staszic high school in Chrzanów, Poland. The tour allows visitors to navigate through various parts of the school building including classrooms, corridors, gymnasiums, and administrative areas. The project was created entirely by a group of three students without any financial benefits. All photographs taken at the school are available in unaltered quality in the \texttt{media} folder.
+
+\section{Project Preview}
+The virtual tour provides an immersive experience through the hallways and rooms of I LO Stanisław Staszic in Chrzanów. Users can navigate through different parts of the school building, visiting classrooms, corridors, gymnasiums, as well as offices and areas typically not accessible to students. The website is fully adapted to W3C accessibility standards to ensure everyone can fully experience it.
+
+\begin{center}
+\textit{See the preview GIF on the title page}
+\end{center}
+
+\section{Key Features}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{360-degree interactive panoramic views} - Complete immersion in the school environment
+    \item \textbf{Smooth navigation between different locations} - Intuitive movement throughout the building
+    \item \textbf{High quality panoramic images} - Crystal clear visuals of the school interior
+    \item \textbf{Quick access menu to classrooms} - Easily locate and visit specific rooms
+    \item \textbf{Glassmorphism design style} - Modern and elegant user interface
+    \item \textbf{W3C accessibility compliance} - Ensuring the tour is usable by everyone
+\end{itemize}
+
+\section{Accessibility Features}
+The virtual tour includes built-in accessibility options to enhance the experience for all users:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{High contrast mode} - Toggle high contrast for better visibility
+    \item \textbf{Text size adjustment} - Increase or decrease text size for better readability
+    \item \textbf{Animation toggle} - Enable or disable animations to suit personal preferences
+\end{itemize}
+
+\section{Technologies Used}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{HTML5} - For structure and semantic markup
+    \item \textbf{CSS3} - For styling and responsive design
+    \item \textbf{JavaScript} - For interactivity and dynamic content
+    \item \textbf{Pannellum.js} - Panorama viewer library for 360° images
+\end{itemize}
+
+\section{Known Issues}
+\begin{tcolorbox}[colback=red!5,colframe=red!75!black,title=Known Bugs]
+\begin{itemize}[leftmargin=*]
+    \item When using the quick access menu, you may occasionally see the message ``The file \%s could not be accessed.'' In such cases, simply click on the classroom in the quick access menu again. This error appears quite rarely and is caused by difficulty loading the image through Cloudflare in time. The images are quite large, and since the site is hosted on a free plan, the CPU time that the hosting can allocate to client requests is limited.
+    
+    \item When toggling the accessibility feature ``Enable/Disable animations'', hotspots may move to the top-left corner instead of staying where they should be. This bug does not affect the functionality of the site. Hotspots immediately return to their proper position as soon as you move the panorama.
+    
+    \item If any errors occur in the production version, they will be added here. If you notice any bugs, feel free to contact one of us, preferably with a screenshot or just a description of the bug.
+\end{itemize}
+\end{tcolorbox}
+
+\section{Digital Signatures and Verification}
+The files \texttt{index.html}, \texttt{pannellum.js}, and \texttt{pannellum.css} are digitally signed using GPG to ensure their integrity and authenticity. This means you can be confident that these files have not been modified by third parties since they were signed by us.
+
+Remember to verify signatures against those from the appropriate Release, not the latest ones.
+
+\subsection{Key Information}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Public Key:} \texttt{AndreansxTech\_0x1A5C5CDB\_public.asc}
+    \item \textbf{Key Fingerprint:} 9282 DF55 1096 3273 6618 5B2E 4C80 939B 1A5C 5CDB
+\end{itemize}
+
+\subsection{Verification Steps}
+To import the key (command line):
+\begin{lstlisting}[language=bash]
+gpg --import AndreansxTech_0x1A5C5CDB_public.asc
+\end{lstlisting}
+
+To verify signatures:
+\begin{lstlisting}[language=bash]
+gpg --verify index.html.sig index.html
+gpg --verify pannellum.css.sig pannellum.css
+gpg --verify pannellum.js.sig pannellum.js
+\end{lstlisting}
+
+\section{Project Structure}
+\begin{tcolorbox}[colback=gray!10,colframe=gray!50!black,title=Directory Structure]
+\begin{lstlisting}
+Staszic360/
+├── additional-media/
+│   └── ...                               (additional devnotes, icons, diagrams)
+├── media/
+│   ├── lowscaled_images/
+│   │   └── ...                           (Images in lower resolution)
+│   └── ...                               (folder with panoramas)
+├── AndreansxTech_0x1A5C5CDB_public.asc - Public key for signature verification
+├── index.html                          - Main HTML file
+├── index.html.sig                      - Digital signature for index.html
+├── LICENSE                             - License file
+├── pannellum.css                       - Pannellum stylesheet
+├── pannellum.css.sig                   - Digital signature for pannellum.css
+├── pannellum.js                        - Pannellum library
+├── pannellum.js.sig                    - Digital signature for pannellum.js
+├── resize_images.py                    - Python script used to reduce image resolution
+└── README.md
+\end{lstlisting}
+\end{tcolorbox}
+
+\section{For the Curious}
+\begin{itemize}[leftmargin=*]
+    \item Files are digitally signed to ensure their integrity and authenticity (read above).
+    \item If you're interested in developing this project further or are just curious about how it works in detail and how the development progressed, be sure to check the \texttt{LICENSE} and \texttt{devnotes} files.
+    \item If you want to suggest something or have any questions, you can write on Telegram.
+\end{itemize}
+
+\section{License}
+This project is licensed under the MIT License. See the \texttt{LICENSE} file for details.
+
+\section{Authors}
+Created with \textcolor{staszicblue}{$\heartsuit$} by:
+\begin{itemize}[leftmargin=*]
+    \item Michał Bańkowski (AndreansxTech)
+    \item Mateusz Długaj (Matkard1)
+    \item Gabriel Świątek (Simonaven265)
+\end{itemize}
+
+\end{document}
