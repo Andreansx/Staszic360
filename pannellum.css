@@ -1042,27 +1042,35 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
     text-align: center;
-    z-index: 50;
+    z-index: 1000;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     width: auto;
     max-width: 90%;
+    pointer-events: none;
 }
 
 .preview-banner {
-    background-color: rgba(250, 204, 21, 0.8);
+    background-color: rgba(250, 204, 21, 0.9);
     color: #000;
-    font-size: 0.9rem;
-    border: 1px solid rgba(245, 158, 11, 0.5);
+    font-size: 0.95rem;
+    border: 2px solid rgba(245, 158, 11, 0.7);
+    animation: pulse 2s infinite;
 }
 
 .production-banner {
-    background-color: rgba(22, 163, 74, 0.8);
+    background-color: rgba(22, 163, 74, 0.9);
     color: white;
-    font-size: 0.8rem;
-    border: 1px solid rgba(21, 128, 61, 0.5);
+    font-size: 0.85rem;
+    border: 2px solid rgba(21, 128, 61, 0.7);
     padding: 6px 12px;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
 }
 
 .high-contrast .environment-banner {

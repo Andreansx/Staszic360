@@ -2841,9 +2841,15 @@
     });
 
     fetch('env.json')
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Failed to load env.json');
+    }
+    return response.json();
+  })
   .then(data => {
     const env = data.environment || 'production';
+    console.log("Environment loaded:", env);
 
     if (env === 'preview') {
       const banner = document.createElement('div');
@@ -2857,8 +2863,13 @@
       document.body.appendChild(badge);
     }
   })
-  .catch(() => {
-    console.warn("env.json not found – assuming production.");
+  .catch(error => {
+    console.warn("Error loading env.json:", error);
+    
+    const fallbackBanner = document.createElement('div');
+    fallbackBanner.textContent = "Local Development";
+    fallbackBanner.className = "environment-banner preview-banner text-scalable";
+    document.body.appendChild(fallbackBanner);
   });
 
 
