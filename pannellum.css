@@ -1031,3 +1031,48 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
 .reduce-motion button:hover {
     transform: none !important;
 }
+
+.environment-banner {
+    position: fixed;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    z-index: 50;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: auto;
+    max-width: 90%;
+}
+
+.preview-banner {
+    background-color: rgba(250, 204, 21, 0.8);
+    color: #000;
+    font-size: 0.9rem;
+    border: 1px solid rgba(245, 158, 11, 0.5);
+}
+
+.production-banner {
+    background-color: rgba(22, 163, 74, 0.8);
+    color: white;
+    font-size: 0.8rem;
+    border: 1px solid rgba(21, 128, 61, 0.5);
+    padding: 6px 12px;
+}
+
+.high-contrast .environment-banner {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: 2px solid #0066FF;
+    background-color: #000 !important;
+    color: #FFFF00 !important;
+}
+
+.reduce-motion .environment-banner {
+    transition: none !important;
+}
