@@ -26,8 +26,7 @@ jobs:
 
       - name: Create env.json for preview
         run: |
-          echo '{ "environment": "preview" }' > env.json
-
+          echo '{ "environment": "preview", "buildDate": "'$(date -u +"%Y-%m-%dT%H:%M:%SZ")'" }' > env.json
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
