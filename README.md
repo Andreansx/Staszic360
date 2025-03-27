@@ -2,7 +2,8 @@ Read the README.md in English <a href="./additional-media/README-en.md">here</a>
 
 # Wirtualny Spacer - I LO im. Stanisława Staszica w Chrzanowie
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Andreansxtech/Staszic360/static.yml?branch=main&style=for-the-badge)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Andreansxtech/Staszic360/deploy-preview.yml?branch=preview&style=for-the-badge)
+
 <!--- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Static Badge](https://img.shields.io/badge/Panellum.js-%23ffa321?style=for-the-badge)

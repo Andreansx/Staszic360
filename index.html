@@ -2840,6 +2840,39 @@
         brightnessToggle.textContent = isDimmed ? 'Przywróć jasność' : 'Przyciemnij widok';
     });
 
+    fetch('env.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Failed to load env.json');
+    }
+    return response.json();
+  })
+  .then(data => {
+    const env = data.environment || 'production';
+    console.log("Environment loaded:", env);
+
+    if (env === 'preview') {
+      const banner = document.createElement('div');
+      banner.textContent = "Preview version – not final!";
+      banner.className = "environment-banner preview-banner text-scalable";
+      document.body.appendChild(banner);
+    } else if (env === 'production') {
+      const badge = document.createElement('div');
+      badge.textContent = "Production";
+      badge.className = "environment-banner production-banner text-scalable";
+      document.body.appendChild(badge);
+    }
+  })
+  .catch(error => {
+    console.warn("Error loading env.json:", error);
+    
+    const fallbackBanner = document.createElement('div');
+    fallbackBanner.textContent = "Local Development";
+    fallbackBanner.className = "environment-banner preview-banner text-scalable";
+    document.body.appendChild(fallbackBanner);
+  });
+
+
 </script>
 </body>
 </html>
