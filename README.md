@@ -21,11 +21,11 @@ Cały projekt jest realizowany przez grupę trzech uczniów szkoły, w pełni be
 
 Projekt aktualnie jest dostępny na poniższych stronach:
 
-[Cloudflare Pages](https://staszic-virtual-walk.pages.dev)  - Wersja Production
+[Cloudflare Pages](https://staszic360.pages.dev)  - Wersja Production
 
 [GitHub Pages](https://andreansxtech.github.io/Staszic360/) - Wersja preview
 
-[Spacer.1lo.pl](http://spacer.1lo.pl/) ( Brak SSL/TLS🔓 )  - Wersja finalna, rzadko updateowana
+[Spacer.1lo.pl](http://spacer.1lo.pl/) ( Brak SSL/TLS🔓 )  - Wersja finalna, rzadko aktualizowana
 
 ## 📝 Opis
 
