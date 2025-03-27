@@ -19,9 +19,16 @@ Read the README.md in English <a href="./additional-media/README-en.md">here</a>
 Interaktywny wirtualny spacer po I Liceum Ogólnokształcącym im. Stanisława Staszica w Chrzanowie. </br>
 Cały projekt jest realizowany przez grupę trzech uczniów szkoły, w pełni bez żadnych korzyści finansowych. Wszystkie zdjęcia wykonane w szkole są dostępne w nieruszonej jakości w folderze <a href="./media/">media</a>.
 
-## 🌐 Demo na żywo
+## 🌐 Zobacz projekt live
 
-Odwiedź wirtualny spacer na stronie: [Staszic360](https://staszic-virtual-walk.pages.dev) !
+Projekt aktualnie jest dostępny na poniższych stronach:
+
+[Cloudflare Pages](https://staszic-virtual-walk.pages.dev)  
+
+[GitHub Pages](https://andreansxtech.github.io/Staszic360/)
+
+[Spacer.1lo.pl](http://spacer.1lo.pl/) ( Brak SSL/TLS🔓 )
+
 
 ## 📝 Opis
 
