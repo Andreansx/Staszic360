@@ -2840,6 +2840,28 @@
         brightnessToggle.textContent = isDimmed ? 'Przywróć jasność' : 'Przyciemnij widok';
     });
 
+    fetch('env.json')
+  .then(response => response.json())
+  .then(data => {
+    const env = data.environment || 'production';
+
+    if (env === 'preview') {
+      const banner = document.createElement('div');
+      banner.textContent = "Preview version – not final!";
+      banner.className = "fixed top-0 left-0 w-full text-center py-2 bg-yellow-500 text-black text-lg font-semibold z-50";
+      document.body.appendChild(banner);
+    } else if (env === 'production') {
+      const badge = document.createElement('div');
+      badge.textContent = "Production";
+      badge.className = "fixed top-0 left-0 m-4 px-3 py-1 bg-green-600 text-white rounded-xl text-sm shadow-md z-50";
+      document.body.appendChild(badge);
+    }
+  })
+  .catch(() => {
+    console.warn("env.json not found – assuming production.");
+  });
+
+
 </script>
 </body>
 </html>
