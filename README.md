@@ -27,7 +27,6 @@ Projekt aktualnie jest dostępny na poniższych stronach:
 
 [Spacer.1lo.pl](http://spacer.1lo.pl/) ( Brak SSL/TLS🔓 )  - Wersja finalna, rzadko updateowana
 
-
 ## 📝 Opis
 
 Ten projekt zapewnia immersyjne doświadczenie wirtualnego spaceru po korytarzach i salach I LO im. Stanisława Staszica w Chrzanowie. Użytkownicy mogą nawigować po różnych częściach budynku szkoły, odwiedzając sale lekcyjne, korytarze i między innymi sale gimnastyczne jak również gabinety i pomieszczenia nie dostępne typowo dla uczniów szkoły. Strona internetowa jest w pełni dostosowana do standardów dostępności W3C tak aby każdy mógł w pełni.
