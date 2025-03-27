@@ -2872,6 +2872,7 @@
     document.body.appendChild(fallbackBanner);
   });
 
+
   fetch('env.json')
     .then(response => {
       if (!response.ok) { throw new Error('env.json not found'); }
@@ -2883,20 +2884,26 @@
       let bannerClass = '';
       let bannerText = '';
       if (env === 'preview') {
-        bannerClass = 'environment-banner preview-banner';
+        bannerClass = 'environment-banner preview-banner text-scalable';
         bannerText = `Preview Version - Build: ${buildDate}`;
+        console.log("Environment loaded:", env);
       } else {
-        bannerClass = 'environment-banner production-banner';
+        bannerClass = 'environment-banner production-banner text-scalable';
         bannerText = `Production Version - Build: ${buildDate}`;
+        console.log("Environment loaded:", env);
       }
+      
+      document.querySelectorAll('.environment-banner').forEach(el => el.remove());
       const banner = document.createElement('div');
       banner.className = bannerClass;
       banner.textContent = bannerText;
       document.body.appendChild(banner);
     })
     .catch(() => {
+      document.querySelectorAll('.environment-banner').forEach(el => el.remove());
+      
       const banner = document.createElement('div');
-      banner.className = 'environment-banner production-banner';
+      banner.className = 'environment-banner production-banner text-scalable';
       banner.textContent = 'Production Version';
       document.body.appendChild(banner);
     });
