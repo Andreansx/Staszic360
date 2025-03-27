@@ -166,6 +166,29 @@
     </button>
 <script type="text/javascript">
 
+const BUILD_INFO = {
+      env: "production",
+      buildDate: "__BUILD_DATE__"
+    };
+
+    fetch("env.json")
+      .then((res) => {
+        if (!res.ok) throw new Error("env.json not found");
+        return res.json();
+      })
+      .then((data) => {
+        showBanner(`Preview Version – Build: ${data.buildDate}`, "preview");
+      })
+      .catch(() => {
+        showBanner(`Production Version – Build: ${BUILD_INFO.buildDate}`, "production");
+      });
+
+    function showBanner(text, env) {
+      const banner = document.createElement("div");
+      banner.className = `env-banner ${env}`;
+      banner.textContent = text;
+      document.body.appendChild(banner);
+    }
     const viewer = pannellum.viewer('panorama', {
         "default": {
             "firstScene": "portiernia",
