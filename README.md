@@ -49,7 +49,9 @@ Nasza strona wirtualnego spaceru zawiera wbudowane opcje dostępności, aby popr
 - HTML5
 - CSS3
 - JavaScript
-- Panellum.js 
+- Panellum.js
+- Python ( skrypty do zautomatyzowania zadań )
+- LaTeX ( do dokumentacji )
 
 ## Znane błędy / problemy
 
