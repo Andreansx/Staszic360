@@ -37,7 +37,7 @@ Ten projekt zapewnia immersyjne doświadczenie wirtualnego spaceru po korytarzac
 
 ## 🖼️ Podgląd
 
-![Podgląd Wirtualnego Spaceru](./additional-media/preview-gif2.gif)
+![Podgląd Wirtualnego Spaceru](./additional-media/preview-gif3.gif)
 
 ## 🚀 Funkcje
 
