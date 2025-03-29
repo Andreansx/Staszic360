@@ -171,24 +171,28 @@ const BUILD_INFO = {
       buildDate: "__BUILD_DATE__"
     };
 
+    function showBanner(text, env) {
+      document.querySelectorAll('.environment-banner').forEach(el => el.remove());
+      
+      const banner = document.createElement("div");
+      banner.className = `environment-banner ${env}-banner text-scalable`;
+      banner.textContent = text;
+      document.body.appendChild(banner);
+    }
+
     fetch("env.json")
       .then((res) => {
         if (!res.ok) throw new Error("env.json not found");
         return res.json();
       })
       .then((data) => {
-        showBanner(`Preview Version – Build: ${data.buildDate}`, "preview");
+        const buildDate = data.buildDate || '';
+        showBanner(`Preview Version – Build: ${buildDate}`, "preview");
       })
       .catch(() => {
         showBanner(`Production Version – Build: ${BUILD_INFO.buildDate}`, "production");
       });
 
-    function showBanner(text, env) {
-      const banner = document.createElement("div");
-      banner.className = `env-banner ${env}`;
-      banner.textContent = text;
-      document.body.appendChild(banner);
-    }
     const viewer = pannellum.viewer('panorama', {
         "default": {
             "firstScene": "portiernia",
@@ -2862,75 +2866,6 @@ const BUILD_INFO = {
         brightnessToggle.classList.toggle('active');
         brightnessToggle.textContent = isDimmed ? 'Przywróć jasność' : 'Przyciemnij widok';
     });
-
-    fetch('env.json')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Failed to load env.json');
-    }
-    return response.json();
-  })
-  .then(data => {
-    const env = data.environment || 'production';
-    console.log("Environment loaded:", env);
-
-    if (env === 'preview') {
-      const banner = document.createElement('div');
-      banner.textContent = "Preview version – not final!";
-      banner.className = "environment-banner preview-banner text-scalable";
-      document.body.appendChild(banner);
-    } else if (env === 'production') {
-      const badge = document.createElement('div');
-      badge.textContent = "Production";
-      badge.className = "environment-banner production-banner text-scalable";
-      document.body.appendChild(badge);
-    }
-  })
-  .catch(error => {
-    console.warn("Error loading env.json:", error);
-    
-    const fallbackBanner = document.createElement('div');
-    fallbackBanner.textContent = "Local Development";
-    fallbackBanner.className = "environment-banner preview-banner text-scalable";
-    document.body.appendChild(fallbackBanner);
-  });
-
-
-  fetch('env.json')
-    .then(response => {
-      if (!response.ok) { throw new Error('env.json not found'); }
-      return response.json();
-    })
-    .then(data => {
-      const env = data.environment || 'production';
-      const buildDate = data.buildDate || '';
-      let bannerClass = '';
-      let bannerText = '';
-      if (env === 'preview') {
-        bannerClass = 'environment-banner preview-banner text-scalable';
-        bannerText = `Preview Version - Build: ${buildDate}`;
-        console.log("Environment loaded:", env);
-      } else {
-        bannerClass = 'environment-banner production-banner text-scalable';
-        bannerText = `Production Version - Build: ${buildDate}`;
-        console.log("Environment loaded:", env);
-      }
-      
-      document.querySelectorAll('.environment-banner').forEach(el => el.remove());
-      const banner = document.createElement('div');
-      banner.className = bannerClass;
-      banner.textContent = bannerText;
-      document.body.appendChild(banner);
-    })
-    .catch(() => {
-      document.querySelectorAll('.environment-banner').forEach(el => el.remove());
-      
-      const banner = document.createElement('div');
-      banner.className = 'environment-banner production-banner text-scalable';
-      banner.textContent = 'Production Version';
-      document.body.appendChild(banner);
-    });
-
 
 </script>
 </body>
