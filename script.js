@@ -13,18 +13,27 @@ const BUILD_INFO = {
       document.body.appendChild(banner);
     }
 
-    fetch("env.json")
-      .then((res) => {
-        if (!res.ok) throw new Error("env.json not found");
-        return res.json();
-      })
+    fetch("version.json")
+      .then((res) => (res.ok ? res.json() : Promise.reject()))
       .then((data) => {
-        const buildDate = data.buildDate || '';
-        showBanner(`Preview Version – Build: ${buildDate}`, "preview");
+        const env = data.environment || "production";
+        const version = data.version || "v?";
+        const buildDate = data.buildDate || "unknown";
+        const label =
+          env === "preview" ? "Preview Version" : "Production Version";
+        showBanner(`${label} – ${version} – Build: ${buildDate}`, env);
       })
       .catch(() => {
-        showBanner(`Production Version – Build: ${BUILD_INFO.buildDate}`, "production");
+        showBanner("Production Version", "production");
       });
+
+    function showBanner(text, env) {
+      const banner = document.createElement("div");
+      banner.className = `environment-banner ${env}-banner text-scalable`;
+      banner.textContent = text;
+      document.body.appendChild(banner);
+    }
+
 
     const viewer = pannellum.viewer('panorama', {
         "default": {
