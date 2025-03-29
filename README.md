@@ -22,11 +22,12 @@ Cały projekt jest realizowany przez grupę trzech uczniów szkoły, w pełni be
 
 Projekt aktualnie jest dostępny na poniższych stronach:
 
-[Cloudflare Pages](https://staszic360.pages.dev)  - Wersja Production
+<a href="https://staszic360.pages.dev" target="_blank" rel="noopener noreferrer">Cloudflare Pages</a> - Wersja production
 
-[GitHub Pages](https://andreansxtech.github.io/Staszic360/) - Wersja preview
+<a href="https://andreansxtech.github.io/Staszic360/" target="_blank" rel="noopener noreferrer">GitHub Pages</a> - Wersja preview
 
-[Spacer.1lo.pl](http://spacer.1lo.pl/) ( Brak SSL/TLS🔓 )  - Wersja finalna, rzadko aktualizowana
+<a href="http://spacer.1lo.pl/" target="_blank" rel="noopener noreferrer">Spacer.1lo.pl</a> ( Brak SSL/TLS🔓 )  - Wersja finalna, rzadko aktualizowana
+
 
 ## 📝 Opis
 
