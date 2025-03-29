@@ -103,23 +103,28 @@ Staszic360/
 ├── additional-media/
 │   └── ...                               ( dodatkowe devnotes, ikonki, diagramy )
 ├── media/
-│   ├──lowscaled_images/
+│   ├── lowscaled_images/
 │   │   └── ...                           ( Zdjęcia w mniejszej rozdzielczości )
 │   └── ...                               ( folder z panoramami )
 ├── AndreansxTech_0x1A5C5CDB_public.asc - Klucz publiczny do weryfikacji podpisów
 ├── check_images.py                     - Skrypt Python do sprawdzenia ścieżek
+├── index_backup.html                   - Kopia zapasowa index.html
 ├── index.html                          - Główny plik HTML
 ├── index.html.sig                      - Podpis cyfrowy index.html
 ├── LICENSE                             - Plik licencji
 ├── pannellum.css                       - Arkusz stylów Pannellum.
 ├── pannellum.css.sig                   - Podpis cyfrowy pannellum.css
 ├── pannellum.js                        - Biblioteka Pannellum
-├── pannellum.js.sig                    - Podpis cyfrowy panellum.js
+├── pannellum.js.sig                    - Podpis cyfrowy pannellum.js
+├── script.js                           - Główny skrypt JavaScript
 ├── resize_images.py                    - Skrypt Pythona użyty do zmniejszenia rozdzielczości zdjęć
 ├── update_paths.py                     - Skrypt Python do zaktualizowania ścieżek zdjęć
+├── build.sh                            - Plik Shell zawierający komendę do Cloudflare build environment dla Production
+├── test.tex                            - Plik dokumentacji LaTeX
+├── test.pdf                            - Wersja PDF pliku README.md
 └── README.md
 ```
-### Stworzone z ❤️ przez Michała Bańkowskiego ( AndreansxTech ), Mateusza Długaja ( Matkard1 ) i Gabriela Świątka ( Simonaven265 ) 2025
 
+### Stworzone z ❤️ przez Michała Bańkowskiego (*AndreansxTech*), Mateusza Długaja (*Matkard1*) i Gabriela Świątka (*Simonaven265*) 2025
 
 ## Ten projekt jest licencjonowany na podstawie **Licencji MIT** (sprawdź <a href="./LICENSE">LICENSE</a>)
