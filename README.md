@@ -104,6 +104,7 @@ Staszic360/
 │   │   └── ...                           ( Zdjęcia w mniejszej rozdzielczości )
 │   └── ...                               ( folder z panoramami )
 ├── AndreansxTech_0x1A5C5CDB_public.asc - Klucz publiczny do weryfikacji podpisów
+├── check_images.py                     - Skrypt Python do sprawdzenia ścieżek
 ├── index.html                          - Główny plik HTML
 ├── index.html.sig                      - Podpis cyfrowy index.html
 ├── LICENSE                             - Plik licencji
