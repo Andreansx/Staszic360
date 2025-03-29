@@ -104,6 +104,7 @@ Staszic360/
 │   │   └── ...                           ( Zdjęcia w mniejszej rozdzielczości )
 │   └── ...                               ( folder z panoramami )
 ├── AndreansxTech_0x1A5C5CDB_public.asc - Klucz publiczny do weryfikacji podpisów
+├── check_images.py                     - Skrypt Python do sprawdzenia ścieżek
 ├── index.html                          - Główny plik HTML
 ├── index.html.sig                      - Podpis cyfrowy index.html
 ├── LICENSE                             - Plik licencji
@@ -112,6 +113,7 @@ Staszic360/
 ├── pannellum.js                        - Biblioteka Pannellum
 ├── pannellum.js.sig                    - Podpis cyfrowy panellum.js
 ├── resize_images.py                    - Skrypt Pythona użyty do zmniejszenia rozdzielczości zdjęć
+├── update_paths.py                     - Skrypt Python do zaktualizowania ścieżek zdjęć
 └── README.md
 ```
 ### Stworzone z ❤️ przez Michała Bańkowskiego ( AndreansxTech ), Mateusza Długaja ( Matkard1 ) i Gabriela Świątka ( Simonaven265 ) 2025
