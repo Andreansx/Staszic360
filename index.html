@@ -214,7 +214,8 @@ const BUILD_INFO = {
                         "pitch": 5, 
                         "yaw": -10,
                         "type": "info",
-                        "text": "Portiernia"
+                        "text": "Portiernia",
+                        "description": "Witamy w I Liceum Ogólnokształcącym im. Staszica w Chrzanowie!",
                     },
                     {
                         "pitch": 5,
@@ -2866,6 +2867,389 @@ const BUILD_INFO = {
         brightnessToggle.classList.toggle('active');
         brightnessToggle.textContent = isDimmed ? 'Przywróć jasność' : 'Przyciemnij widok';
     });
+
+// Add this to the JavaScript section after your existing functions
+
+function setupHotspotTooltips() {
+    console.log("Setting up all hotspot tooltips");
+    
+    // Process info hotspots
+    const infoHotspots = document.querySelectorAll('.pnlm-hotspot-base.pnlm-info');
+    infoHotspots.forEach(hotspot => {
+        // Make sure the hotspot is visible
+        hotspot.style.visibility = 'visible';
+        hotspot.style.opacity = '1';
+        hotspot.style.display = 'block';
+        
+        // Check if tooltip already exists
+        if (!hotspot.querySelector('.info-tooltip')) {
+            let tooltipText = '';
+            
+            // Try to find the text in the existing tooltip
+            const existingTooltip = hotspot.querySelector('.pnlm-tooltip span');
+            if (existingTooltip) {
+                tooltipText = existingTooltip.textContent;
+            }
+            
+            if (tooltipText) {
+                // Create the tooltip element
+                const infoTooltip = document.createElement('div');
+                infoTooltip.className = 'info-tooltip text-scalable';
+                infoTooltip.innerHTML = tooltipText;
+                
+                // Add the tooltip to the hotspot
+                hotspot.appendChild(infoTooltip);
+                
+                // Hide the original tooltip if it exists
+                if (existingTooltip && existingTooltip.parentNode) {
+                    existingTooltip.parentNode.style.display = 'none';
+                }
+            }
+        }
+    });
+    
+    // Process scene hotspots
+    const sceneHotspots = document.querySelectorAll('.pnlm-hotspot-base.pnlm-scene');
+    sceneHotspots.forEach(hotspot => {
+        // Make sure the hotspot is visible
+        hotspot.style.visibility = 'visible';
+        hotspot.style.opacity = '1';
+        hotspot.style.display = 'block';
+        
+        // Check if tooltip already exists
+        if (!hotspot.querySelector('.scene-tooltip')) {
+            let tooltipText = '';
+            
+            // Try to find the text in the existing tooltip
+            const existingTooltip = hotspot.querySelector('.pnlm-tooltip span');
+            if (existingTooltip) {
+                tooltipText = existingTooltip.textContent;
+            }
+            
+            if (tooltipText) {
+                // Create the tooltip element
+                const sceneTooltip = document.createElement('div');
+                sceneTooltip.className = 'scene-tooltip text-scalable';
+                sceneTooltip.innerHTML = tooltipText;
+                
+                // Add the tooltip to the hotspot
+                hotspot.appendChild(sceneTooltip);
+                
+                // Hide the original tooltip if it exists
+                if (existingTooltip && existingTooltip.parentNode) {
+                    existingTooltip.parentNode.style.display = 'none';
+                }
+            }
+        }
+    });
+}
+
+// Replace your existing setupInfoTooltips function with this enhanced one
+function setupInfoTooltips() {
+    setupHotspotTooltips();
+}
+
+// Update the existing event handlers
+viewer.on('load', function() {
+    console.log("Viewer loaded");
+    setTimeout(function() {
+        const allHotspots = document.querySelectorAll('.pnlm-hotspot-base');
+        console.log("Found hotspots: ", allHotspots.length);
+        
+        allHotspots.forEach(hotspot => {
+            hotspot.style.visibility = 'visible';
+            hotspot.style.opacity = '1';
+            hotspot.style.display = 'block';
+        });
+        
+        setupHotspotTooltips();
+    }, 500);
+});
+
+viewer.on('scenechange', function() {
+    console.log("Scene changed");
+    // Run multiple attempts to ensure hotspots are visible
+    setTimeout(setupHotspotTooltips, 100);
+    setTimeout(setupHotspotTooltips, 500);
+    setTimeout(setupHotspotTooltips, 1000);
+});
+
+// Add a more robust function for scene hotspots
+function enhanceSceneHotspots() {
+    // Get the current scene configuration
+    const currentScene = viewer.getScene();
+    if (!currentScene) return;
+
+    const sceneConfig = viewer.getConfig().scenes[currentScene];
+    if (!sceneConfig || !sceneConfig.hotSpots) return;
+
+    // Find scene-type hotspots
+    const sceneHotspots = sceneConfig.hotSpots.filter(spot => spot.type === 'scene');
+    if (sceneHotspots.length === 0) return;
+    
+    console.log(`Found ${sceneHotspots.length} scene hotspots in scene config`);
+    
+    // Try multiple times to ensure hotspots are processed
+    for (let attempt = 1; attempt <= 3; attempt++) {
+        setTimeout(() => {
+            const hotspotElements = document.querySelectorAll('.pnlm-hotspot-base.pnlm-scene');
+            console.log(`Attempt ${attempt}: Found ${hotspotElements.length} scene hotspot elements in DOM`);
+            
+            if (hotspotElements.length === 0) return;
+            
+            // Force hotspots to be visible
+            hotspotElements.forEach(element => {
+                element.style.visibility = 'visible';
+                element.style.opacity = '1';
+                element.style.display = 'block';
+                
+                // Add a class to help with debugging
+                element.classList.add('enhanced-hotspot');
+            });
+            
+            // Match DOM elements with configuration
+            hotspotElements.forEach((element, index) => {
+                if (index < sceneHotspots.length) {
+                    const hotspotData = sceneHotspots[index];
+                    
+                    // Create or update the enhanced tooltip
+                    let sceneTooltip = element.querySelector('.scene-tooltip');
+                    if (!sceneTooltip) {
+                        sceneTooltip = document.createElement('div');
+                        sceneTooltip.className = 'scene-tooltip text-scalable';
+                        element.appendChild(sceneTooltip);
+                    }
+                    
+                    // Use the text from the config or default
+                    const tooltipText = hotspotData.text || 'Przejdź';
+                    sceneTooltip.innerHTML = tooltipText;
+                    
+                    // Hide the original tooltip if it exists
+                    const existingTooltip = element.querySelector('.pnlm-tooltip');
+                    if (existingTooltip) {
+                        existingTooltip.style.display = 'none';
+                    }
+                }
+            });
+        }, attempt * 300); // Increase delay for each attempt
+    }
+}
+
+// Update event handlers to include both types of hotspots
+viewer.on('scenechange', function() {
+    enhanceInfoHotspots();
+    enhanceSceneHotspots();
+});
+
+// Update the MutationObserver to handle both types of hotspots
+let hotspotObserver;
+
+if (!hotspotObserver) {
+    hotspotObserver = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.addedNodes.length) {
+                setTimeout(() => {
+                    const hotspots = document.querySelectorAll('.pnlm-hotspot-base');
+                    if (hotspots.length > 0) {
+                        console.log("MutationObserver: New nodes detected, processing hotspots");
+                        hotspots.forEach(hotspot => {
+                            hotspot.style.visibility = 'visible';
+                            hotspot.style.opacity = '1';
+                            hotspot.style.display = 'block';
+                        });
+                        setupHotspotTooltips();
+                        enhanceInfoHotspots();
+                        enhanceSceneHotspots();
+                    }
+                }, 100);
+            }
+        });
+    });
+}
+
+// Call all enhancement functions with initial delay
+setTimeout(() => {
+    enhanceInfoHotspots();
+    enhanceSceneHotspots();
+}, 1000);
+
+// Add a more robust function to ensure info hotspots are always visible
+
+function setupInfoTooltips() {
+    console.log("Setting up info tooltips");
+    // Process all info-type hotspots in the current scene
+    const infoHotspots = document.querySelectorAll('.pnlm-hotspot-base.pnlm-info');
+    
+    infoHotspots.forEach(hotspot => {
+        // Force visibility
+        hotspot.style.visibility = 'visible';
+        hotspot.style.opacity = '1';
+        hotspot.style.display = 'block';
+        
+        // Check if tooltip is already added
+        if (!hotspot.querySelector('.info-tooltip')) {
+            // Get the hotspot text from the hotspot's data attributes or from the default tooltip
+            let tooltipText = '';
+            
+            // Try to find the text in the existing pnlm-tooltip span
+            const existingTooltip = hotspot.querySelector('.pnlm-tooltip span');
+            if (existingTooltip) {
+                tooltipText = existingTooltip.textContent;
+            }
+            
+            if (tooltipText) {
+                // Create the info tooltip element
+                const infoTooltip = document.createElement('div');
+                infoTooltip.className = 'info-tooltip text-scalable';
+                infoTooltip.innerHTML = tooltipText;
+                
+                // Add the tooltip to the hotspot
+                hotspot.appendChild(infoTooltip);
+                
+                // Hide the original tooltip if it exists
+                if (existingTooltip && existingTooltip.parentNode) {
+                    existingTooltip.parentNode.style.display = 'none';
+                }
+            }
+        }
+    });
+}
+
+// Force info hotspots to be visible on load and scene change
+viewer.on('load', function() {
+    console.log("Viewer loaded");
+    // Give the viewer some time to fully render the scene
+    setTimeout(function() {
+        const allHotspots = document.querySelectorAll('.pnlm-hotspot-base');
+        console.log("Found hotspots: ", allHotspots.length);
+        
+        allHotspots.forEach(hotspot => {
+            hotspot.style.visibility = 'visible';
+            hotspot.style.opacity = '1';
+            hotspot.style.display = 'block';
+        });
+        
+        setupInfoTooltips();
+    }, 500);
+});
+
+// Update the event handlers to ensure hotspots are properly shown after scene changes
+viewer.on('scenechange', function() {
+    console.log("Scene changed");
+    // Run multiple attempts to ensure hotspots are visible
+    setTimeout(setupInfoTooltips, 100);
+    setTimeout(setupInfoTooltips, 500);
+    setTimeout(setupInfoTooltips, 1000);
+});
+
+// Add a render event handler to ensure hotspots remain visible
+viewer.on('render', function() {
+    // This helps keep hotspots visible during interactions
+    const hotspots = document.querySelectorAll('.pnlm-hotspot-base');
+    if (hotspots.length > 0) {
+        hotspots.forEach(hotspot => {
+            if (hotspot.style.visibility === 'hidden') {
+                hotspot.style.visibility = 'visible';
+                hotspot.style.opacity = '1';
+                hotspot.style.display = 'block';
+            }
+        });
+    }
+});
+
+// Create a more comprehensive function to handle info hotspots
+function enhanceInfoHotspots() {
+    // Get the current scene configuration
+    const currentScene = viewer.getScene();
+    if (!currentScene) return;
+
+    const sceneConfig = viewer.getConfig().scenes[currentScene];
+    if (!sceneConfig || !sceneConfig.hotSpots) return;
+
+    // Find info-type hotspots
+    const infoHotspots = sceneConfig.hotSpots.filter(spot => spot.type === 'info');
+    if (infoHotspots.length === 0) return;
+    
+    console.log(`Found ${infoHotspots.length} info hotspots in scene config`);
+    
+    // Try multiple times to ensure hotspots are processed
+    for (let attempt = 1; attempt <= 3; attempt++) {
+        setTimeout(() => {
+            const hotspotElements = document.querySelectorAll('.pnlm-hotspot-base.pnlm-info');
+            console.log(`Attempt ${attempt}: Found ${hotspotElements.length} info hotspot elements in DOM`);
+            
+            if (hotspotElements.length === 0) return;
+            
+            // Force hotspots to be visible
+            hotspotElements.forEach(element => {
+                element.style.visibility = 'visible';
+                element.style.opacity = '1';
+                element.style.display = 'block';
+                
+                // Add a class to help with debugging
+                element.classList.add('enhanced-hotspot');
+            });
+            
+            // Match DOM elements with configuration
+            hotspotElements.forEach((element, index) => {
+                if (index < infoHotspots.length) {
+                    const hotspotData = infoHotspots[index];
+                    
+                    // Create or update the enhanced tooltip
+                    let infoTooltip = element.querySelector('.info-tooltip');
+                    if (!infoTooltip) {
+                        infoTooltip = document.createElement('div');
+                        infoTooltip.className = 'info-tooltip text-scalable';
+                        element.appendChild(infoTooltip);
+                    }
+                    
+                    // Use the text from the config or default
+                    const tooltipText = hotspotData.text || 'Informacja';
+                    
+                    // You can add HTML formatting here
+                    let tooltipContent = `<strong>${tooltipText}</strong>`;
+                    
+                    // Add description if available
+                    if (hotspotData.description) {
+                        tooltipContent += `<br><p>${hotspotData.description}</p>`;
+                    }
+                    
+                    infoTooltip.innerHTML = tooltipContent;
+                    
+                    // Hide the original tooltip if it exists
+                    const existingTooltip = element.querySelector('.pnlm-tooltip');
+                    if (existingTooltip) {
+                        existingTooltip.style.display = 'none';
+                    }
+                }
+            });
+        }, attempt * 300); // Increase delay for each attempt
+    }
+}
+
+// Call enhanceInfoHotspots when scene changes
+viewer.on('scenechange', enhanceInfoHotspots);
+
+// Initial call with delay
+setTimeout(enhanceInfoHotspots, 1000);
+
+// Add a MutationObserver to detect when hotspots are added to the DOM
+hotspotObserver.observe(document.body, {
+    childList: true,
+    subtree: true
+});
+
+// Set up a periodic check to ensure hotspots remain visible
+setInterval(function() {
+    const hotspots = document.querySelectorAll('.pnlm-hotspot-base');
+    if (hotspots.length > 0) {
+        hotspots.forEach(hotspot => {
+            hotspot.style.visibility = 'visible';
+            hotspot.style.opacity = '1';
+            hotspot.style.display = 'block';
+        });
+    }
+}, 1000); // Check every second
 
 </script>
 </body>

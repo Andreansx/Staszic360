@@ -127,7 +127,7 @@
 .pnlm-hotspot.pnlm-scene{background-position:0 -130px}
 .pnlm-hotspot-base.pnlm-scene,
 .pnlm-hotspot-base.pnlm-info {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.15);
     border: 0px solid rgba(255, 255, 255, 0.2);
     border-radius: 9999px;
     padding: 1rem;
@@ -135,6 +135,9 @@
     -webkit-backdrop-filter: blur(8px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
     transition: all 0.2s ease;
+    visibility: visible !important;  /* Force visibility */
+    opacity: 1 !important;  /* Make sure hotspots are fully opaque */
+    display: block !important;  /* Ensure hotspots are displayed */
 }
 
 .pnlm-hotspot-base.pnlm-scene:hover,
@@ -152,6 +155,9 @@
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     box-shadow: none;
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
 }
 
 .high-contrast .pnlm-hotspot-base.pnlm-scene:hover,
@@ -185,25 +191,181 @@ div.pnlm-tooltip span {
     transform: translateY(10px);
 }
 
-div.pnlm-tooltip:hover span {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
+.info-tooltip {
+    visibility: hidden;
+    position: absolute;
+    border-radius: 16px;
+    background: rgba(16, 60, 255, 0.65);
+    border: 0px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: white;
+    text-align: center;
+    max-width: 250px;
+    padding: 12px 20px;
+    bottom: 70px;
+    /* Center the tooltip properly */
+    left: 50%;
+    width: auto;
+    min-width: 150px;
+    transform: translateX(-50%) translateY(10px);
+    cursor: default;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    opacity: 0;
+    z-index: 10;
+    pointer-events: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-div.pnlm-tooltip:hover span:after {
+.scene-tooltip {
+    visibility: hidden;
+    position: absolute;
+    border-radius: 16px;
+    background: rgba(16, 60, 255, 0.65);
+    border: 0px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: white;
+    text-align: center;
+    max-width: 250px;
+    padding: 12px 20px;
+    bottom: 70px;
+    left: 50%;
+    width: auto;
+    min-width: 150px;
+    transform: translateX(-50%) translateY(10px);
+    cursor: default;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    opacity: 0;
+    z-index: 10;
+    pointer-events: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.info-tooltip::after,
+.scene-tooltip::after {
     content: '';
     position: absolute;
     width: 0;
     height: 0;
     border-width: 10px;
     border-style: solid;
-    border-color: rgba(16, 60, 255, 0.25) transparent transparent transparent;
+    border-color: rgba(16, 60, 255, 0.65) transparent transparent transparent;
     bottom: -20px;
-    left: -11px;
-    margin: 0 50%;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.pnlm-hotspot-base.pnlm-info:hover .info-tooltip,
+.pnlm-hotspot-base.pnlm-scene:hover .scene-tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.high-contrast .info-tooltip,
+.high-contrast .scene-tooltip {
+    background-color: #000000 !important;
+    border: 3px solid #0066FF !important;
+    color: #FFFF00 !important;
+    text-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+}
+
+.high-contrast .info-tooltip::after,
+.high-contrast .scene-tooltip::after {
+    border-color: #000000 transparent transparent transparent;
+}
+
+.reduce-motion .info-tooltip,
+.reduce-motion .scene-tooltip {
+    transition: none;
+}
+
+.reduce-motion .pnlm-hotspot-base.pnlm-info:hover .info-tooltip,
+.reduce-motion .pnlm-hotspot-base.pnlm-scene:hover .scene-tooltip {
+    transform: translateX(-50%);
+}
+
+.info-tooltip {
+    visibility: hidden;
+    position: absolute;
+    border-radius: 16px;
+    background: rgba(16, 60, 255, 0.65);
+    border: 0px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    color: white;
+    text-align: center;
+    max-width: 250px;
+    padding: 12px 20px;
+    bottom: 70px;
+    /* Center the tooltip properly */
+    left: 50%;
+    width: auto;
+    min-width: 150px;
+    transform: translateX(-50%) translateY(10px);
+    cursor: default;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    opacity: 0;
+    z-index: 10;
+    pointer-events: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.info-tooltip::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgba(16, 60, 255, 0.65) transparent transparent transparent;
+    bottom: -20px;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.pnlm-hotspot-base.pnlm-info:hover .info-tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.high-contrast .info-tooltip {
+    background-color: #000000 !important;
+    border: 3px solid #0066FF !important;
+    color: #FFFF00 !important;
+    text-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+}
+
+.high-contrast .info-tooltip::after {
+    border-color: #000000 transparent transparent transparent;
+}
+
+.reduce-motion .info-tooltip {
+    transition: none;
+}
+
+.reduce-motion .pnlm-hotspot-base.pnlm-info:hover .info-tooltip {
+    transform: translateX(-50%);
 }
 
 .pnlm-compass{position:absolute;width:50px;height:50px;right:4px;bottom:40px;border-radius:25px;background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2250%22%20width%3D%2250%22%3E%0A%3Cpath%20d%3D%22m24.5078%206-3.2578%2018h7.5l-3.25781-18h-0.984376zm-3.2578%2020%203.2578%2018h0.9844l3.2578-18h-7.5zm1.19531%200.9941h5.10938l-2.5547%2014.1075-2.5547-14.1075z%22%2F%3E%0A%3C%2Fsvg%3E%0A');cursor:default;display:none}.pnlm-world{position:absolute;left:50%;top:50%}.pnlm-face{position:absolute;-webkit-transform-origin:0 0;transform-origin:0 0}.pnlm-dragfix,.pnlm-preview-img{position:absolute;height:100%;width:100%}.pnlm-preview-img{background-size:cover;background-position:center}
