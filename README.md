@@ -22,11 +22,14 @@ Cały projekt jest realizowany przez grupę trzech uczniów szkoły, w pełni be
 
 Projekt aktualnie jest dostępny na poniższych stronach:
 
-[Cloudflare Pages](https://staszic360.pages.dev)  - Wersja Production
+👉 [Cloudflare Pages](https://staszic360.pages.dev) – wersja produkcyjna  
 
-[GitHub Pages](https://andreansxtech.github.io/Staszic360/) - Wersja preview
+👉 [GitHub Pages](https://andreansxtech.github.io/Staszic360/) – wersja preview  
 
-[Spacer.1lo.pl](http://spacer.1lo.pl/) ( Brak SSL/TLS🔓 )  - Wersja finalna, rzadko aktualizowana
+👉 [Spacer.1lo.pl](http://spacer.1lo.pl/) ( Brak SSL/TLS🔓 ) - Wersja finalna, rzadko aktualizowana
+
+_(Kliknij Prawym przyciskiem myszy → otwórz w nowej karcie, GitHub nie pozwala otwierać automatycznie)_
+
 
 ## 📝 Opis
 
@@ -34,7 +37,7 @@ Ten projekt zapewnia immersyjne doświadczenie wirtualnego spaceru po korytarzac
 
 ## 🖼️ Podgląd
 
-![Podgląd Wirtualnego Spaceru](./additional-media/preview-gif2.gif)
+![Podgląd Wirtualnego Spaceru](./additional-media/preview-gif3.gif)
 
 ## 🚀 Funkcje
 
@@ -100,23 +103,28 @@ Staszic360/
 ├── additional-media/
 │   └── ...                               ( dodatkowe devnotes, ikonki, diagramy )
 ├── media/
-│   ├──lowscaled_images/
+│   ├── lowscaled_images/
 │   │   └── ...                           ( Zdjęcia w mniejszej rozdzielczości )
 │   └── ...                               ( folder z panoramami )
 ├── AndreansxTech_0x1A5C5CDB_public.asc - Klucz publiczny do weryfikacji podpisów
 ├── check_images.py                     - Skrypt Python do sprawdzenia ścieżek
+├── index_backup.html                   - Kopia zapasowa index.html
 ├── index.html                          - Główny plik HTML
 ├── index.html.sig                      - Podpis cyfrowy index.html
 ├── LICENSE                             - Plik licencji
 ├── pannellum.css                       - Arkusz stylów Pannellum.
 ├── pannellum.css.sig                   - Podpis cyfrowy pannellum.css
 ├── pannellum.js                        - Biblioteka Pannellum
-├── pannellum.js.sig                    - Podpis cyfrowy panellum.js
+├── pannellum.js.sig                    - Podpis cyfrowy pannellum.js
+├── script.js                           - Główny skrypt JavaScript
 ├── resize_images.py                    - Skrypt Pythona użyty do zmniejszenia rozdzielczości zdjęć
 ├── update_paths.py                     - Skrypt Python do zaktualizowania ścieżek zdjęć
+├── build.sh                            - Plik Shell zawierający komendę do Cloudflare build environment dla Production
+├── test.tex                            - Plik dokumentacji LaTeX
+├── test.pdf                            - Wersja PDF pliku README.md
 └── README.md
 ```
-### Stworzone z ❤️ przez Michała Bańkowskiego ( AndreansxTech ), Mateusza Długaja ( Matkard1 ) i Gabriela Świątka ( Simonaven265 ) 2025
 
+### Stworzone z ❤️ przez <a href="https://AndreansxTech.github.io/">Michała Bańkowskiego (*AndreansxTech*)</a>, Mateusza Długaja (*Matkard1*) i Gabriela Świątka (*Simonaven265*) 2025
 
 ## Ten projekt jest licencjonowany na podstawie **Licencji MIT** (sprawdź <a href="./LICENSE">LICENSE</a>)

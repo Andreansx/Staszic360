@@ -1056,7 +1056,6 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
     color: #000;
     font-size: 0.95rem;
     border: 2px solid rgba(245, 158, 11, 0.7);
-    animation: pulse 2s infinite;
 }
 
 .production-banner {
@@ -1067,6 +1066,7 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
     padding: 6px 12px;
 }
 
+/* zosatwiam to jakby sie gdzies indziej przydalo */
 @keyframes pulse {
     0% { opacity: 0.8; }
     50% { opacity: 1; }

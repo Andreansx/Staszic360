@@ -28,6 +28,11 @@ jobs:
         run: |
           echo '{ "environment": "preview", "buildDate": "'$(date -u +"%Y-%m-%dT%H:%M:%SZ")'" }' > env.json
 
+      - name: Create version.json (for preview)
+        run: |
+          VERSION="preview-$(date -u +%Y%m%d-%H%M)"
+          echo '{ "version": "'$VERSION'", "buildDate": "'$(date -u +"%Y-%m-%dT%H:%M:%SZ")'", "environment": "preview" }' > version.json
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
