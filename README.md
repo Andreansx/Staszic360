@@ -125,6 +125,6 @@ Staszic360/
 └── README.md
 ```
 
-### Stworzone z ❤️ przez Michała Bańkowskiego (*AndreansxTech*), Mateusza Długaja (*Matkard1*) i Gabriela Świątka (*Simonaven265*) 2025
+### Stworzone z ❤️ przez <a href="https://AndreansxTech.github.io/">Michała Bańkowskiego (*AndreansxTech*)</a>, Mateusza Długaja (*Matkard1*) i Gabriela Świątka (*Simonaven265*) 2025
 
 ## Ten projekt jest licencjonowany na podstawie **Licencji MIT** (sprawdź <a href="./LICENSE">LICENSE</a>)
