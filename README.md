@@ -115,8 +115,8 @@ Staszic360/
 ├── pannellum.css                       - Arkusz stylów Pannellum.
 ├── pannellum.css.sig                   - Podpis cyfrowy pannellum.css
 ├── pannellum.js                        - Biblioteka Pannellum
-├── pannellum.js.sig                    - Podpis cyfrowy pannellum.js
 ├── script.js                           - Główny skrypt JavaScript
+├── script.js.sig                       - Podpis cyfrowy script.js
 ├── resize_images.py                    - Skrypt Pythona użyty do zmniejszenia rozdzielczości zdjęć
 ├── update_paths.py                     - Skrypt Python do zaktualizowania ścieżek zdjęć
 ├── build.sh                            - Plik Shell zawierający komendę do Cloudflare build environment dla Production
