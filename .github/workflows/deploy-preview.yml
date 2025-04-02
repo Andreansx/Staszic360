@@ -29,13 +29,20 @@ jobs:
           VERSION="preview-$(date -u +%Y%m%d-%H%M)"
           echo '{ "version": "'$VERSION'", "buildDate": "'$(date -u +"%Y-%m-%dT%H:%M:%SZ")'", "environment": "preview" }' > version.json
 
+      - name: Prepare deploy directory (minimal set for GitHub Pages)
+        run: |
+          mkdir -p deploy/media/lowscaled_images
+          cp index.html pannellum.css pannellum.js script.js version.json index.html.sig pannellum.css.sig script.js.sig deploy/
+          cp -r additional-media deploy/
+          cp -r media/lowscaled_images/* deploy/media/lowscaled_images/
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: './deploy'
 
       - name: Deploy to GitHub Pages
         id: deployment
