@@ -10,7 +10,7 @@ Read the README.md in English <a href="./additional-media/README-en.md">here</a>
 --->
 
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/AndreansxTech/Staszic360?style=for-the-badge&logo=github)
-![GitHub License](https://img.shields.io/github/license/AndreansxTech/Staszic360?style=for-the-badge)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/Licencja-CC_BY--NC--SA_4.0-%23ff2652?style=for-the-badge)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Andreansxtech/Staszic360?style=for-the-badge)
 [![Kontakt](https://img.shields.io/badge/Kontakt-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/Andrtexh)
 
@@ -18,7 +18,7 @@ Read the README.md in English <a href="./additional-media/README-en.md">here</a>
 Interaktywny wirtualny spacer po I Liceum Ogólnokształcącym im. Stanisława Staszica w Chrzanowie. </br>
 Cały projekt jest realizowany przez grupę trzech uczniów szkoły, w pełni bez żadnych korzyści finansowych. Wszystkie zdjęcia wykonane w szkole są dostępne w nieruszonej jakości w folderze <a href="./media/">media</a>.
 
-## 🌐 Zobacz projekt live
+## 🌐 Publiczne zatwierdzone instancje projektu
 
 Projekt aktualnie jest dostępny na poniższych stronach:
 
@@ -124,7 +124,14 @@ Staszic360/
 ├── test.pdf                            - Wersja PDF pliku README.md
 └── README.md
 ```
+# Prawa
 
-### Stworzone z ❤️ przez <a href="https://AndreansxTech.github.io/">Michała Bańkowskiego (*AndreansxTech*)</a>, Mateusza Długaja (*Matkard1*) i Gabriela Świątka (*Simonaven265*) 2025
+## Stworzone z ❤️ przez <a href="https://AndreansxTech.github.io/">Michała Bańkowskiego (*AndreansxTech*)</a>, Mateusza Długaja (*Matkard1*) i Gabriela Świątka (*Simonaven265*) 2025
 
-## Ten projekt jest licencjonowany na podstawie **Licencji MIT** (sprawdź <a href="./LICENSE">LICENSE</a>)
+## Projekt używa biblioteki <a href="https://github.com/mpetroff/pannellum">Pannellum.js</a>, której autorem jest <a href="https://mpetroff.net/">Matthew Petroff</a>.
+
+### Kopia pliku licencji Pannellum.js znajduje się w <a href="./LICENSE-PANNELLUM">LICENSE-PANNELLUM</a>
+
+## Ten projekt jest licencjonowany na podstawie <a href="./LICENSE">**Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International**</a> (sprawdź <a href="./LICENSE">LICENSE</a>)
+
+### Wraz z dniem 2 kwietnia 2025 roku, projekt nie jest już rozwijany na podstawach licencji MIT. Każda nowa aktualizacja jest obięta prawami autorskimi licencji **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International**
