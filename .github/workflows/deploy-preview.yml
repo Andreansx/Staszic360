@@ -24,10 +24,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Create env.json for preview
-        run: |
-          echo '{ "environment": "preview", "buildDate": "'$(date -u +"%Y-%m-%dT%H:%M:%SZ")'" }' > env.json
-
       - name: Create version.json (for preview)
         run: |
           VERSION="preview-$(date -u +%Y%m%d-%H%M)"

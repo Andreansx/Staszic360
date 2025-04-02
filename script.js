@@ -33,8 +33,6 @@ const BUILD_INFO = {
       banner.textContent = text;
       document.body.appendChild(banner);
     }
-
-
     const viewer = pannellum.viewer('panorama', {
         "default": {
             "firstScene": "portiernia",
