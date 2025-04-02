@@ -1754,13 +1754,13 @@ const viewer = pannellum.viewer("panorama", {
           text: "Sala numer 6",
           sceneId: "sala6",
         },
-        {
+        /*{
           pitch: 0,
           yaw: 25,
           type: "scene",
           text: "Sala numer 5",
           sceneId: "sala5",
-        },
+        },*/
       ],
     },
     sala6: {
@@ -1916,7 +1916,7 @@ const viewer = pannellum.viewer("panorama", {
         },
       ],
     },
-    sala5: {
+    /*sala5: {
       title: "Sala 5",
       hfov: 180,
       pitch: 0,
@@ -1932,7 +1932,7 @@ const viewer = pannellum.viewer("panorama", {
           sceneId: "parter-stareskrzydl3.3",
         },
       ],
-    },
+    },*/
 
     sala16p: {
       title: "Sale 16A i 16B",
@@ -2485,8 +2485,6 @@ function goToScene() {
     "sala 3": "sala3",
     sala4: "sala4",
     "sala 4": "sala4",
-    sala5: "sala5",
-    "sala 5": "sala5",
     6: "sala6",
     "sala 6": "sala6",
     sala6: "sala6",
