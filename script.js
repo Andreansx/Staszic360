@@ -21,7 +21,7 @@ const BUILD_INFO = {
         const buildDate = data.buildDate || "unknown";
         const label =
           env === "preview" ? "Preview Version" : "Production Version";
-        showBanner(`${label} – ${version} – Build: ${buildDate}`, env);
+        showBanner(`${label} – ${version} – Build: ${buildDate} UTC`, env);
       })
       .catch(() => {
         showBanner("Production Version", "production");
