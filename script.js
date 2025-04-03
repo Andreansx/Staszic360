@@ -33,7 +33,7 @@ function showBanner(text, env) {
 }
 const viewer = pannellum.viewer("panorama", {
   default: {
-    firstScene: "dwapietronoweskrzydtest2",
+    firstScene: "Portiernia",
     autoLoad: true,
     sceneFadeDuration: 100,
     showFullscreenCtrl: false,
