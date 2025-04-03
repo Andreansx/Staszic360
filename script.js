@@ -33,7 +33,7 @@ function showBanner(text, env) {
 }
 const viewer = pannellum.viewer("panorama", {
   default: {
-    firstScene: "Portiernia",
+    firstScene: "portiernia",
     autoLoad: true,
     sceneFadeDuration: 100,
     showFullscreenCtrl: false,
@@ -2421,7 +2421,7 @@ const viewer = pannellum.viewer("panorama", {
   pitch: 0,
   yaw: -80,
   type: "equirectangular",
-  panorama: "media/2pietronowetest.jpg",
+  panorama: "media/experimental-14mp/2pietronowetest.jpg",
   hotSpots: [
     {
       pitch: 0,
@@ -2445,7 +2445,7 @@ const viewer = pannellum.viewer("panorama", {
       pitch: 0,
       yaw: 130,
       type: "equirectangular",
-      panorama: "media/2pietronowetest2.jpg",
+      panorama: "media/experimental-14mp/2pietronowetest2.jpg",
       hotSpots: [
         {
           pitch: 0,
@@ -2469,7 +2469,7 @@ const viewer = pannellum.viewer("panorama", {
       pitch: 0,
       yaw: 130,
       type: "equirectangular",
-      panorama: "media/2pietronowetest3.jpg",
+      panorama: "media/experimental-14mp/2pietronowetest3.jpg",
       hotSpots: [
         {
           pitch: 0,
@@ -2501,7 +2501,7 @@ const viewer = pannellum.viewer("panorama", {
       pitch: 0,
       yaw: 130,
       type: "equirectangular",
-      panorama: "media/2pietronowetest4.jpg",
+      panorama: "media/experimental-14mp/2pietronowetest4.jpg",
       hotSpots: [
         {
           pitch: 0,
@@ -2532,7 +2532,7 @@ const viewer = pannellum.viewer("panorama", {
       pitch: 0,
       yaw: 130,
       type: "equirectangular",
-      panorama: "media/2pietronowetest5.jpg",
+      panorama: "media/experimental-14mp/2pietronowetest5.jpg",
       hotSpots: [
         {
           pitch: 0,
@@ -2556,7 +2556,7 @@ const viewer = pannellum.viewer("panorama", {
       pitch: 0,
       yaw: 130,
       type: "equirectangular",
-      panorama: "media/klasa55test.jpg",
+      panorama: "media/experimental-14mp/klasa55test.jpg",
       hotSpots: [
         {
           pitch: 0,
@@ -2574,7 +2574,7 @@ const viewer = pannellum.viewer("panorama", {
       pitch: 0,
       yaw: 130,
       type: "equirectangular",
-      panorama: "media/klasa50test.jpg",
+      panorama: "media/experimental-14mp/klasa50test.jpg",
       hotSpots: [
         {
           pitch: 0,
@@ -2592,7 +2592,7 @@ const viewer = pannellum.viewer("panorama", {
       pitch: 0,
       yaw: 130,
       type: "equirectangular",
-      panorama: "media/klasa57test.jpg",
+      panorama: "media/experimental-14mp/klasa57test.jpg",
       hotSpots: [
         {
           pitch: 0,
