@@ -33,7 +33,7 @@ function showBanner(text, env) {
 }
 const viewer = pannellum.viewer("panorama", {
   default: {
-    firstScene: "portiernia",
+    firstScene: "dwapietronoweskrzydtest2",
     autoLoad: true,
     sceneFadeDuration: 100,
     showFullscreenCtrl: false,
@@ -2414,6 +2414,206 @@ const viewer = pannellum.viewer("panorama", {
         },
       ],
     },
+ //Zdjęcia testowe piętro 2
+  dwapietronoweskrzydtest: {
+  title: "test2",
+  hfov: 180,
+  pitch: 0,
+  yaw: -80,
+  type: "equirectangular",
+  panorama: "media/2pietronowetest.jpg",
+  hotSpots: [
+    {
+      pitch: 0,
+      yaw: -100,
+      type: "scene",
+      text: "dalej",
+      sceneId: "dwapietronoweskrzydtest2",
+    },
+    {
+      pitch: -20,
+      yaw: 190,
+      type: "scene",
+      text: "na dół",
+      sceneId: "2pietr-noweskrzydl-schod",
+    },
+  ],
+},
+    dwapietronoweskrzydtest2: {
+      title: "test2",
+      hfov: 180,
+      pitch: 0,
+      yaw: 130,
+      type: "equirectangular",
+      panorama: "media/2pietronowetest2.jpg",
+      hotSpots: [
+        {
+          pitch: 0,
+          yaw: 30,
+          type: "scene",
+          text: "do tyłu",
+          sceneId: "dwapietronoweskrzydtest",
+        },
+        {
+          pitch: 0,
+          yaw: -110,
+          type: "scene",
+          text: "dalej",
+          sceneId: "dwapietronoweskrzydtest3",
+        },
+      ],
+    },
+    dwapietronoweskrzydtest3: {
+      title: "test2",
+      hfov: 180,
+      pitch: 0,
+      yaw: 130,
+      type: "equirectangular",
+      panorama: "media/2pietronowetest3.jpg",
+      hotSpots: [
+        {
+          pitch: 0,
+          yaw: -140,
+          type: "scene",
+          text: "do tyłu",
+          sceneId: "dwapietronoweskrzydtest2",
+        },
+        {
+          pitch: 0,
+          yaw: 35,
+          type: "scene",
+          text: "dalej",
+          sceneId: "dwapietronoweskrzydtest4",
+        },
+        {
+          pitch: 0,
+          yaw: 120,
+          type: "scene",
+          text: "sala 50",
+          sceneId: "klasa50test",
+        },
+        
+      ],
+    },
+    dwapietronoweskrzydtest4: {
+      title: "test2",
+      hfov: 180,
+      pitch: 0,
+      yaw: 130,
+      type: "equirectangular",
+      panorama: "media/2pietronowetest4.jpg",
+      hotSpots: [
+        {
+          pitch: 0,
+          yaw: -105,
+          type: "scene",
+          text: "do tyłu",
+          sceneId: "dwapietronoweskrzydtest3",
+        },
+        {
+          pitch: 0,
+          yaw: 75,
+          type: "scene",
+          text: "dalej",
+          sceneId: "dwapietronoweskrzydtest5",
+        },
+        {
+          pitch: 0,
+          yaw: -20,
+          type: "scene",
+          text: "sala 57",
+          sceneId: "klasa57test",
+        },
+      ],
+    },
+    dwapietronoweskrzydtest5: {
+      title: "test2",
+      hfov: 180,
+      pitch: 0,
+      yaw: 130,
+      type: "equirectangular",
+      panorama: "media/2pietronowetest5.jpg",
+      hotSpots: [
+        {
+          pitch: 0,
+          yaw: 10,
+          type: "scene",
+          text: "do tyłu",
+          sceneId: "dwapietronoweskrzydtest4",
+        },
+        {
+          pitch: 0,
+          yaw: 115,
+          type: "scene",
+          text: "sala 55",
+          sceneId: "klasa55test",
+        },
+      ],
+    },
+    klasa55test: {
+      title: "test2",
+      hfov: 180,
+      pitch: 0,
+      yaw: 130,
+      type: "equirectangular",
+      panorama: "media/klasa55test.jpg",
+      hotSpots: [
+        {
+          pitch: 0,
+          yaw: -50,
+          type: "scene",
+          text: "do tyłu",
+          sceneId: "dwapietronoweskrzydtest5",
+        },
+        
+      ],
+    },
+    klasa50test: {
+      title: "test2",
+      hfov: 180,
+      pitch: 0,
+      yaw: 130,
+      type: "equirectangular",
+      panorama: "media/klasa50test.jpg",
+      hotSpots: [
+        {
+          pitch: 0,
+          yaw: 110,
+          type: "scene",
+          text: "do tyłu",
+          sceneId: "dwapietronoweskrzydtest3",
+        },
+        
+      ],
+    },
+    klasa57test: {
+      title: "test2",
+      hfov: 180,
+      pitch: 0,
+      yaw: 130,
+      type: "equirectangular",
+      panorama: "media/klasa57test.jpg",
+      hotSpots: [
+        {
+          pitch: 0,
+          yaw: -70,
+          type: "scene",
+          text: "do tyłu",
+          sceneId: "dwapietronoweskrzydtest4",
+        },
+        
+      ],
+
+
+    }
+
+
+
+
+
+
+
+
   }, //wazne nawiasy nie usuwac
 });
 
@@ -2547,6 +2747,7 @@ function goToScene() {
     "sala 61": "olimp2",
     korytarz: "hallway",
     "sala gimnastyczna": "sala-gim",
+    dwapietronoweskrzydtest: "test",
   };
 
   if (sceneMapping[searchInput]) {
