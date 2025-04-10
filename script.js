@@ -233,7 +233,7 @@ const viewer = pannellum.viewer("panorama", {
       ],
     },
     salagimn: {
-      title: "Sala gimnasyczna duża",
+      title: "Sala gimnastyczna duża",
       hfov: 180,
       pitch: 0,
       yaw: 170,
@@ -2895,4 +2895,49 @@ brightnessToggle.addEventListener("click", function () {
   brightnessToggle.textContent = isDimmed
     ? "Przywróć jasność"
     : "Przyciemnij widok";
+});
+let autoRotateInterval;
+let isUserInteracting = false;
+const EXCLUDED_SCENES = ['portiernia'];
+const ROTATION_SPEED = 15;
+
+function startAutoRotate() {
+  const currentScene = viewer.getScene();
+  if (EXCLUDED_SCENES.includes(currentScene)) {
+    return;
+  }
+    stopAutoRotate();
+  
+  autoRotateInterval = setInterval(() => {
+    if (!isUserInteracting) {
+      const currentYaw = viewer.getYaw();
+      viewer.setYaw(currentYaw + ROTATION_SPEED);
+    }
+  }, 50);
+}
+
+function stopAutoRotate() {
+  if (autoRotateInterval) {
+    clearInterval(autoRotateInterval);
+    autoRotateInterval = null;
+  }
+}
+
+document.querySelector('.pnlm-container').addEventListener('mousedown', function() {
+  isUserInteracting = true;
+  stopAutoRotate();
+});
+
+document.querySelector('.pnlm-container').addEventListener('touchstart', function() {
+  isUserInteracting = true;
+  stopAutoRotate();
+});
+
+viewer.on('scenechange', function() {
+  isUserInteracting = false;
+  setTimeout(startAutoRotate, 500);
+});
+
+viewer.on('load', function() {
+  setTimeout(startAutoRotate, 0);
 });
