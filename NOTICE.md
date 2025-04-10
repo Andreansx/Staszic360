@@ -9,7 +9,7 @@ Projekt został wykonany niezależnie, bez formalnego zlecenia, jako dobrowolna 
 ## 📷 Wkład własny
 Do realizacji zdjęć panoramicznych jeden z autorów projektu zakupił na własny koszt kamerę Samsung Gear 360.
 
-Strona jest hostowana w kilku lokalizacjach (w tym GitHub Pages, Cloudflare Pages i serwer szkolny), a jej kod źródłowy jest dostępny publicznie.
+Strona jest hostowana w kilku lokalizacjach (w tym GitHub Pages, Cloudflare Pages i nazwa.pl), a jej kod źródłowy jest dostępny publicznie.
 
 ## ⚖️ Licencja
 Projekt Staszic360 jest licencjonowany na zasadach [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/).
@@ -41,7 +41,7 @@ The project was developed independently, without formal school commission, as a 
 
 For the purpose of capturing 360° panoramic images, one of the authors personally purchased a Samsung Gear 360 camera using his own funds.
 
-The website is currently hosted on multiple platforms (including GitHub Pages, Cloudflare Pages, and the school's internal server). The source code is publicly available and actively maintained.
+The website is currently hosted on multiple platforms (including GitHub Pages, Cloudflare Pages, and nazwa.pl). The source code is publicly available and actively maintained.
 
 ## ⚖️ License
 
