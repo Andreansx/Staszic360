@@ -33,7 +33,7 @@ jobs:
         run: |
           mkdir -p deploy/media/lowscaled_images
           mkdir -p deploy/media/experimental-14mp
-          cp index.html pannellum.css pannellum.js script.js version.json index.html.sig pannellum.css.sig script.js.sig favicon.ico deploy/
+          cp index.html style.css pannellum.css pannellum.js script.js version.json index.html.sig pannellum.css.sig script.js.sig favicon.ico deploy/
           cp -r additional-media deploy/
           cp -r media/lowscaled_images/* deploy/media/lowscaled_images/
           cp -r media/experimental-14mp/* deploy/media/experimental-14mp/
