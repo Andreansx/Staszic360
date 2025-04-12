@@ -82,7 +82,7 @@ Nasza strona wirtualnego spaceru zawiera wbudowane opcje dostępności, aby popr
 
 ## Weryfikacja podpisów
 
-Pliki `index.html`, `panellum.js` i `panellum.css` są podpisane cyfrowo za pomocą GPG, aby zapewnić ich integralność i autentyczność. Oznacza to, że możesz mieć pewność, iż pliki te nie zostały zmodyfikowane przez osoby trzecie od momentu ich podpisania przez nas.</br>
+Pliki `index.html`, `script.js` i `pannellum.css` są podpisane cyfrowo za pomocą GPG, aby zapewnić ich integralność i autentyczność. Oznacza to, że możesz mieć pewność, iż pliki te nie zostały zmodyfikowane przez osoby trzecie od momentu ich podpisania przez nas.</br>
 
 Pamiętaj żeby przy weryfikacji podpisów, sprawdzać je z podpisami z odpowiedniego Release, nie z najnowszymi.
 
