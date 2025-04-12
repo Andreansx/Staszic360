@@ -99,7 +99,7 @@ gpg --import AndreansxTech_0x1A5C5CDB_public.asc
 ```bash
 gpg --verify index.html.sig index.html
 gpg --verify pannellum.css.sig pannellum.css
-gpg --verify pannellum.js.sig pannellum.js
+gpg --verify script.js.sig script.js
 ```
 ### Struktura projektu
 ```
