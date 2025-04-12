@@ -1475,13 +1475,6 @@ const viewer = pannellum.viewer("panorama", {
           text: "Sala numer 6",
           sceneId: "sala6",
         },
-        {
-          pitch: 0,
-          yaw: 25,
-          type: "scene",
-          text: "Sala numer 5",
-          sceneId: "sala5",
-        },
       ],
     },
     sala6: {
