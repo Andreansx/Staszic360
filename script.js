@@ -1909,24 +1909,6 @@ const viewer = pannellum.viewer("panorama", {
         },
       ],
     },
-    /*sala5: {
-      title: "Sala 5",
-      hfov: 180,
-      pitch: 0,
-      yaw: 0,
-      type: "equirectangular",
-      panorama: "media/lowscaled_images/sala5-lowscaled.jpg",
-      hotSpots: [
-        {
-          pitch: 0,
-          yaw: 20,
-          type: "scene",
-          text: "Wróć na korytarz",
-          sceneId: "parter-stareskrzydl3.3",
-        },
-      ],
-    },*/
-
     sala16p: {
       title: "Sale 16A i 16B",
       hfov: 180,
