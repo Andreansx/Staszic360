@@ -2409,7 +2409,7 @@ const viewer = pannellum.viewer("panorama", {
       pitch: -20,
       yaw: 190,
       type: "scene",
-      text: "na dół",
+      text: "Na dół",
       sceneId: "2pietr-noweskrzydl-schod",
     },
   ],
