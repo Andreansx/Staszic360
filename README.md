@@ -52,13 +52,16 @@ Ten projekt zapewnia immersyjne doświadczenie wirtualnego spaceru po korytarzac
 - Piękny styl glassmorphism
 - Pełna dostępność zgodnie z W3C
 
-## 🤝 Dostępność
+## Dostępność
 
-Nasza strona wirtualnego spaceru zawiera wbudowane opcje dostępności, aby poprawić doświadczenie każdego użytkownika:
-
-- **Tryb wysokiego kontrastu:** Przełącz na wysoki kontrast dla lepszej widoczności.
-- **Zmiana rozmiaru tekstu:** Zwiększ lub zmniejsz rozmiar tekstu dla lepszej czytelności.
-- **Przełącznik animacji:** Włącz lub wyłącz animacje, aby dostosować stronę do osobistych preferencji.
+Staszic360 został zaprojektowany z myślą o szerokiej dostępności i inkluzywności. Staramy się, aby projekt był możliwie najbardziej przystępny zarówno technicznie, jak i użytkowo.
+- 	Urządzenia mobilne i komputery – spacer działa na większości nowoczesnych urządzeń z obsługą WebGL.
+- 	Przeglądarki – rekomendujemy najnowsze wersje Chrome, Firefox, Edge lub Safari.
+-   Bez logowania – dostęp do spaceru nie wymaga zakładania konta.
+-   Szybkie ładowanie – zoptymalizowany kod pozwala na korzystanie także przy wolniejszym łączu.
+-   Nawigacja klawiaturą – projekt wspiera poruszanie się po interfejsie za pomocą klawiatury (tabindex).
+-   Wstępna obsługa czytników ekranu – dodano atrybuty aria-*, które umożliwiają czytnikom ekranu lepsze rozumienie zawartości strony. Funkcje te będą rozwijane.
+-   Planowane rozszerzenia – planujemy dalsze udoskonalenia dostępności, m.in. lepsze opisy scen. 
 
 ## 🛠️ Użyte technologie
 
