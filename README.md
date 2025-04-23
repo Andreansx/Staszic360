@@ -1,10 +1,12 @@
 Read the README.md in English <a href="./additional-media/README-en.md">here</a>
 
 # Wirtualny Spacer - I LO im. Stanisława Staszica w Chrzanowie
-
+<!---
 <p align="center">
   <img src="./Staszic-cropped.png" height="200"/>
-</p>
+</p>--->
+
+![img](./IMG_0150.jpeg)
 
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Andreansxtech/Staszic360/deploy-preview.yml?branch=preview&style=for-the-badge)  
 
