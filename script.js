@@ -24,13 +24,6 @@ fetch("version.json")
   .catch(() => {
     showBanner("Production Version", "production");
   });
-
-function showBanner(text, env) {
-  const banner = document.createElement("div");
-  banner.className = `environment-banner ${env}-banner text-scalable`;
-  banner.textContent = text;
-  document.body.appendChild(banner);
-}
 const viewer = pannellum.viewer("panorama", {
   default: {
     firstScene: "portiernia",
