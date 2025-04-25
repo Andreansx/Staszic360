@@ -1524,7 +1524,7 @@ const viewer = pannellum.viewer("panorama", {
           sceneId: "sala4",
         },
         {
-          pitch: 0, // wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+          pitch: 0,
           yaw: -115,
           type: "scene",
           text: "Sala numer 3",
@@ -1747,13 +1747,6 @@ const viewer = pannellum.viewer("panorama", {
           text: "Sala numer 6",
           sceneId: "sala6",
         },
-        /*{
-          pitch: 0,
-          yaw: 25,
-          type: "scene",
-          text: "Sala numer 5",
-          sceneId: "sala5",
-        },*/
       ],
     },
     sala6: {
@@ -1809,7 +1802,7 @@ const viewer = pannellum.viewer("panorama", {
           text: "Sala numer 3",
           sceneId: "sala3",
         },
-      ],
+              ],
     },
     "1pietr-stareskrzydl1": {
       title: "1 Piętro Stare Skrzydło 1",
@@ -2871,3 +2864,24 @@ brightnessToggle.addEventListener("click", function () {
     ? "Przywróć jasność"
     : "Przyciemnij widok";
 });
+
+const preloadedPanoramas = new Set();
+
+function preloadAdjacentScenes(sceneId) {
+  const scenes = viewer.getConfig().scenes;
+  const hotspots = scenes[sceneId]?.hotSpots || [];
+  hotspots.forEach((hs) => {
+    if (hs.type === 'scene') {
+      const target = hs.sceneId;
+      if (!preloadedPanoramas.has(target) && scenes[target]?.panorama) {
+        const img = new Image();
+        img.src = scenes[target].panorama;
+        preloadedPanoramas.add(target);
+      }
+    }
+  });
+}
+
+viewer.on('scenechange', preloadAdjacentScenes);
+
+preloadAdjacentScenes(viewer.getScene());
