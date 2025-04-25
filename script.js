@@ -34,9 +34,9 @@ function showBanner(text, env) {
 const viewer = pannellum.viewer("panorama", {
   default: {
     firstScene: "portiernia",
-    autoLoad: true,
     sceneFadeDuration: 100,
     showFullscreenCtrl: false,
+    autoLoad: true,
   },
   scenes: {
     portiernia: {
@@ -46,7 +46,6 @@ const viewer = pannellum.viewer("panorama", {
       yaw: -30,
       type: "equirectangular",
       panorama: "media/lowscaled_images/0portierniawejscie-lowscaled.jpg",
-      autoLoad: true,
       hotSpots: [
         {
           pitch: 5,
@@ -2585,12 +2584,12 @@ const viewer = pannellum.viewer("panorama", {
   }, //wazne nawiasy nie usuwac
 });
 
-document.getElementById("welcomeButton").addEventListener("click", function () {
+  document.getElementById("welcomeButton").addEventListener("click", function () {
   document.getElementById("welcomeScreen").style.display = "none";
   document.getElementById("searchDiv").classList.remove("hidden");
   document.querySelector(".quick-access-menu").classList.remove("blurred");
   viewer.resize();
-  preloadImages();
+  // preloadImages(); Removed call to preload all images
 });
 
 function showErrorModal() {
@@ -2732,24 +2731,6 @@ function goToScene() {
   } else {
     showErrorModal();
   }
-}
-function preloadImages() {
-  const scenes = viewer.getConfig().scenes;
-  const sceneValues = Object.values(scenes);
-  let loadedImages = 0;
-  const totalImages = sceneValues.length;
-
-  sceneValues.forEach((scene) => {
-    const img = new Image();
-    img.src = scene.panorama;
-    img.onload = img.onerror = () => {
-      console.log("Image preloaded");
-      loadedImages++;
-      if (loadedImages === totalImages) {
-        console.log("All images preloaded");
-      }
-    };
-  });
 }
 
 document
