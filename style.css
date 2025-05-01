@@ -1034,7 +1034,6 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     width: auto;
     max-width: 90%;
-    pointer-events: none;
 }
 
 .preview-banner {
