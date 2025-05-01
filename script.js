@@ -19,7 +19,16 @@ fetch("version.json")
     const version = data.version || "v?";
     const buildDate = data.buildDate || "unknown";
     const label = env === "preview" ? "Preview Version" : "Production Version";
-    showBanner(`${label} – ${version} – Build: ${buildDate} UTC`, env);
+    if (env === "preview" && data.runUrl) {
+      // Remove any existing banners and show clickable preview banner
+      document.querySelectorAll(".environment-banner").forEach((el) => el.remove());
+      const banner = document.createElement("div");
+      banner.className = `environment-banner ${env}-banner text-scalable`;
+      banner.innerHTML = `${label} – <a href="${data.runUrl}" target="_blank" rel="noopener noreferrer">${version}</a> – Build: ${buildDate} UTC`;
+      document.body.appendChild(banner);
+    } else {
+      showBanner(`${label} – ${version} – Build: ${buildDate} UTC`, env);
+    }
   })
   .catch(() => {
     showBanner("Production Version", "production");
