@@ -1034,6 +1034,23 @@ body[data-text-scale="150"] input::placeholder { font-size: 150%; }
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     width: auto;
     max-width: 90%;
+    animation: banner-glow 3s cubic-bezier(0.4,0,0.2,1);
+    box-shadow: 0 0 0 0 rgba(250,204,21,0.7), 0 4px 12px rgba(0,0,0,0.3);
+}
+
+@keyframes banner-glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(250,204,21,0.7), 0 4px 12px rgba(0,0,0,0.3);
+        filter: brightness(1.2) drop-shadow(0 0 16px rgba(250,204,21,0.7));
+    }
+    60% {
+        box-shadow: 0 0 32px 12px rgba(250,204,21,0.7), 0 4px 12px rgba(0,0,0,0.3);
+        filter: brightness(1.4) drop-shadow(0 0 32px rgba(250,204,21,0.7));
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(250,204,21,0.0), 0 4px 12px rgba(0,0,0,0.3);
+        filter: none;
+    }
 }
 
 .preview-banner {
