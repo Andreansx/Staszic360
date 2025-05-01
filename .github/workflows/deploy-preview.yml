@@ -24,14 +24,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Create env.json for preview
-        run: |
-          echo '{ "environment": "preview", "buildDate": "'$(date -u +"%Y-%m-%dT%H:%M:%SZ")'" }' > env.json
-
       - name: Create version.json (for preview)
         run: |
-          VERSION="preview-$(date -u +%Y%m%d-%H%M)"
-          echo '{ "version": "'$VERSION'", "buildDate": "'$(date -u +"%Y-%m-%dT%H:%M:%SZ")'", "environment": "preview" }' > version.json
+          VERSION="preview-${{ github.run_number }}.$(date -u +%m-%d)"
+          RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          echo "{\"version\": \"${VERSION}\", \"buildDate\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\", \"environment\": \"preview\", \"runUrl\": \"${RUN_URL}\"}" > version.json
+
+      - name: Prepare deploy directory (minimal set for GitHub Pages)
+        run: |
+          mkdir -p deploy/media/lowscaled_images
+          mkdir -p deploy/media/experimental-14mp
+          cp index.html style.css pannellum.css pannellum.js script.js version.json index.html.sig pannellum.css.sig script.js.sig favicon.ico deploy/
+          cp -r additional-media deploy/
+          cp -r media/lowscaled_images/* deploy/media/lowscaled_images/
+          cp -r media/experimental-14mp/* deploy/media/experimental-14mp/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -39,7 +45,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: './deploy'
 
       - name: Deploy to GitHub Pages
         id: deployment

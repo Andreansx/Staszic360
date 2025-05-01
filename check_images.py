@@ -1,16 +1,16 @@
 import re
 import os
 
-index_path = 'index.html'
+script_path = 'script.js'
 media_folder = 'media/lowscaled_images'
 
-with open(index_path, 'r', encoding='utf-8') as f:
+with open(script_path, 'r', encoding='utf-8') as f:
     content = f.read()
 
-used_paths = re.findall(r'"panorama"\s*:\s*"([^"]+)"', content)
-used_paths = list(set(used_paths)) 
+used_paths = re.findall(r'panorama\s*:\s*"([^"]+)"', content)
+used_paths = list(set(used_paths))
 
-print("🔍 Znaleziono ścieżki do obrazów w index.html:")
+print("🔍 Znaleziono ścieżki do obrazów w script.js:")
 for path in used_paths:
     print(" -", path)
 

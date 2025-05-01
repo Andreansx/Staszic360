@@ -1,22 +1,28 @@
 <!DOCTYPE HTML>
 <html lang="pl">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wirtualny spacer po I liceum w Chrzanowie</title>
-    <link rel="stylesheet" href="pannellum.css"/>
+    <link rel="stylesheet" href="pannellum.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="text/javascript" src="pannellum.js"></script>
     <style>
-        html, body {
+        html,
+        body {
             height: 100%;
             margin: 0;
             padding: 0;
             font-size: 17px;
         }
+
         #panorama {
             width: 100%;
             height: 102.5%;
@@ -26,16 +32,101 @@
         }
     </style>
 </head>
+
 <body class="relative">
-    <div id="errorModal" class="hidden fixed inset-0 overflow-y-auto h-full w-full z-50" style="backdrop-filter: blur(8px); background: rgba(0, 0, 0, 0.4)">
-        <div class="relative top-20 mx-auto p-8 w-96 rounded-2xl" 
-             style="background: rgba(16, 60, 255, 0.1); backdrop-filter: blur(12px); border: 0px solid rgba(255, 255, 255, 0.2); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+    <div id="welcomeScreen" role="dialog" aria-modal="true" tabindex="-1"
+        class="fixed inset-0 bg-gray-200 bg-opacity-70 backdrop-blur-sm flex justify-center items-center z-50">
+        <div class="p-6 bg-white rounded-xl shadow-inner flex flex-col items-center space-y-4">
+            <h1 class="text-4xl font-semibold text-gray-800 ">Zapraszamy do Staszic360!</h1>
+            <h3 class="text-lg text-gray-600 text-center text-scalable">Nawiguj po szkole klikając na kółka aby przejść
+                w ich kierunku<br>Wyszukuj klasy wpisując nazwy: "16a", "sala 16a" lub "sklepik"</br>Jeśli coś się
+                zawiesi albo wystąpi błąd, odśwież stronę.</br>Kod źródłowy projektu dostępny <a
+                    href="https://github.com/Andreansxtech/Staszic360" target="_blank">tutaj</a></br>Zachęcamy do
+                zostawienia gwiazdki na GitHubie</h3>
+            <button id="welcomeButton"
+                class="px-4 py-2 bg-blue-500 text-white rounded-xl shadow-md hover:bg-blue-600 transition text-scalable">Zobacz
+                Wirtualny spacer po szkole</button>
+        </div>
+    </div>
+    <div id="mapOverlay" class="pnlm-map-overlay">
+        <div class="pnlm-map-hint text-scalable">Kliknij gdziekolwiek dookoła aby zamknąć mapę</div>
+        <div class="pnlm-map-container">
+            <img src="./additional-media/mapa-szkoly-2020.jpg" alt="Mapa szkoły" />
+        </div>
+    </div>
+    <div id="panorama">&nbsp;</div>
+    <div id="searchDiv" class="absolute top-4 right-4 z-50 flex space-x-2 hidden">
+        <label for="searchInput" class="visually-hidden">Wyszukaj panoramę</label>
+        <input id="searchInput" type="text" placeholder="Wyszukaj salę... np. 16a"
+            class="px-4 py-2 border border-gray-300 rounded-lg shadow-inner focus:outline-none focus:ring focus:border-blue-300 text-lg font-medium text-scalable" />
+        <button onclick="goToScene()"
+            class="px-4 py-2 bg-blue-500 text-white rounded-xl shadow-md hover:bg-blue-600 transition text-lg font-semibold text-scalable">Przejdź</button>
+    </div>
+
+    <div class="quick-access-menu text-scalable blurred">
+        <button id="quickAccessBtn" class="quick-access-button text-scalable">
+            Szybki dostęp ▼
+        </button>
+        <div id="quickAccessContent" class="quick-access-content" role="menu" aria-labelledby="quickAccessBtn">
+            <div class="quick-access-section-title">Sale lekcyjne</div>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala1')">Sala 1</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala2a')">Sala 2A</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala2b')">Sala 2B</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala3')">Sala 3</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala4')">Sala 4</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala6')">Sala 6</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala7')">Sala 7</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala8')">Sala 8</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala16a')">Sala 16A</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala16b')">Sala 16B</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala17')">Sala 17</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala18')">Sala 18</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala19')">Sala 19</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala20')">Sala 20</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala21')">Sala 21</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala24')">Sala 24</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala25')">Sala 25</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala26')">Sala 26</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala33')">Sala 33</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala39')">Sala 39</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala40')">Sala 40</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala45')">Sala 45</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala46')">Sala 46</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala47')">Sala 47</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala57')">Sala 57</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala59')">Sala 59</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala60')">Sala 60</button>
+
+            <div class="quick-access-section-title">Administracja</div>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sekretariat')">Sekretariat</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('dyrektor')">Gabinet dyrektora</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('wicedyr')">Gabinet wicedyrektora</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('skarbnik')">Księgowość</button>
+
+            <div class="quick-access-section-title">Piętra</div>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('1pietr-srod')">I piętro</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('2pietr-srod')">II piętro</button>
+
+            <div class="quick-access-section-title">Inne miejsca</div>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('biblioteka1')">Biblioteka</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('Sklepik')">Sklepik szkolny</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('sala-gim')">Sala gimnastyczna mała</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('salagimn')">Sala gimnastyczna duża</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('niebieskiDywan')">Niebieski dywan</button>
+            <button type="button" class="quick-access-item" role="menuitem" onclick="viewer.loadScene('olimp1')">Olimp</button>
+        </div>
+    </div>
+
+    <div id="errorModal" role="dialog" aria-modal="true" tabindex="-1" class="hidden fixed inset-0 overflow-y-auto h-full w-full z-50"
+        style="backdrop-filter: blur(8px); background: rgba(0, 0, 0, 0.4)">
+        <div class="relative top-20 mx-auto p-8 w-96 rounded-2xl"
+            style="background: rgba(16, 60, 255, 0.1); backdrop-filter: blur(12px); border: 0px solid rgba(255, 255, 255, 0.2); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
             <div class="mt-3 text-center">
-                <div class="mx-auto flex items-center justify-center h-14 w-14 rounded-full mb-4" 
-                     style="background: rgba(239, 68, 68, 0.15); backdrop-filter: blur(4px);">
+                <div class="mx-auto flex items-center justify-center h-14 w-14 rounded-full mb-4"
+                    style="background: rgba(239, 68, 68, 0.15); backdrop-filter: blur(4px);">
                     <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                              d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                 </div>
                 <h3 class="text-xl leading-6 font-semibold text-white mb-2 text-scalable">
@@ -47,116 +138,47 @@
                     </p>
                 </div>
                 <div class="mt-6">
-                    <button id="closeErrorModal" 
-                            class="px-6 py-3 bg-white bg-opacity-10 hover:bg-opacity-20 text-white text-base font-medium rounded-xl 
+                    <button id="closeErrorModal" class="px-6 py-3 bg-white bg-opacity-10 hover:bg-opacity-20 text-white text-base font-medium rounded-xl 
                                    transition duration-300 ease-in-out transform hover:-translate-y-1 text-scalable"
-                            style="backdrop-filter: blur(4px); border: px solid rgba(255, 255, 255, 0.1);">
+                        style="backdrop-filter: blur(4px); border: px solid rgba(255, 255, 255, 0.1);">
                         Zamknij
                     </button>
                 </div>
             </div>
         </div>
     </div>
-    <div id="welcomeScreen" class="fixed inset-0 bg-gray-200 bg-opacity-70 backdrop-blur-sm flex justify-center items-center z-50">
-        <div class="p-6 bg-white rounded-xl shadow-inner flex flex-col items-center space-y-4">
-            <h1 class="text-4xl font-semibold text-gray-800 ">Zapraszamy do Staszic360!</h1>
-            <h3 class="text-lg text-gray-600 text-center text-scalable">Nawiguj po szkole klikając na kółka aby przejść w ich kierunku<br>Wyszukuj klasy wpisując nazwy: "16a", "sala 16a" lub "sklepik"</br>Jeśli coś się zawiesi albo wystąpi błąd, odśwież stronę.</br>Kod źródłowy projektu dostępny <a href="https://github.com/Andreansxtech/Staszic360" target="_blank">tutaj</a></br>Zachęcamy do zostawienia gwiazdki na GitHubie</h3> 
-            <button id="welcomeButton" class="px-4 py-2 bg-blue-500 text-white rounded-xl shadow-md hover:bg-blue-600 transition text-scalable">Zobacz Wirtualny spacer po szkole</button>
-        </div>
-    </div>
-    <div id="mapOverlay" class="pnlm-map-overlay">
-        <div class="pnlm-map-hint text-scalable">Kliknij gdziekolwiek dookoła aby zamknąć mapę</div>
-        <div class="pnlm-map-container">
-            <img src="./additional-media/mapa-szkoly-2020.jpg" alt="Mapa szkoły" />
-        </div>
-    </div>
-    <div id="panorama">&nbsp;</div>
-    <div id="searchDiv" class="absolute top-4 right-4 z-50 flex space-x-2 hidden">
-        <input id="searchInput" type="text" placeholder="Wyszukaj salę... np. 16a" class="px-4 py-2 border border-gray-300 rounded-lg shadow-inner focus:outline-none focus:ring focus:border-blue-300 text-lg font-medium text-scalable"/>
-        <button onclick="goToScene()" class="px-4 py-2 bg-blue-500 text-white rounded-xl shadow-md hover:bg-blue-600 transition text-lg font-semibold text-scalable">Przejdź</button>
-    </div>
-
-    <div class="quick-access-menu text-scalable blurred">
-        <button id="quickAccessBtn" class="quick-access-button text-scalable">
-            Szybki dostęp ▼
-        </button>
-        <div id="quickAccessContent" class="quick-access-content">
-            <div class="quick-access-section-title">Sale lekcyjne</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala1')">Sala 1</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala2a')">Sala 2A</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala2b')">Sala 2B</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala3')">Sala 3</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala4')">Sala 4</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala5')">Sala 5</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala6')">Sala 6</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala7')">Sala 7</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala8')">Sala 8</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala16a')">Sala 16A</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala16b')">Sala 16B</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala17')">Sala 17</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala18')">Sala 18</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala19')">Sala 19</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala20')">Sala 20</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala21')">Sala 21</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala24')">Sala 24</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala25')">Sala 25</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala26')">Sala 26</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala33')">Sala 33</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala39')">Sala 39</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala40')">Sala 40</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala45')">Sala 45</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala46')">Sala 46</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala47')">Sala 47</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala57')">Sala 57</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala59')">Sala 59</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala60')">Sala 60</div>
-            
-            <div class="quick-access-section-title">Administracja</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sekretariat')">Sekretariat</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('dyrektor')">Gabinet dyrektora</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('wicedyr')">Gabinet wicedyrektora</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('skarbnik')">Księgowość</div>
-            
-            <div class="quick-access-section-title">Piętra</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('1pietr-srod')">I piętro</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('2pietr-srod')">II piętro</div>
-
-            <div class="quick-access-section-title">Inne miejsca</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('biblioteka1')">Biblioteka</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('Sklepik')">Sklepik szkolny</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('sala-gim')">Sala gimnastyczna mała</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('salagimn')">Sala gimnastyczna duża</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('niebieskiDywan')">Niebieski dywan</div>
-            <div class="quick-access-item" onclick="viewer.loadScene('olimp1')">Olimp</div>
-        </div>
-    </div>
-
     <div id="accessibilityMenu" class="hidden fixed bottom-20 right-4 bg-white rounded-xl shadow-lg p-4 z-50 w-64">
         <h3 class="text-lg font-semibold mb-3 text-gray-800 text-scalable">Opcje dostępności</h3>
         <div class="space-y-3">
             <div class="flex items-center justify-between">
                 <label class="text-sm text-gray-700 text-scalable">Wysoki kontrast</label>
-                <button id="highContrastBtn" class="px-3 py-1 bg-blue-500 text-white rounded-lg text-sm hover:bg-blue-600 transition text-scalable">
+                <button id="highContrastBtn"
+                    class="px-3 py-1 bg-blue-500 text-white rounded-lg text-sm hover:bg-blue-600 transition text-scalable">
                     Włącz
                 </button>
             </div>
             <div class="flex items-center justify-between">
                 <label class="text-sm text-gray-700 text-scalable">Rozmiar tekstu</label>
                 <div class="flex space-x-2">
-                    <button id="decreaseText" class="px-2 py-1 bg-gray-200 text-gray-700 rounded-lg text-sm hover:bg-gray-300 transition text-scalable">A-</button>
-                    <button id="increaseText" class="px-2 py-1 bg-gray-200 text-gray-700 rounded-lg text-sm hover:bg-gray-300 transition text-scalable">A+</button>
+                    <button id="decreaseText"
+                        class="px-2 py-1 bg-gray-200 text-gray-700 rounded-lg text-sm hover:bg-gray-300 transition text-scalable">A-</button>
+                    <button id="increaseText"
+                        class="px-2 py-1 bg-gray-200 text-gray-700 rounded-lg text-sm hover:bg-gray-300 transition text-scalable">A+</button>
                 </div>
             </div>
             <div class="flex items-center justify-between">
                 <label class="text-sm text-gray-700 text-scalable">Animacje</label>
-                <button id="toggleAnimations" class="px-3 py-1 bg-blue-500 text-white rounded-lg text-sm hover:bg-blue-600 transition text-scalable">
+                <button id="toggleAnimations"
+                    class="px-3 py-1 bg-blue-500 text-white rounded-lg text-sm hover:bg-blue-600 transition text-scalable">
                     Wyłącz
                 </button>
             </div>
         </div>
     </div>
 
-    <button id="accessibilityBtn" class="fixed bottom-4 right-4 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition z-50" aria-label="Opcje dostępności">
+    <button id="accessibilityBtn"
+        class="fixed bottom-4 right-4 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 shadow-lg transition z-50"
+        aria-label="Opcje dostępności">
         <!--- Icon by Smashicons  -->
         <img src="./additional-media/accessibility_1512642.png" alt="Ikona dostępności" class="w-8 h-8 filter invert" />
     </button>
@@ -166,4 +188,5 @@
     </button>
     <script src="script.js" type="text/javascript"></script>
 </body>
+
 </html>

@@ -1,24 +1,30 @@
 Read the README.md in English <a href="./additional-media/README-en.md">here</a>
 
 # Wirtualny Spacer - I LO im. Stanisława Staszica w Chrzanowie
+<!---
+<p align="center">
+  <img src="./Staszic-cropped.png" height="200"/>
+</p>--->
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Andreansxtech/Staszic360/deploy-preview.yml?branch=preview&style=for-the-badge)
+![img](/additional-media/IMG_0150.jpeg)
+
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Andreansxtech/Staszic360/deploy-preview.yml?branch=preview&style=for-the-badge)  
 
 <!--- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Static Badge](https://img.shields.io/badge/Panellum.js-%23ffa321?style=for-the-badge)
 --->
-
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/AndreansxTech/Staszic360?style=for-the-badge&logo=github)
-![GitHub License](https://img.shields.io/github/license/AndreansxTech/Staszic360?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/Andreansxtech/Staszic360?style=for-the-badge)
-[![Kontakt](https://img.shields.io/badge/Kontakt-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/Andrtexh)
+![GitHub last commit](https://img.shields.io/github/last-commit/Andreansxtech/Staszic360?style=for-the-badge)  
 
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/Licencja-CC_BY--NC--SA_4.0-%23ff2652?style=for-the-badge)](https://creativecommons.org/licenses/by-nc-sa/4.0/)  ![WCAG](https://img.shields.io/badge/WCAG-%23015A69.svg?style=for-the-badge&logo=WCAG&logoColor=white)
+
+[![Kontakt](https://img.shields.io/badge/Kontakt-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/Andrtexh)
 
 Interaktywny wirtualny spacer po I Liceum Ogólnokształcącym im. Stanisława Staszica w Chrzanowie. </br>
 Cały projekt jest realizowany przez grupę trzech uczniów szkoły, w pełni bez żadnych korzyści finansowych. Wszystkie zdjęcia wykonane w szkole są dostępne w nieruszonej jakości w folderze <a href="./media/">media</a>.
 
-## 🌐 Zobacz projekt live
+## 🌐 Publiczne zatwierdzone instancje projektu
 
 Projekt aktualnie jest dostępny na poniższych stronach:
 
@@ -50,11 +56,14 @@ Ten projekt zapewnia immersyjne doświadczenie wirtualnego spaceru po korytarzac
 
 ## 🤝 Dostępność
 
-Nasza strona wirtualnego spaceru zawiera wbudowane opcje dostępności, aby poprawić doświadczenie każdego użytkownika:
-
-- **Tryb wysokiego kontrastu:** Przełącz na wysoki kontrast dla lepszej widoczności.
-- **Zmiana rozmiaru tekstu:** Zwiększ lub zmniejsz rozmiar tekstu dla lepszej czytelności.
-- **Przełącznik animacji:** Włącz lub wyłącz animacje, aby dostosować stronę do osobistych preferencji.
+Staszic360 został zaprojektowany z myślą o szerokiej dostępności i inkluzywności. Staramy się, aby projekt był możliwie najbardziej przystępny zarówno technicznie, jak i użytkowo.
+- 	Urządzenia mobilne i komputery – spacer działa na większości nowoczesnych urządzeń z obsługą WebGL.
+- 	Przeglądarki – rekomendujemy najnowsze wersje Chrome, Firefox, Edge lub Safari.
+-   Bez logowania – dostęp do spaceru nie wymaga zakładania konta.
+-   Szybkie ładowanie – zoptymalizowany kod pozwala na korzystanie także przy wolniejszym łączu.
+-   Nawigacja klawiaturą – projekt wspiera poruszanie się po interfejsie za pomocą klawiatury (tabindex).
+-   Wstępna obsługa czytników ekranu – dodano atrybuty aria-*, które umożliwiają czytnikom ekranu lepsze rozumienie zawartości strony. Funkcje te będą rozwijane.
+-   Planowane rozszerzenia – planujemy dalsze udoskonalenia dostępności, m.in. lepsze opisy scen. 
 
 ## 🛠️ Użyte technologie
 
@@ -63,7 +72,6 @@ Nasza strona wirtualnego spaceru zawiera wbudowane opcje dostępności, aby popr
 - JavaScript
 - Panellum.js
 - Python ( skrypty do zautomatyzowania zadań )
-- LaTeX ( do dokumentacji )
 
 ## Znane błędy / problemy
 
@@ -78,7 +86,7 @@ Nasza strona wirtualnego spaceru zawiera wbudowane opcje dostępności, aby popr
 
 ## Weryfikacja podpisów
 
-Pliki `index.html`, `panellum.js` i `panellum.css` są podpisane cyfrowo za pomocą GPG, aby zapewnić ich integralność i autentyczność. Oznacza to, że możesz mieć pewność, iż pliki te nie zostały zmodyfikowane przez osoby trzecie od momentu ich podpisania przez nas.</br>
+Pliki `index.html`, `script.js` i `pannellum.css` są podpisane cyfrowo za pomocą GPG, aby zapewnić ich integralność i autentyczność. Oznacza to, że możesz mieć pewność, iż pliki te nie zostały zmodyfikowane przez osoby trzecie od momentu ich podpisania przez nas.</br>
 
 Pamiętaj żeby przy weryfikacji podpisów, sprawdzać je z podpisami z odpowiedniego Release, nie z najnowszymi.
 
@@ -95,7 +103,7 @@ gpg --import AndreansxTech_0x1A5C5CDB_public.asc
 ```bash
 gpg --verify index.html.sig index.html
 gpg --verify pannellum.css.sig pannellum.css
-gpg --verify pannellum.js.sig pannellum.js
+gpg --verify script.js.sig script.js
 ```
 ### Struktura projektu
 ```
@@ -115,8 +123,8 @@ Staszic360/
 ├── pannellum.css                       - Arkusz stylów Pannellum.
 ├── pannellum.css.sig                   - Podpis cyfrowy pannellum.css
 ├── pannellum.js                        - Biblioteka Pannellum
-├── pannellum.js.sig                    - Podpis cyfrowy pannellum.js
 ├── script.js                           - Główny skrypt JavaScript
+├── script.js.sig                       - Podpis cyfrowy script.js
 ├── resize_images.py                    - Skrypt Pythona użyty do zmniejszenia rozdzielczości zdjęć
 ├── update_paths.py                     - Skrypt Python do zaktualizowania ścieżek zdjęć
 ├── build.sh                            - Plik Shell zawierający komendę do Cloudflare build environment dla Production
@@ -124,7 +132,14 @@ Staszic360/
 ├── test.pdf                            - Wersja PDF pliku README.md
 └── README.md
 ```
+# Prawa
 
-### Stworzone z ❤️ przez <a href="https://AndreansxTech.github.io/">Michała Bańkowskiego (*AndreansxTech*)</a>, Mateusza Długaja (*Matkard1*) i Gabriela Świątka (*Simonaven265*) 2025
+## Stworzone z ❤️ przez <a href="https://AndreansxTech.github.io/">Michała Bańkowskiego (*AndreansxTech*)</a>, Mateusza Długaja (*Matkard1*) i Gabriela Świątka (*Simonaven265*) 2025
 
-## Ten projekt jest licencjonowany na podstawie **Licencji MIT** (sprawdź <a href="./LICENSE">LICENSE</a>)
+## Projekt używa biblioteki <a href="https://github.com/mpetroff/pannellum">Pannellum.js</a>, której autorem jest <a href="https://mpetroff.net/">Matthew Petroff</a>.
+
+### Kopia pliku licencji Pannellum.js znajduje się w <a href="./LICENSE-PANNELLUM">LICENSE-PANNELLUM</a>
+
+## Ten projekt jest licencjonowany na podstawie <a href="./LICENSE">**Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International**</a> (sprawdź <a href="./LICENSE">LICENSE</a>)
+
+### Wraz z dniem 2 kwietnia 2025 roku, projekt nie jest już rozwijany na podstawach licencji MIT. Każda nowa aktualizacja jest obięta prawami autorskimi licencji **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International**
