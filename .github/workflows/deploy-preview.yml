@@ -27,7 +27,8 @@ jobs:
       - name: Create version.json (for preview)
         run: |
           VERSION="preview-${{ github.run_number }}.$(date -u +%m-%d)"
-          echo '{ "version": "'$VERSION'", "buildDate": "'$(date -u +"%Y-%m-%dT%H:%M:%SZ")'", "environment": "preview", "runUrl": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" }' > version.json
+          RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          echo "{\"version\": \"${VERSION}\", \"buildDate\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\", \"environment\": \"preview\", \"runUrl\": \"${RUN_URL}\"}" > version.json
 
       - name: Prepare deploy directory (minimal set for GitHub Pages)
         run: |
