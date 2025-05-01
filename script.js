@@ -18,7 +18,7 @@ fetch("version.json")
     const env = data.environment || "production";
     const version = data.version || "v?";
     const buildDate = data.buildDate || "unknown";
-    const label = env === "preview" ? "Preview Version" : "Production Version";
+    const label = env === "preview" ? "Preview Version" : "Wersja Produkcyjna";
     if (env === "preview" && data.runUrl) {
       // Remove any existing banners and show clickable preview banner
       document.querySelectorAll(".environment-banner").forEach((el) => el.remove());
@@ -31,7 +31,7 @@ fetch("version.json")
     }
   })
   .catch(() => {
-    showBanner("Production Version", "production");
+    showBanner("Wersja Produkcyjna", "production");
   });
 const viewer = pannellum.viewer("panorama", {
   default: {
