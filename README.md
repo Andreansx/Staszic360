@@ -72,7 +72,6 @@ Staszic360 został zaprojektowany z myślą o szerokiej dostępności i inkluzyw
 - JavaScript
 - Panellum.js
 - Python ( skrypty do zautomatyzowania zadań )
-- LaTeX ( do dokumentacji )
 
 ## Znane błędy / problemy
 
