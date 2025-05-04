@@ -6,27 +6,32 @@ Read the README.md in English <a href="./additional-media/README-en.md">here</a>
   <img src="./Staszic-cropped.png" height="200"/>
 </p>--->
 
-![img](/additional-media/IMG_0150.jpeg)
+<p align="center">
+  <img src="./additional-media/IMG_0150.jpeg" height="150"/>
+</p>
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Andreansxtech/Staszic360/deploy-preview.yml?branch=preview&style=for-the-badge)  
 
 <!--- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Static Badge](https://img.shields.io/badge/Panellum.js-%23ffa321?style=for-the-badge)
 --->
+<div align="center">
+
+  ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Andreansxtech/Staszic360/deploy-preview.yml?branch=preview&style=for-the-badge)  
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/AndreansxTech/Staszic360?style=for-the-badge&logo=github)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Andreansxtech/Staszic360?style=for-the-badge)  
-
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/Licencja-CC_BY--NC--SA_4.0-%23ff2652?style=for-the-badge)](https://creativecommons.org/licenses/by-nc-sa/4.0/)  ![WCAG](https://img.shields.io/badge/WCAG-%23015A69.svg?style=for-the-badge&logo=WCAG&logoColor=white)
-
 [![Kontakt](https://img.shields.io/badge/Kontakt-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/Andrtexh)
+
+</div>
 
 Interaktywny wirtualny spacer po I Liceum Ogólnokształcącym im. Stanisława Staszica w Chrzanowie. </br>
 Cały projekt jest realizowany przez grupę trzech uczniów szkoły, w pełni bez żadnych korzyści finansowych. Wszystkie zdjęcia wykonane w szkole są dostępne w nieruszonej jakości w folderze <a href="./media/">media</a>.
+<div align="center">
+<h1>  🌐 Publiczne zatwierdzone instancje projektu </h1> 
+</div>
 
-## 🌐 Publiczne zatwierdzone instancje projektu
-
-Projekt aktualnie jest dostępny na poniższych stronach:
+### Projekt aktualnie jest dostępny na poniższych stronach:
 
 👉 [Cloudflare Pages](https://staszic360.pages.dev) – wersja produkcyjna  
 
@@ -35,17 +40,23 @@ Projekt aktualnie jest dostępny na poniższych stronach:
 👉 [Spacer.1lo.pl](http://spacer.1lo.pl/) ( Brak SSL/TLS🔓 ) - Wersja finalna, rzadko aktualizowana
 
 _(Kliknij Prawym przyciskiem myszy → otwórz w nowej karcie, GitHub nie pozwala otwierać automatycznie)_
-
-
-## 📝 Opis
+<div align="center">
+<h1> 📝 Opis </h1>
 
 Ten projekt zapewnia immersyjne doświadczenie wirtualnego spaceru po korytarzach i salach I LO im. Stanisława Staszica w Chrzanowie. Użytkownicy mogą nawigować po różnych częściach budynku szkoły, odwiedzając sale lekcyjne, korytarze i między innymi sale gimnastyczne jak również gabinety i pomieszczenia nie dostępne typowo dla uczniów szkoły. Strona internetowa jest w pełni dostosowana do standardów dostępności W3C tak aby każdy mógł w pełni korzystać z jej funkcji niezależnie od swoich indywidualnych potrzeb lub ograniczeń.
+</div>
 
-## 🖼️ Podgląd
+<div align="center">
 
-![Podgląd Wirtualnego Spaceru](./additional-media/preview-gif3.gif)
+<h1> 🖼️ Podgląd </h1>
 
-## 🚀 Funkcje
+<img src="./additional-media/preview-gif3.gif">
+
+</div>
+
+<div align="center">
+<h2> 🚀 Funkcje </h2>
+</div>
 
 - Interaktywny widok w 360 stopniach
 - Płynna nawigacja między różnymi lokalizacjami
@@ -54,7 +65,9 @@ Ten projekt zapewnia immersyjne doświadczenie wirtualnego spaceru po korytarzac
 - Piękny styl glassmorphism
 - Pełna dostępność zgodnie z W3C
 
-## 🤝 Dostępność
+<div align="center">
+<h2> 🤝 Dostępność </h2>
+</div>
 
 Staszic360 został zaprojektowany z myślą o szerokiej dostępności i inkluzywności. Staramy się, aby projekt był możliwie najbardziej przystępny zarówno technicznie, jak i użytkowo.
 - 	Urządzenia mobilne i komputery – spacer działa na większości nowoczesnych urządzeń z obsługą WebGL.
@@ -65,7 +78,9 @@ Staszic360 został zaprojektowany z myślą o szerokiej dostępności i inkluzyw
 -   Wstępna obsługa czytników ekranu – dodano atrybuty aria-*, które umożliwiają czytnikom ekranu lepsze rozumienie zawartości strony. Funkcje te będą rozwijane.
 -   Planowane rozszerzenia – planujemy dalsze udoskonalenia dostępności, m.in. lepsze opisy scen. 
 
-## 🛠️ Użyte technologie
+<div align="center">
+<h2> 🛠️ Użyte technologie </h2>
+</div>
 
 - HTML5
 - CSS3
@@ -73,7 +88,9 @@ Staszic360 został zaprojektowany z myślą o szerokiej dostępności i inkluzyw
 - Panellum.js
 - Python ( skrypty do zautomatyzowania zadań )
 
-## Znane błędy / problemy
+<div align="center">
+<h2> Znane błędy / problemy </h2>
+</div>
 
 - Czasami przy użyciu menu szybkiego dostępu, możemy zobaczyć komunikat ```"The file %s could not be accessed."``` W takim przypadku należy poprostu kliknąć na salę w menu szybkieg dostępu jeszcze raz. Ten błąd pojawia się dosyć rzadko, a jego powodem jest trudność z załadowaniem zdjęcia przez Cloudflare w odpowiednim czasie. Zdjęcia są dosyć duże a plan, dzięki któremu ta strona jest hostowana, jest darmowy więc czas jaki CPU w hostingu może przeznaczyć na zapytanie od clienta jest ograniczony
 - Przy przełączaniu funkcji dostępności "Włącz / Wyłącz animacje", hotspoty mogą przesunąć się do lewego górnego rogu zamiast być tam gdzie powinny. Ten błąd nie wpływa na funkcjonalność strony. Hotspoty odrazu wracają na swoje miejsce kiedy tylko poruszymy panoramą.
@@ -132,7 +149,9 @@ Staszic360/
 ├── test.pdf                            - Wersja PDF pliku README.md
 └── README.md
 ```
-# Prawa
+<div align="center">
+<h1>Prawa</h1>
+</div>
 
 ## Stworzone z ❤️ przez <a href="https://AndreansxTech.github.io/">Michała Bańkowskiego (*AndreansxTech*)</a>, Mateusza Długaja (*Matkard1*) i Gabriela Świątka (*Simonaven265*) 2025
 
