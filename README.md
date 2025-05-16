@@ -35,7 +35,7 @@ Cały projekt jest realizowany przez grupę trzech uczniów szkoły, w pełni be
 
 👉 [Cloudflare Pages](https://staszic360.pages.dev) – wersja produkcyjna  
 
-👉 [GitHub Pages](https://andreansxtech.github.io/Staszic360/) – wersja preview  
+👉 [GitHub Pages](https://andreansx.github.io/Staszic360/) – wersja preview  
 
 👉 [Spacer.1lo.pl](http://spacer.1lo.pl/) ( Brak SSL/TLS🔓 ) - Wersja finalna, rzadko aktualizowana
 
