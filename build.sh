@@ -1,3 +1,2 @@
 #!/bin/bash
-echo "Injecting build date..."
-echo '{ "version": "v1.1", "buildDate": "'$(date -u +"%Y-%m-%dT%H:%M:%SZ")'", "environment": "production" }' > version.json && sed -i "s/__BUILD_DATE__/$(date -u +"%Y-%m-%dT%H:%M:%SZ")/" script.js
+echo '{ "version": "version-here", "buildDate": "'$(date -u +"%Y-%m-%dT%H:%M:%SZ")'", "environment": "production" }' > version.json && sed -i "s/__BUILD_DATE__/$(date -u +"%Y-%m-%dT%H:%M:%SZ")/" script.js

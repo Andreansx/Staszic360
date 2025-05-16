@@ -7,8 +7,8 @@ Ogólnie fajnie że nie ma tu nawet żadnego backendu. Właściwie to statyczna 
 - "sig" - podpis cyfrowy - użyj np. Kleopatry aby sprawdzić czy ktoś ruszał pliki od czasu podpisania go przez nas, autorów.</br>
 Po wpisaniu pobierze się plik z podpisem odpowiednio:</br>
 sig1 - index.html</br>
-sig2 - panellum.css</br>
-sig3 - panellum.js
+sig2 - style.css</br>
+sig3 - script.js
 
 Wiadomo że to ta strona to nie coś co możemy skompilować i mieć wątpliwości co do bezpieczeństwa i autentyczności tego pliku. Jednakże ten projekt jest częścią naszego ogólnie coraz szerszego poznawania tego wszystkiego. Dlatego nie zaszkodzi na nim odrazu po próbować na przykład właśnie podpisów cyfrowych. Nikomu to nie przeszkodzi w użytkowaniu a nam pozwala na poznanie czegoś nowego.
 ## Diagramy blokowe
