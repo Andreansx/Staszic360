@@ -2622,14 +2622,14 @@ function goToScene() {
   if (searchInput === "sig2") {
     window.location.href = window.location.href.replace(
       /\/[^\/]*$/,
-      "/pannellum.css.sig"
+      "/style.css.sig"
     );
     return;
   }
   if (searchInput === "sig3") {
     window.location.href = window.location.href.replace(
       /\/[^\/]*$/,
-      "/pannellum.js.sig"
+      "/script.js.sig"
     );
     return;
   }

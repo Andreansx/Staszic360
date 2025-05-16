@@ -25,7 +25,7 @@ Read the README.md in English <a href="./additional-media/README-en.md">here</a>
 
 </div>
 
-Interaktywny wirtualny spacer po I Liceum Ogólnokształcącym im. Stanisława Staszica w Chrzanowie. </br>
+Interaktywny wirtualny spacer po I Liceum Ogólnokształcącym im. Stanisława Staszica w Chrzanowie.  
 Cały projekt jest realizowany przez grupę trzech uczniów szkoły, w pełni bez żadnych korzyści finansowych. Wszystkie zdjęcia wykonane w szkole są dostępne w nieruszonej jakości w folderze <a href="./media/">media</a>.
 <div align="center">
 <h1>  🌐 Publiczne zatwierdzone instancje projektu </h1> 
@@ -75,9 +75,7 @@ Staszic360 został zaprojektowany z myślą o szerokiej dostępności i inkluzyw
 -   Bez logowania – dostęp do spaceru nie wymaga zakładania konta.
 -   Szybkie ładowanie – zoptymalizowany kod pozwala na korzystanie także przy wolniejszym łączu.
 -   Nawigacja klawiaturą – projekt wspiera poruszanie się po interfejsie za pomocą klawiatury (tabindex).
--   Wstępna obsługa czytników ekranu – dodano atrybuty aria-*, które umożliwiają czytnikom ekranu lepsze rozumienie zawartości strony. Funkcje te będą rozwijane.
--   Planowane rozszerzenia – planujemy dalsze udoskonalenia dostępności, m.in. lepsze opisy scen. 
-
+-   Wstępna obsługa czytników ekranu – dodano atrybuty aria-*, które umożliwiają czytnikom ekranu lepsze rozumienie zawartości strony.
 <div align="center">
 <h2> 🛠️ Użyte technologie </h2>
 </div>
@@ -103,7 +101,7 @@ Staszic360 został zaprojektowany z myślą o szerokiej dostępności i inkluzyw
 
 ## Weryfikacja podpisów
 
-Pliki `index.html`, `script.js` i `pannellum.css` są podpisane cyfrowo za pomocą GPG, aby zapewnić ich integralność i autentyczność. Oznacza to, że możesz mieć pewność, iż pliki te nie zostały zmodyfikowane przez osoby trzecie od momentu ich podpisania przez nas.</br>
+Pliki `index.html`, `script.js` i `style.css` są podpisane cyfrowo za pomocą GPG, aby zapewnić ich integralność i autentyczność. Oznacza to, że możesz mieć pewność, iż pliki te nie zostały zmodyfikowane przez osoby trzecie od momentu ich podpisania przez nas. Należy mieć na uwadze, że weryfikacja sygnatur nie ma tutaj takiego charakteru, jak przy zkompilowanych programach gdzie krytyczna jest zgodność z kodem źródłowym.  
 
 Pamiętaj żeby przy weryfikacji podpisów, sprawdzać je z podpisami z odpowiedniego Release, nie z najnowszymi.
 
@@ -119,7 +117,7 @@ gpg --import AndreansxTech_0x1A5C5CDB_public.asc
 **Weryfikacja podpisów**
 ```bash
 gpg --verify index.html.sig index.html
-gpg --verify pannellum.css.sig pannellum.css
+gpg --verify style.css.sig style.css
 gpg --verify script.js.sig script.js
 ```
 ### Struktura projektu
@@ -133,20 +131,18 @@ Staszic360/
 │   └── ...                               ( folder z panoramami )
 ├── AndreansxTech_0x1A5C5CDB_public.asc - Klucz publiczny do weryfikacji podpisów
 ├── check_images.py                     - Skrypt Python do sprawdzenia ścieżek
-├── index_backup.html                   - Kopia zapasowa index.html
 ├── index.html                          - Główny plik HTML
 ├── index.html.sig                      - Podpis cyfrowy index.html
 ├── LICENSE                             - Plik licencji
 ├── pannellum.css                       - Arkusz stylów Pannellum.
-├── pannellum.css.sig                   - Podpis cyfrowy pannellum.css
 ├── pannellum.js                        - Biblioteka Pannellum
 ├── script.js                           - Główny skrypt JavaScript
 ├── script.js.sig                       - Podpis cyfrowy script.js
+├── style.css                           - Główny plik styli CSS strony
+├── style.css.sig                       - Podpis cyfrowy pliku styli CSS
 ├── resize_images.py                    - Skrypt Pythona użyty do zmniejszenia rozdzielczości zdjęć
 ├── update_paths.py                     - Skrypt Python do zaktualizowania ścieżek zdjęć
-├── build.sh                            - Plik Shell zawierający komendę do Cloudflare build environment dla Production
-├── test.tex                            - Plik dokumentacji LaTeX
-├── test.pdf                            - Wersja PDF pliku README.md
+├── build.sh                            - Plik Shell zawierający komendę do Cloudflare build environment dla wersji produkcyjnej
 └── README.md
 ```
 <div align="center">
